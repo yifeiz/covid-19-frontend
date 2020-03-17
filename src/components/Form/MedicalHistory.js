@@ -22,26 +22,24 @@ const MedicalHistory = props => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Favorite Color</label>
-        <Field name="favoriteColor" component={renderColorSelector} />
-      </div>
-      <div>
-        <label htmlFor="employed">Employed</label>
+        <label>Are you on any Medication? If so list please them below.</label>
         <div>
-          <Field
-            name="employed"
-            id="employed"
-            component="input"
-            type="checkbox"
-          />
+          <Field name="mediation" component="textarea" placeholder="Medication" />
         </div>
       </div>
       <div>
-        <label>Notes</label>
+        <label>Do you have any Allergies? If so list please them below.</label>
         <div>
-          <Field name="notes" component="textarea" placeholder="Notes" />
+          <Field name="allergies" component="textarea" placeholder="Allergies" />
         </div>
       </div>
+      <div>
+        <label>Do you have any pre-existing Medical Conditions? If so list please them below.</label>
+        <div>
+          <Field name="conditions" component="textarea" placeholder="Medical Condition" />
+        </div>
+      </div>
+
       <div>
         <button type="button" className="previous" onClick={previousPage}>
           Previous
