@@ -2,9 +2,10 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Info from "./pages/Info";
+import Home from "./Home";
+import Login from "./Login";
+import Info from "./Info";
+import WizardForm from "./Form/WizardForm";
 import history from "../history";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/login" exact component={Login} />
             <Route path="/info" exact component={Info} />
+            <Route path="/track-your-symptoms" exact component={WizardForm} />
           </Switch>
         </div>
       </Router>
