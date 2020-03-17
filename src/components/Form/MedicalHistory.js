@@ -1,21 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import validate from "./validate";
-const colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
 
-const renderColorSelector = ({ input, meta: { touched, error } }) => (
-  <div>
-    <select {...input}>
-      <option value="">Select a color...</option>
-      {colors.map(val => (
-        <option value={val} key={val}>
-          {val}
-        </option>
-      ))}
-    </select>
-    {touched && error && <span>{error}</span>}
-  </div>
-);
 
 const MedicalHistory = props => {
   const { handleSubmit, pristine, previousPage, submitting } = props;
@@ -53,7 +39,7 @@ const MedicalHistory = props => {
 };
 
 export default reduxForm({
-  form: "wizard", //Form name is same
+  form: "track-symptoms", //Form name is same
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate
