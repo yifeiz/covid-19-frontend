@@ -12,7 +12,7 @@ const TestedTrueShortnessBreathForm = props => {
           <div>
             <button
               type="button"
-              onClick={}
+              onClick={testedTrue}
               disabled={pristine || submitting}
             >
               Yes, I have a Shortness of Breath.
@@ -21,7 +21,7 @@ const TestedTrueShortnessBreathForm = props => {
           <div>
             <button
               type="button"
-              onClick={}
+              onClick={testedFalse}
               disabled={pristine || submitting}
             >
               No, I do not have a Shortness of Breath.
