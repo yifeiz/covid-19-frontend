@@ -1,28 +1,28 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import WizardFormFirstPage from "./WizardFormFirstPage";
-import WizardFormSecondPage from "./WizardFormSecondPage";
-import WizardFormThirdPage from "./WizardFormThirdPage";
+import NameForm from "./NameForm.js";
 
 import { nextPage, previousPage, onSubmit } from "../../actions";
+import ContactForm from "./ContactForm.js";
+import MedicalHistory from "./MedicalHistory";
 
-class WizardForm extends React.Component {
+class TrackSymptomsForm extends React.Component {
   render() {
     const { page } = this.props;
 
     console.log(page);
     return (
       <div>
-        {page === 1 && <WizardFormFirstPage onSubmit={this.props.nextPage} />}
+        {page === 1 && <NameForm onSubmit={this.props.nextPage} />}
         {page === 2 && (
-          <WizardFormSecondPage
+          <ContactForm
             previousPage={this.props.previousPage}
             onSubmit={this.props.nextPage}
           />
         )}
         {page === 3 && (
-          <WizardFormThirdPage
+          <MedicalHistory
             previousPage={this.props.previousPage}
             onSubmit={onSubmit}
           />
@@ -35,10 +35,10 @@ class WizardForm extends React.Component {
 const mapStateToProps = state => {
   console.log(state);
   return {
-    page: state.wizardForm.page
+    page: state.trackSymptomsForm.page
   };
 };
 
 export default connect(mapStateToProps, { nextPage, previousPage, onSubmit })(
-  WizardForm
+  TrackSymptomsForm
 );

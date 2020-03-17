@@ -4,5 +4,5 @@ import pageReducer from "./pageReducer";
 
 export default combineReducers({
   form: formReducer,
-  wizardForm: pageReducer
+  trackSymptomsForm: pageReducer
 });

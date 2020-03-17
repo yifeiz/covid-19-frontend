@@ -17,7 +17,7 @@ const renderColorSelector = ({ input, meta: { touched, error } }) => (
   </div>
 );
 
-const WizardFormThirdPage = props => {
+const MedicalHistory = props => {
   const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -59,4 +59,4 @@ export default reduxForm({
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate
-})(WizardFormThirdPage);
+})(MedicalHistory);

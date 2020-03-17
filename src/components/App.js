@@ -5,8 +5,8 @@ import Header from "./Header";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Info from "./pages/Info";
-import WizardForm from "./Form/WizardForm";
 import history from "../history";
+import TrackSymptomsForm from "./Form/TrackSymptomsForm";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/login" exact component={Login} />
             <Route path="/info" exact component={Info} />
-            <Route path="/track-your-symptoms" exact component={WizardForm} />
+            <Route path="/track-your-symptoms" exact component={TrackSymptomsForm} />
           </Switch>
         </div>
       </Router>
