@@ -26,6 +26,15 @@ const validate = values => {
   if(!values.sex){
     errors.sex = "Required";
   }
+  if(!values.postal){
+    errors.postal = "Required";
+  }
+  else if(!/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$/i.test(values.postal)){
+    errors.postal = "Invalid Postal Code, should be formatted as A1A 1A1"
+  }
+  if(!values.familyDoctor){
+    errors.familyDoctor = "Required";
+  }
 
   return errors;
 };

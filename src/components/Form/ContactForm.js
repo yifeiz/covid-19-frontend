@@ -16,7 +16,7 @@ const ContactForm = props => {
         label="Postal Code"
       />
       <Field
-        name="family-doctor"
+        name="familyDoctor"
         type="text"
         component={renderField}
         label="Name of Family Doctor"

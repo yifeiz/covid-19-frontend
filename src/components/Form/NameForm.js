@@ -43,12 +43,14 @@ class NameForm extends React.Component {
             type="text"
             component={this.renderInput}
             label="First Name"
+            placeholder="First Name"
           />
           <Field
             name="lastName"
             type="text"
             component={this.renderInput}
             label="Last Name"
+            placeholder="Last Name"
           />
           <div style={centerStyle}>
             <div>
