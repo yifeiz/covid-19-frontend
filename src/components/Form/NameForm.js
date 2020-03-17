@@ -34,7 +34,6 @@ class NameForm extends React.Component {
       flexDirection: "column",
       height: "auto"
     };
-    //TODO: Insert Validation for DOB
     return (
       <div style={centerStyle}>
         <form onSubmit={this.props.handleSubmit}>

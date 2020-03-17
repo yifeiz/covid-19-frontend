@@ -5,7 +5,6 @@ import renderField from "./renderField";
 
 const ContactForm = props => {
   const { handleSubmit, previousPage } = props;
-  //Insert Validation for Postal Code
   return (
     <form onSubmit={handleSubmit}>
       <Field name="email" type="email" component={renderField} label="Email" />

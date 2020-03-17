@@ -13,6 +13,7 @@ import {
 import ContactForm from "./ContactForm.js";
 import MedicalHistory from "./MedicalHistory";
 import TestedForm from "./TestedForm.js";
+import TestedTrueShortnessBreathForm from "./TestedTrueShortnessBreathForm.js";
 
 class TrackSymptomsForm extends React.Component {
   render() {
@@ -40,7 +41,10 @@ class TrackSymptomsForm extends React.Component {
             testedFalse={this.props.testedFalse}
           />
         )}
-        {page === 5 && tested && <div>You have been tested</div>}
+        {page === 5 && tested && <TestedTrueShortnessBreathForm
+          previousPage = {this.props.previousPage}
+          
+        />}
         {page === 5 && !tested && <div>You have not been tested</div>}
       </div>
     );
