@@ -6,21 +6,29 @@ const TestedForm = props => {
   const { pristine, previousPage, testedTrue, testedFalse, submitting } = props;
   return (
     <form>
-      <button
-        type="button"
-        onClick={testedTrue}
-        disabled={pristine || submitting}
-      >
-        I have been tested.
-      </button>
-      <button
-        type="button"
-        onClick={testedFalse}
-        disabled={pristine || submitting}
-      >
-        I have been not been tested.
-      </button>
-
+      Have you tested positive for COVID-19 at a hospital?
+      <div>
+        <div>
+          <div>
+            <button
+              type="button"
+              onClick={testedTrue}
+              disabled={pristine || submitting}
+            >
+              I have tested Positive.
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              onClick={testedFalse}
+              disabled={pristine || submitting}
+            >
+              I have been not been tested or I have tested negative in the past.
+            </button>
+          </div>
+        </div>
+      </div>
       <button type="button" className="previous" onClick={previousPage}>
         Previous
       </button>
