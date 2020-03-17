@@ -1,12 +1,16 @@
 import React from "react";
-import TextInput from "../UI/TextInput.js"
+import LoginForm from "../LoginForm"
 class Login extends React.Component {
-  form = <div>
-          <TextInput identifier="Username"></TextInput><br></br>
-          <TextInput identifier="Password"></TextInput>
-         </div>;
   render() {
-    return this.form;
+    const loginStyle = {
+      display:"flex",
+      "justify-content": "center",
+      "align-items": "center",
+      "flex-direction": "column",
+      "height":"auto"
+    }
+
+    return <div id="loginForm-Wrapper" style={{height:"100%",width:"100%"}}><LoginForm style={loginStyle}></LoginForm></div>;
   }
   
 }
