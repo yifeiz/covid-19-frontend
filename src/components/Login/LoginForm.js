@@ -18,23 +18,34 @@ class LoginForm extends React.Component {
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
       <div className={className}>
-        <input {...input} placeholder={placeholder}autoComplete="off" />
+        <input {...input} placeholder={placeholder} autoComplete="off" />
         {this.renderError(meta)}
       </div>
     );
   };
 
   render() {
-    const form = <form style={this.props.style} id="form-LoginForm" onSubmit={this.props.handleSubmit}>
-                    <h1>Login</h1>
-                    <LoginField component={this.renderInput} identifier="Username"></LoginField>
-                    <LoginField component={this.renderInput} identifier="Password"></LoginField>
-                    <LoginButton identifier="Login"></LoginButton>
-                </form>;
+    const form = (
+      <form
+        style={this.props.style}
+        id="form-LoginForm"
+        onSubmit={this.props.handleSubmit}
+      >
+        <h1>Login</h1>
+        <LoginField
+          component={this.renderInput}
+          identifier="Username"
+        ></LoginField>
+        <LoginField
+          component={this.renderInput}
+          identifier="Password"
+        ></LoginField>
+        <LoginButton identifier="Login"></LoginButton>
+      </form>
+    );
 
     return form;
   }
-  
 }
 
 export default reduxForm({
