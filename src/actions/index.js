@@ -15,5 +15,16 @@ export const onSubmit = () => {
     type: "CHANGE_ME"
   };
 };
+export const testedTrue = () => {
+  return {
+    type: "TESTED_TRUE"
+  };
+}
+export const testedFalse = () => {
+  return {
+    type: "TESTED_FALSE"
+  };
+}
+
 // NEED TO DO
 // Implement form submit action to backend
