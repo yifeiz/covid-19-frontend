@@ -3,7 +3,13 @@ import { connect } from "react-redux";
 
 import NameForm from "./NameForm.js";
 
-import { nextPage, previousPage, onSubmit, testedTrue, testedFalse } from "../../actions";
+import {
+  nextPage,
+  previousPage,
+  onSubmit,
+  testedTrue,
+  testedFalse
+} from "../../actions";
 import ContactForm from "./ContactForm.js";
 import MedicalHistory from "./MedicalHistory";
 import TestedForm from "./TestedForm.js";
@@ -11,9 +17,7 @@ import TestedForm from "./TestedForm.js";
 class TrackSymptomsForm extends React.Component {
   render() {
     const { page, tested } = this.props;
-    console.log(this.props)
     console.log(page);
-    console.log(tested);
     return (
       <div>
         {page === 1 && <NameForm onSubmit={this.props.nextPage} />}
@@ -51,6 +55,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { nextPage, previousPage, onSubmit, testedTrue, testedFalse })(
-  TrackSymptomsForm
-);
+export default connect(mapStateToProps, {
+  nextPage,
+  previousPage,
+  onSubmit,
+  testedTrue,
+  testedFalse
+})(TrackSymptomsForm);

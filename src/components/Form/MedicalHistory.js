@@ -31,7 +31,7 @@ const MedicalHistory = props => {
           Previous
         </button>
         <button type="submit" disabled={pristine || submitting}>
-          Submit
+          Next
         </button>
       </div>
     </form>

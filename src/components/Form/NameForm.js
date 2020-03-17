@@ -15,12 +15,12 @@ class NameForm extends React.Component {
     }
   }
 
-  renderInput = ({ input, label, meta }) => {
+  renderInput = ({ input, label, meta, placeholder }) => {
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
       <div className={className}>
         <label> {label} </label>
-        <input {...input} autoComplete="off" />
+        <input {...input} placeholder={placeholder} autoComplete="off" />
         {this.renderError(meta)}
       </div>
     );
@@ -84,6 +84,7 @@ class NameForm extends React.Component {
             type="date"
             component={this.renderInput}
             label="Date of Birth"
+            placeholder = "MM/DD/YYYY"
           />
           <div style={centerStyle}>
             <button type="submit" className="next">

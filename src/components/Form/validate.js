@@ -17,6 +17,16 @@ const validate = values => {
   if (!values.favoriteColor) {
     errors.favoriteColor = "Required";
   }
+  if(!values.DOB){
+    errors.DOB = "Required";
+  }
+  else if(!/([0-9]{2})+\/([0-9]{2})+\/([0-9]{4})/i.test(values.DOB)){
+    errors.DOB = "Format as MM/DD/YYYY";
+  }
+  if(!values.sex){
+    errors.sex = "Required";
+  }
+
   return errors;
 };
 
