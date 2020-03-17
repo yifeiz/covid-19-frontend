@@ -1,12 +1,12 @@
 import React from "react";
-import LoginForm from "../LoginForm"
+import LoginForm from "../Login/LoginForm"
 class Login extends React.Component {
   render() {
     const loginStyle = {
       display:"flex",
-      "justify-content": "center",
-      "align-items": "center",
-      "flex-direction": "column",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "flexDirection": "column",
       "height":"auto"
     }
 
