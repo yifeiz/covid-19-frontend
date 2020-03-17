@@ -15,4 +15,4 @@ Installation link can be found here for
 
 If you'd like to avoid the above package managers, you can install node [here](https://nodejs.org/en/download/releases/), and make sure to select node version 10.18.1 (As long as you have node versions above ~8, you should be good)
 
-After making sure you have node and npm on your system, you can run 'npm start' in the root directory to start the project.
+After making sure you have node and npm on your system, you can run `npm install` and then `npm start` in the root directory to start the project.
