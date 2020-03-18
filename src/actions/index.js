@@ -9,11 +9,3 @@ export const previousPage = () => {
     type: "PREVIOUS_PAGE"
   };
 };
-
-export const onSubmit = () => {
-  return {
-    type: "CHANGE_ME"
-  };
-};
-// NEED TO DO
-// Implement form submit action to backend

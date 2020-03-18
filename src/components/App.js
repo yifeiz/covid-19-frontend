@@ -3,9 +3,8 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import Info from "./pages/Info";
-import WizardForm from "./Form/WizardForm";
+import SymptomForm from "./Form/SymptomForm";
 import history from "../history";
 
 const App = () => {
@@ -16,9 +15,8 @@ const App = () => {
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/login" exact component={Login} />
             <Route path="/info" exact component={Info} />
-            <Route path="/track-your-symptoms" exact component={WizardForm} />
+            <Route path="/track-your-symptoms" exact component={SymptomForm} />
           </Switch>
         </div>
       </Router>
