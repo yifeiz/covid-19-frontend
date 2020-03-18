@@ -19,7 +19,7 @@ class Header extends React.Component {
 
   renderNav() {
     return (
-      <Navbar color="light" light expand="md">
+      <Navbar className="nav" color="light" light expand="md">
         <NavbarBrand href="/">Flatten</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
@@ -55,7 +55,7 @@ class Header extends React.Component {
     );
   }
   render() {
-    return <div>{this.renderNav()}</div>;
+    return <React.Fragment> {this.renderNav()}</React.Fragment>;
   }
 }
 

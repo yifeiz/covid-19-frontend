@@ -1,0 +1,35 @@
+/* set main containers to take up full size of screen */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  height: 5%;
+}
+
+/* home styling */
+.home {
+  height: 95%;
+  width: 100%;
+}
+
+.home__left {
+  width: 50%;
+  display: inline-flex;
+}
+
+.home__right {
+  width: 50%;
+  display: inline-flex;
+}
