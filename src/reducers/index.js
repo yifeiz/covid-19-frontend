@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
-import pageReducer from "./pageReducer";
-
+import submitReducer from "./submitReducer";
 export default combineReducers({
   form: formReducer,
-  wizardForm: pageReducer
+  response: submitReducer
 });
