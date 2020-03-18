@@ -78,7 +78,9 @@ class SymptomForm extends React.Component {
                 <tbody>
                   {this.renderQuestions(questions)}
                   <tr key="postal-code">
-                    <th className="question">Enter your postal code</th>
+                    <th className="question">
+                      What are the first three digits of your postal code?
+                    </th>
                     <td colSpan="2">
                       <Field name="postalCode" component={this.renderInput} />
                     </td>
