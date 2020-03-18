@@ -22,14 +22,13 @@ body {
 .home {
   height: 95%;
   width: 100%;
+  display: inline-flex;
 }
 
 .home__left {
   width: 50%;
-  display: inline-flex;
 }
 
 .home__right {
   width: 50%;
-  display: inline-flex;
 }

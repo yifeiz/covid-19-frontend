@@ -9,7 +9,14 @@ class Home extends React.Component {
           <img src={icon} />
         </div>
 
-        <div className="home__right"> </div>
+        <div className="home__right">
+          <h1>FLATTEN</h1>
+          <p>
+            Your platform for up-to-date information about COVID-19 in your
+            community and around the world.
+          </p>
+          <button>login or register</button>
+        </div>
       </div>
     );
   }
