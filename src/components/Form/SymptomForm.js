@@ -1,5 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
+import { Table, Container, Row, Col } from "reactstrap";
+
+import { submitForm } from "../../actions";
+import image from "./science.png";
+import "./SymptomForm.css";
 
 class SymptomForm extends React.Component {
   renderError({ error, touched }) {
@@ -26,35 +32,21 @@ class SymptomForm extends React.Component {
   renderQuestions = questions => {
     return questions.map(question => {
       return (
-        <div>
-          <label>{question}</label>
-          <div>
-            <label>
-              <Field
-                name={question}
-                component="input"
-                type="radio"
-                value="yes"
-              />
-              Yes
-            </label>
-            <label>
-              <Field
-                name={question}
-                component="input"
-                type="radio"
-                value="no"
-              />
-              No
-            </label>
-          </div>
-        </div>
+        <tr key={question}>
+          <th className="question">{question}</th>
+          <td>
+            <Field name={question} component="input" type="radio" value="yes" />
+          </td>
+          <td>
+            <Field name={question} component="input" type="radio" value="no" />
+          </td>
+        </tr>
       );
     });
   };
 
   onSubmit = formValues => {
-    this.props.onSubmit(formValues);
+    this.props.submitForm(formValues);
   };
 
   render() {
@@ -68,18 +60,41 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <form
-        onSubmit={this.props.handleSubmit(this.onSubmit)}
-        className="ui form error"
-      >
-        {this.renderQuestions(questions)}
-        <Field
-          name="postalCode"
-          component={this.renderInput}
-          label="Enter Postal Code"
-        />
-        <button className="ui button primary">Submit</button>
-      </form>
+      <Container>
+        <Row>
+          <Col md="8">
+            <form
+              onSubmit={this.props.handleSubmit(this.onSubmit)}
+              className="ui form error"
+            >
+              <Table responsive>
+                <thead>
+                  <tr>
+                    <th>Tell us how you feel!</th>
+                    <th>Yes</th>
+                    <th>No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.renderQuestions(questions)}
+                  <tr key="postal-code">
+                    <th className="question">Enter your postal code</th>
+                    <td colSpan="2">
+                      <Field name="postalCode" component={this.renderInput} />
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+              <button className="ui button primary">Submit</button>
+            </form>
+          </Col>
+          <Col className="d-none d-md-block">
+            <span className="frame">
+              <img src={image} />
+            </span>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
@@ -93,7 +108,9 @@ const validate = formValues => {
   return errors;
 };
 
-export default reduxForm({
+const formWrapped = reduxForm({
   form: "SymptomForm",
   validate
 })(SymptomForm);
+
+export default connect(null, { submitForm })(formWrapped);

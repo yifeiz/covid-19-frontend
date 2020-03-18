@@ -1,0 +1,27 @@
+.question {
+  background-color: #f4f1f1;
+  background-clip: padding-box; /* this has been added */
+  border-radius: 15px;
+  color: black;
+  border: 5px solid white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-left: 10%;
+}
+
+.frame {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  height: 100%;
+}
