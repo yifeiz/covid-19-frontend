@@ -183,8 +183,8 @@ const validate = formValues => {
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
   }
-  else if(!/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$/i.test(formValues.postalCode)){
-    errors.postalCode = "Invalid Postal Code, should be formatted as A1A 1A1"
+  else if(!/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]$/i.test(formValues.postalCode)){
+    errors.postalCode = "Invalid Postal Code, should be formatted as A1A"
   }
   return errors;
 };
