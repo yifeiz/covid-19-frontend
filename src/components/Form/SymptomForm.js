@@ -12,7 +12,33 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Box from "@material-ui/core/Box";
 import { TextField } from "@material-ui/core";
+import {makeStyles,fade} from '@material-ui/core/styles'
 var Recaptcha = require("react-recaptcha");
+
+const postalStyle = makeStyles(theme => ({
+  root: {
+    border: '4px solid #e2e2e1',
+    overflow: 'hidden',
+    borderRadius: 5,
+    backgroundColor: '#fcfcfb',
+    transition: theme.transitions.create(['border-color', 'box-shadow']),
+    '&:hover': {
+      backgroundColor: '#fff',
+    },
+    '&$focused': {
+      backgroundColor: '#fff',
+      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
+      borderColor: theme.palette.primary.main,
+    },
+  },
+  focused: {},
+}));
+
+function PostalTextField(props) {
+  const classes = postalStyle();
+
+  return <TextField InputProps={{ classes, disableUnderline: true }} {...props} />;
+}
 
 class SymptomForm extends React.Component {
   state = { isVerified: false };
@@ -62,14 +88,13 @@ class SymptomForm extends React.Component {
     meta: { touched, invalid, error },
     ...custom
   }) => (
-    <TextField
+    <PostalTextField
       placeholder={label}
       error={touched && invalid}
       helperText={touched && error}
       {...input}
       {...custom}
-      variant="outlined"
-    ></TextField>
+    ></PostalTextField>
   );
   renderQuestions = questions => {
     return questions.map(question => {
