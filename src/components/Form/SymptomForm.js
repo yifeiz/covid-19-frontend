@@ -11,6 +11,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Box from "@material-ui/core/Box";
+import { TextField } from "@material-ui/core";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
@@ -45,7 +46,7 @@ class SymptomForm extends React.Component {
       </div>
     );
   };
-  radioButton = ({ input, ...rest }) => (
+  renderRadioButton = ({ input, ...rest }) => (
     <FormControl>
       <RadioGroup row row {...input} {...rest}>
         <FormControlLabel
@@ -55,6 +56,21 @@ class SymptomForm extends React.Component {
       </RadioGroup>
     </FormControl>
   );
+  renderTextField = ({
+    label,
+    input,
+    meta: { touched, invalid, error },
+    ...custom
+  }) => (
+    <TextField
+      placeholder={label}
+      error={touched && invalid}
+      helperText={touched && error}
+      {...input}
+      {...custom}
+      variant="outlined"
+    ></TextField>
+  );
   renderQuestions = questions => {
     return questions.map(question => {
       return (
@@ -62,14 +78,22 @@ class SymptomForm extends React.Component {
           <th className="question">{question}</th>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field value="yes" name={question} component={this.radioButton}>
+              <Field
+                value="yes"
+                name={question}
+                component={this.renderRadioButton}
+              >
                 <Radio value="yes"></Radio>
               </Field>
             </Box>
           </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field value="no" name={question} component={this.radioButton}>
+              <Field
+                value="no"
+                name={question}
+                component={this.renderRadioButton}
+              >
                 <Radio value="no"></Radio>
               </Field>
             </Box>
@@ -98,7 +122,7 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container fluid style={{marginLeft:"5%"}}>
+      <Container fluid style={{ marginLeft: "5%" }}>
         <Row>
           <Col md="7">
             <form
@@ -120,7 +144,10 @@ class SymptomForm extends React.Component {
                       What are the first three digits of your postal code?
                     </th>
                     <td colSpan="2">
-                      <Field name="postalCode" component={this.renderInput} />
+                      <Field
+                        name="postalCode"
+                        component={this.renderTextField}
+                      ></Field>
                     </td>
                   </tr>
                 </tbody>
@@ -155,6 +182,9 @@ const validate = formValues => {
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
+  }
+  else if(!/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$/i.test(formValues.postalCode)){
+    errors.postalCode = "Invalid Postal Code, should be formatted as A1A 1A1"
   }
   return errors;
 };
