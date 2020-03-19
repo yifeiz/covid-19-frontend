@@ -7,7 +7,21 @@ import { submitForm } from "../../actions";
 import image from "./science.png";
 import "./SymptomForm.css";
 
+var Recaptcha = require("react-recaptcha");
+
 class SymptomForm extends React.Component {
+  state = { isVerified: false };
+
+  recaptchaLoaded() {
+    console.log("Loaded");
+  }
+
+  verifyCallback = response => {
+    if (response) {
+      this.setState({ isVerified: true });
+    }
+  };
+
   renderError({ error, touched }) {
     if (touched && error) {
       return (
@@ -49,6 +63,10 @@ class SymptomForm extends React.Component {
     this.props.submitForm(formValues);
   };
 
+  onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   render() {
     const questions = [
       "Do you have a fever, chills or shakes?",
@@ -60,7 +78,7 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container>
+      <Container fluid>
         <Row>
           <Col md="8">
             <form
@@ -87,7 +105,18 @@ class SymptomForm extends React.Component {
                   </tr>
                 </tbody>
               </Table>
-              <button className="ui button primary">Submit</button>
+              <Recaptcha
+                sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+                render="explicit"
+                onloadCallback={this.recaptchaLoaded}
+                verifyCallback={this.verifyCallback}
+              />
+              <button
+                className="ui button primary"
+                disabled={!this.state.isVerified}
+              >
+                Submit
+              </button>
             </form>
           </Col>
           <Col className="d-none d-md-block">
