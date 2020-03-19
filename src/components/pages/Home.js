@@ -1,5 +1,7 @@
 import React from "react";
 import icon from "../../assets/doctor.png";
+import world from "../../assets/world.png";
+import canada from "../../assets/canada.png";
 
 class Home extends React.Component {
   render() {
@@ -18,6 +20,14 @@ class Home extends React.Component {
             </p>
             <button className="button">login or register</button>
           </div>
+        </div>
+        <div className="world">
+          <img className="stat__image" src={world} alt="world" />
+          <p className="stat__text">214,894 cases</p>
+        </div>
+        <div className="canada">
+          <img className="stat__image" src={canada} alt="canada" />
+          <p className="stat__text">657 cases </p>
         </div>
       </div>
     );

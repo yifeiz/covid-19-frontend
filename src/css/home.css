@@ -49,12 +49,34 @@ button:hover {
   -webkit-transition: 0.09s ease-in;
 }
 
+.world {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.canada {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.stat__image {
+  width: 40px;
+}
+
+.stat__text {
+  padding-left: 16px;
+  display: inline;
+}
+
 /* home styling */
 .home {
   height: 95%;
   width: 100%;
   padding: 5%;
   display: inline-flex;
+  position: relative;
 }
 
 .home__left {
