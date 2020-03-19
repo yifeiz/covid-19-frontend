@@ -26,3 +26,7 @@ img {
   display: table-cell;
   height: 100%;
 }
+.table th, .table td{
+  border-top:none !important;
+  border-bottom:none !important;
+}
