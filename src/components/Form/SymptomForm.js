@@ -78,7 +78,7 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container>
+      <Container fluid>
         <Row>
           <Col md="8">
             <form
@@ -108,10 +108,9 @@ class SymptomForm extends React.Component {
               <Recaptcha
                 sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
                 render="explicit"
-                onloadCallback={this.recaptchaLoaded()}
+                onloadCallback={this.recaptchaLoaded}
                 verifyCallback={this.verifyCallback}
               />
-              ,
               <button
                 className="ui button primary"
                 disabled={!this.state.isVerified}

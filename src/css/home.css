@@ -14,9 +14,9 @@ body {
   width: 100%;
 }
 
-.nav {
-  height: 5%;
-}
+/* .nav {
+  height: 10%;
+} */
 
 /* generic elements */
 h1 {
@@ -76,7 +76,7 @@ button:focus {
 
 /* home styling */
 .home {
-  height: 95%;
+  height: 90%;
   width: 100%;
   padding: 5%;
   display: inline-flex;
