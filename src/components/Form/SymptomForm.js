@@ -48,7 +48,7 @@ class SymptomForm extends React.Component {
   };
   renderRadioButton = ({ input, ...rest }) => (
     <FormControl>
-      <RadioGroup row row {...input} {...rest}>
+      <RadioGroup row {...input} {...rest}>
         <FormControlLabel
           value={rest.children.props.value}
           control={<Radio />}
@@ -167,7 +167,7 @@ class SymptomForm extends React.Component {
           </Col>
           <Col className="d-none d-md-block">
             <span className="frame">
-              <img src={image} />
+              <img src={image} alt="Microscope Icon"/>
             </span>
           </Col>
         </Row>
