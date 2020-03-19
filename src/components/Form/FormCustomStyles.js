@@ -4,9 +4,9 @@ import React from "react";
 
 const postalStyle = makeStyles(theme => ({
   root: {
-    border: "4px solid #e2e2e1",
+    border: "6px solid #f5f0f0",
     overflow: "hidden",
-    borderRadius: 5,
+    borderRadius: 12,
     backgroundColor: "#fcfcfb",
     transition: theme.transitions.create(["border-color", "box-shadow"]),
     "&:hover": {
@@ -14,7 +14,7 @@ const postalStyle = makeStyles(theme => ({
     },
     "&$focused": {
       backgroundColor: "#fff",
-      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
+      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 5px`,
       borderColor: theme.palette.primary.main
     }
   },

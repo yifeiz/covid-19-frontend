@@ -9,6 +9,7 @@
   color: #5f5f5f;
   font-weight: 500;
   vertical-align: middle !important;
+  padding-left:10%;
 }
 
 img {
@@ -52,4 +53,5 @@ th.questionRow {
 table {
   border-collapse: separate !important;
   border-spacing: 1em !important;
+  font-family:"Open Sans";
 }
