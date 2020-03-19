@@ -167,7 +167,7 @@ class SymptomForm extends React.Component {
           </Col>
           <Col className="d-none d-md-block">
             <span className="frame">
-              <img src={image} alt="Microscope Icon"/>
+              <img src={image} alt="Microscope Icon" />
             </span>
           </Col>
         </Row>
