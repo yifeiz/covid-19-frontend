@@ -49,6 +49,10 @@ button:hover {
   -webkit-transition: 0.09s ease-in;
 }
 
+button:focus {
+  outline: none;
+}
+
 .world {
   position: absolute;
   bottom: 5%;
