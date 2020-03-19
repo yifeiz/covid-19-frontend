@@ -6,12 +6,16 @@ import { Table, Container, Row, Col } from "reactstrap";
 import { submitForm } from "../../actions";
 import image from "./science.png";
 import "./SymptomForm.css";
-
+import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import Box from "@material-ui/core/Box";
+import PostalTextField from "./FormCustomStyles";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
   state = { isVerified: false };
-
   recaptchaLoaded() {
     console.log("Loaded");
   }
@@ -42,17 +46,56 @@ class SymptomForm extends React.Component {
       </div>
     );
   };
-
+  renderRadioButton = ({ input, ...rest }) => (
+    <FormControl>
+      <RadioGroup row {...input} {...rest}>
+        <FormControlLabel
+          value={rest.children.props.value}
+          control={<Radio />}
+        />
+      </RadioGroup>
+    </FormControl>
+  );
+  renderTextField = ({
+    label,
+    input,
+    meta: { touched, invalid, error },
+    ...custom
+  }) => (
+    <PostalTextField
+      placeholder={label}
+      error={touched && invalid}
+      helperText={touched && error}
+      {...input}
+      {...custom}
+    ></PostalTextField>
+  );
   renderQuestions = questions => {
     return questions.map(question => {
       return (
         <tr key={question}>
           <th className="question">{question}</th>
-          <td>
-            <Field name={question} component="input" type="radio" value="yes" />
+          <td className="answer">
+            <Box display="flex" justifyContent="center">
+              <Field
+                value="yes"
+                name={question}
+                component={this.renderRadioButton}
+              >
+                <Radio value="yes"></Radio>
+              </Field>
+            </Box>
           </td>
-          <td>
-            <Field name={question} component="input" type="radio" value="no" />
+          <td className="answer">
+            <Box display="flex" justifyContent="center">
+              <Field
+                value="no"
+                name={question}
+                component={this.renderRadioButton}
+              >
+                <Radio value="no"></Radio>
+              </Field>
+            </Box>
           </td>
         </tr>
       );
@@ -78,9 +121,9 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container fluid>
+      <Container fluid style={{ marginLeft: "5%" }}>
         <Row>
-          <Col md="8">
+          <Col md="7">
             <form
               onSubmit={this.props.handleSubmit(this.onSubmit)}
               className="ui form error"
@@ -88,9 +131,9 @@ class SymptomForm extends React.Component {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>Tell us how you feel!</th>
-                    <th>Yes</th>
-                    <th>No</th>
+                    <th className="questionRow">Tell us how you feel!</th>
+                    <th className="answer">Yes</th>
+                    <th className="answer">No</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -100,7 +143,10 @@ class SymptomForm extends React.Component {
                       What are the first three digits of your postal code?
                     </th>
                     <td colSpan="2">
-                      <Field name="postalCode" component={this.renderInput} />
+                      <Field
+                        name="postalCode"
+                        component={this.renderTextField}
+                      ></Field>
                     </td>
                   </tr>
                 </tbody>
@@ -121,7 +167,7 @@ class SymptomForm extends React.Component {
           </Col>
           <Col className="d-none d-md-block">
             <span className="frame">
-              <img src={image} />
+              <img src={image} alt="Microscope Icon"/>
             </span>
           </Col>
         </Row>
@@ -135,6 +181,10 @@ const validate = formValues => {
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
+  } else if (
+    !/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]$/i.test(formValues.postalCode)
+  ) {
+    errors.postalCode = "Invalid Postal Code, should be formatted as A1A";
   }
   return errors;
 };
