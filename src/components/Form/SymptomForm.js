@@ -11,9 +11,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Box from "@material-ui/core/Box";
-import PostalTextField from './FormCustomStyles'
+import PostalTextField from "./FormCustomStyles";
 var Recaptcha = require("react-recaptcha");
-
 
 class SymptomForm extends React.Component {
   state = { isVerified: false };
@@ -182,9 +181,10 @@ const validate = formValues => {
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
-  }
-  else if(!/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]$/i.test(formValues.postalCode)){
-    errors.postalCode = "Invalid Postal Code, should be formatted as A1A"
+  } else if (
+    !/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]$/i.test(formValues.postalCode)
+  ) {
+    errors.postalCode = "Invalid Postal Code, should be formatted as A1A";
   }
   return errors;
 };
