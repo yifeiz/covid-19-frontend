@@ -6,12 +6,14 @@ import { Table, Container, Row, Col } from "reactstrap";
 import { submitForm } from "../../actions";
 import image from "./science.png";
 import "./SymptomForm.css";
-
+import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
   state = { isVerified: false };
-
   recaptchaLoaded() {
     console.log("Loaded");
   }
@@ -42,17 +44,27 @@ class SymptomForm extends React.Component {
       </div>
     );
   };
-
+  radioButton = ({ input, ...rest }) => (
+    <FormControl>
+    <RadioGroup {...input} {...rest}>
+      <FormControlLabel value={rest.children.props.value}  control={<Radio />}/>
+    </RadioGroup>
+  </FormControl>  );
   renderQuestions = questions => {
     return questions.map(question => {
       return (
         <tr key={question}>
           <th className="question">{question}</th>
           <td>
-            <Field name={question} component="input" type="radio" value="yes" />
+            <Field value="yes" name={question} component={this.radioButton}>
+            <Radio value="yes"></Radio>
+            </Field>
           </td>
           <td>
-            <Field name={question} component="input" type="radio" value="no" />
+            <Field value="no" name={question} component={this.radioButton}>
+            <Radio value="no"></Radio>
+
+            </Field>
           </td>
         </tr>
       );
@@ -145,3 +157,4 @@ const formWrapped = reduxForm({
 })(SymptomForm);
 
 export default connect(null, { submitForm })(formWrapped);
+ 
