@@ -19,7 +19,7 @@ class Home extends React.Component {
               community and around the world.
             </p>
             <Link to={"/track-your-symptoms"}>
-              <button className="button">track your symptoms</button>
+              <button className="red-button">track your symptoms</button>
             </Link>
           </div>
         </div>

@@ -19,12 +19,26 @@ h1 {
   font-size: 4rem !important;
 }
 
+h2 {
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  font-size: 1rem !important;
+  padding-left: 60px;
+  color: black !important;
+}
+
+h3 {
+  font-family: "Open Sans";
+  letter-spacing: 0.5px;
+  font-size: 1rem !important;
+}
+
 p {
   font-family: "Open Sans";
   letter-spacing: 0.3px;
 }
 
-button {
+.red-button {
   background-color: #f54263;
   border: none;
   border-radius: 24px !important;
@@ -36,7 +50,7 @@ button {
   letter-spacing: 0.5px;
 }
 
-button:hover {
+.red-button:hover {
   border: 2px solid #f54263;
   background-color: white;
   color: #f54263;
@@ -45,4 +59,35 @@ button:hover {
 
 button:focus {
   outline: 0 !important;
+}
+
+.navbar {
+  height: 60px;
+  min-height: 40px;
+}
+
+.navbar-toggle {
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+  height: 50px;
+}
+
+.navbar-toggler:hover {
+  color: #f8f9fa !important;
+}
+
+.navbar-collapse {
+  padding: 10px 75px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
 }
