@@ -2,6 +2,7 @@ import React from "react";
 import icon from "../../assets/doctor.png";
 import world from "../../assets/world.png";
 import canada from "../../assets/canada.png";
+import "./home.css";
 
 class Home extends React.Component {
   render() {
