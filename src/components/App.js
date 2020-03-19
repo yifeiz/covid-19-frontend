@@ -9,18 +9,16 @@ import history from "../history";
 
 const App = () => {
   return (
-    <div className="ui container">
+    <React.Fragment>
       <Router history={history}>
-        <div>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/info" exact component={Info} />
-            <Route path="/track-your-symptoms" exact component={SymptomForm} />
-          </Switch>
-        </div>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/info" exact component={Info} />
+          <Route path="/track-your-symptoms" exact component={SymptomForm} />
+        </Switch>
       </Router>
-    </div>
+    </React.Fragment>
   );
 };
 
