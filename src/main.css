@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Open Sans";
+  letter-spacing: 16px;
+  font-size: 4rem !important;
+}
+
+p {
+  font-family: "Open Sans";
+  letter-spacing: 0.3px;
+}
+
+button {
+  background-color: #f54263;
+  border: none;
+  border-radius: 24px !important;
+  height: 60px;
+  width: 300px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  border: 2px solid #f54263;
+  background-color: white;
+  color: #f54263;
+  -webkit-transition: 0.09s ease-in;
+}
+
+button:focus {
+  outline: 0 !important;
+}
