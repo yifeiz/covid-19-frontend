@@ -10,6 +10,7 @@ import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
+import Box from "@material-ui/core/Box";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
@@ -46,25 +47,32 @@ class SymptomForm extends React.Component {
   };
   radioButton = ({ input, ...rest }) => (
     <FormControl>
-    <RadioGroup {...input} {...rest}>
-      <FormControlLabel value={rest.children.props.value}  control={<Radio />}/>
-    </RadioGroup>
-  </FormControl>  );
+      <RadioGroup row row {...input} {...rest}>
+        <FormControlLabel
+          value={rest.children.props.value}
+          control={<Radio />}
+        />
+      </RadioGroup>
+    </FormControl>
+  );
   renderQuestions = questions => {
     return questions.map(question => {
       return (
         <tr key={question}>
           <th className="question">{question}</th>
-          <td>
-            <Field value="yes" name={question} component={this.radioButton}>
-            <Radio value="yes"></Radio>
-            </Field>
+          <td className="answer">
+            <Box display="flex" justifyContent="center">
+              <Field value="yes" name={question} component={this.radioButton}>
+                <Radio value="yes"></Radio>
+              </Field>
+            </Box>
           </td>
-          <td>
-            <Field value="no" name={question} component={this.radioButton}>
-            <Radio value="no"></Radio>
-
-            </Field>
+          <td className="answer">
+            <Box display="flex" justifyContent="center">
+              <Field value="no" name={question} component={this.radioButton}>
+                <Radio value="no"></Radio>
+              </Field>
+            </Box>
           </td>
         </tr>
       );
@@ -90,9 +98,9 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container fluid>
+      <Container fluid style={{marginLeft:"5%"}}>
         <Row>
-          <Col md="8">
+          <Col md="7">
             <form
               onSubmit={this.props.handleSubmit(this.onSubmit)}
               className="ui form error"
@@ -100,9 +108,9 @@ class SymptomForm extends React.Component {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>Tell us how you feel!</th>
-                    <th>Yes</th>
-                    <th>No</th>
+                    <th className="questionRow">Tell us how you feel!</th>
+                    <th className="answer">Yes</th>
+                    <th className="answer">No</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -157,4 +165,3 @@ const formWrapped = reduxForm({
 })(SymptomForm);
 
 export default connect(null, { submitForm })(formWrapped);
- 

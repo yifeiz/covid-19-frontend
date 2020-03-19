@@ -1,9 +1,14 @@
 .question {
-  background-color: #f4f1f1;
+  background-color: #f5f0f0;
   background-clip: padding-box; /* this has been added */
-  border-radius: 15px;
+  border-radius: 20px;
   color: black;
   border: 5px solid white;
+  font-size:1.35rem;
+  align-items: center;
+  color:#5f5f5f;
+  font-weight: 500;
+  vertical-align: middle !important;
 }
 
 img {
@@ -15,18 +20,35 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
-  padding-left: 25%;
   padding-right: 10%;
+  padding-top:5%;
+  padding-left:10%;
 }
 
 .frame {
   vertical-align: middle;
   text-align: center;
   display: table-cell;
-  height: 100%;
+  height: 80%;
 }
 .table th, .table td{
   border-top:none !important;
   border-bottom:none !important;
+}
+th.answer{
+  text-align:center;
+  font-size: 1.7rem;
+}
+.MuiFormControlLabel-root{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+th.questionRow{
+  font-size:2.5rem !important;
+  vertical-align: middle;
+}
+
+table{
+  border-collapse: separate !important;
+  border-spacing: 1em !important;
 }
