@@ -1,19 +1,15 @@
 .question {
-  background-color: #f5f0f0;
-  background-clip: padding-box; /* this has been added */
-  border-radius: 20px;
-  color: black;
-  border: 5px solid white;
-  font-size: 1.35rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
   align-items: center;
   color: #5f5f5f;
-  font-weight: 500;
   vertical-align: middle !important;
+  padding: 20px 30px;
 }
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   position: absolute;
   top: 0;
@@ -31,19 +27,28 @@ img {
   display: table-cell;
   height: 80%;
 }
+
 .table th,
 .table td {
   border-top: none !important;
   border-bottom: none !important;
+  padding-left: 30px !important;
 }
+
 th.answer {
+  font-family: "Open Sans";
+  letter-spacing: 0.5px;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  padding-top: 40px;
   text-align: center;
-  font-size: 1.4rem;
 }
+
 .MuiFormControlLabel-root {
-  margin-left: 0 !important;
+  margin-left: 10 !important;
   margin-right: 0 !important;
 }
+
 th.questionRow {
   font-size: 2.5rem !important;
   vertical-align: middle;
@@ -52,4 +57,16 @@ th.questionRow {
 table {
   border-collapse: separate !important;
   border-spacing: 1em !important;
+}
+
+.row {
+  padding-left: 120px;
+}
+
+.makeStyles-root-91 {
+  border: none !important;
+}
+
+.MuiInputBase-input {
+  border: 2px solid #6c757d !important;
 }
