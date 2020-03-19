@@ -18,7 +18,7 @@ class Home extends React.Component {
               Your platform for up-to-date information about COVID-19 in your
               community and around the world.
             </p>
-            <button className="button">login or register</button>
+            <button className="button">track your symptoms</button>
           </div>
         </div>
         <div className="world">
