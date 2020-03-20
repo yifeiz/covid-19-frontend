@@ -11,10 +11,13 @@ const Para0 = () => (
       coronaviruses are new strains of the virus that have not been previously
       identified in humans.
     </p>
-    <p>
-      Source: World Health Organization
-      (https://www.who.int/health-topics/coronavirus)
-    </p>
+    <span>Source: </span>
+    <a
+      className="infoLink"
+      href="https://www.who.int/health-topics/coronavirus"
+    >
+      World Health Organization
+    </a>
   </React.Fragment>
 );
 

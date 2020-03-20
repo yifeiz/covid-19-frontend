@@ -20,12 +20,20 @@ const Para4 = () => (
       call 911, notify the operator that you have or think you might have,
       COVID-19. If possible, put on a facemask before medical help arrives.
     </p>
-    <p>
-      Source: Government of Ontario
-      (https://www.ontario.ca/page/2019-novel-coronavirus) and Centers for
-      Disease Control and Prevention
-      (https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html)
-    </p>
+    <span>Sources: </span>
+    <a
+      className="infoLink"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
+    >
+      Government of Ontario
+    </a>
+    <span>, </span>
+    <a
+      className="infoLink"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
+    >
+      Centers for Disease Control and Prevention
+    </a>
   </React.Fragment>
 );
 
