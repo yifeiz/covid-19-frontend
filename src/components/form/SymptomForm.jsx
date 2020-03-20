@@ -14,9 +14,13 @@ import PostalTextField from "./FormCustomStyles";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
-  state = { isVerified: true };
+  state = { isVerified: false };
   recaptchaLoaded() {
     console.log("Loaded");
+  }
+
+  recaptchaExpired() {
+    this.setState({ isVerified: false });
   }
 
   verifyCallback = response => {
@@ -158,9 +162,15 @@ class SymptomForm extends React.Component {
               render="explicit"
               onloadCallback={this.recaptchaLoaded}
               verifyCallback={this.verifyCallback}
+              expiredCallback={this.recaptchaExpired}
             />
             <div className="submit">
-              <button className="submit-button red-button">Submit</button>
+              <button
+                className="submit-button red-button"
+                disabled={!this.state.isVerified}
+              >
+                Submit
+              </button>
             </div>
           </form>
         </Col>
@@ -176,6 +186,27 @@ class SymptomForm extends React.Component {
 
 const validate = formValues => {
   const errors = {};
+  if (!formValues.q1) {
+    errors.q1 = "Required";
+  }
+  if (!formValues.q2) {
+    errors.q2 = "Required";
+  }
+  if (!formValues.q3) {
+    errors.q3 = "Required";
+  }
+  if (!formValues.q4) {
+    errors.q4 = "Required";
+  }
+  if (!formValues.q5) {
+    errors.q5 = "Required";
+  }
+  if (!formValues.q6) {
+    errors.q6 = "Required";
+  }
+  if (!formValues.q7) {
+    errors.q7 = "Required";
+  }
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
@@ -184,6 +215,7 @@ const validate = formValues => {
   ) {
     errors.postalCode = "Invalid Postal Code, should be formatted as A1A";
   }
+
   return errors;
 };
 
