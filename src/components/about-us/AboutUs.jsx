@@ -30,6 +30,7 @@ class AboutUs extends React.Component {
       "Emily Tao",
       "Benjamin Fine"
     ];
+
     return (
       <div className="App">
         <section>
