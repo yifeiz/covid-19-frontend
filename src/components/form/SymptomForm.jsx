@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Table, Row, Col } from "reactstrap";
 
-import { submitForm } from "../../actions";
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import FormControl from "@material-ui/core/FormControl";
@@ -18,6 +17,10 @@ class SymptomForm extends React.Component {
   state = { isVerified: false };
   recaptchaLoaded() {
     console.log("Loaded");
+  }
+
+  recaptchaExpired() {
+    this.setState({ isVerified: false });
   }
 
   verifyCallback = response => {
@@ -72,28 +75,22 @@ class SymptomForm extends React.Component {
   );
   renderQuestions = questions => {
     return questions.map(question => {
+      const label = `q${questions.indexOf(question) + 1}`;
+
       return (
-        <tr key={question}>
+        <tr key={label}>
           <p className="question">{question}</p>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="yes"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="yes"></Radio>
+              <Field value="y" name={label} component={this.renderRadioButton}>
+                <Radio value="y"></Radio>
               </Field>
             </Box>
           </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="no"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="no"></Radio>
+              <Field value="n" name={label} component={this.renderRadioButton}>
+                <Radio value="n"></Radio>
               </Field>
             </Box>
           </td>
@@ -103,7 +100,7 @@ class SymptomForm extends React.Component {
   };
 
   onSubmit = formValues => {
-    this.props.submitForm(formValues);
+    this.props.onSubmit(formValues);
   };
 
   onChange(value) {
@@ -176,9 +173,15 @@ class SymptomForm extends React.Component {
               render="explicit"
               onloadCallback={this.recaptchaLoaded}
               verifyCallback={this.verifyCallback}
+              expiredCallback={this.recaptchaExpired}
             />
             <div className="submit">
-              <button className="submit-button red-button">Submit</button>
+              <button
+                className="submit-button red-button"
+                disabled={!this.state.isVerified}
+              >
+                Submit
+              </button>
             </div>
           </form>
         </Col>
@@ -194,6 +197,27 @@ class SymptomForm extends React.Component {
 
 const validate = formValues => {
   const errors = {};
+  if (!formValues.q1) {
+    errors.q1 = "Required";
+  }
+  if (!formValues.q2) {
+    errors.q2 = "Required";
+  }
+  if (!formValues.q3) {
+    errors.q3 = "Required";
+  }
+  if (!formValues.q4) {
+    errors.q4 = "Required";
+  }
+  if (!formValues.q5) {
+    errors.q5 = "Required";
+  }
+  if (!formValues.q6) {
+    errors.q6 = "Required";
+  }
+  if (!formValues.q7) {
+    errors.q7 = "Required";
+  }
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
@@ -202,6 +226,7 @@ const validate = formValues => {
   ) {
     errors.postalCode = "Invalid Postal Code, should be formatted as A1A";
   }
+
   return errors;
 };
 
@@ -210,4 +235,4 @@ const formWrapped = reduxForm({
   validate
 })(SymptomForm);
 
-export default connect(null, { submitForm })(formWrapped);
+export default connect(null)(formWrapped);
