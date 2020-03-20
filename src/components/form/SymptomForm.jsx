@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Table, Container, Row, Col } from "reactstrap";
+import { Table, Row, Col } from "reactstrap";
 
 import { submitForm } from "../../actions";
 import image from "../../assets/science.png";
