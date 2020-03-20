@@ -72,7 +72,7 @@ table {
 
 #g-recaptcha {
   float: right;
-  padding-right: 25px;
+  padding-right: 20px;
   padding-bottom: 25px;
   display: block;
   clear: both;
@@ -86,17 +86,16 @@ table {
   border: 2px solid #6c757d !important;
 }
 
-
 .submit {
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 button {
   float: right;
   display: block;
   clear: both;
+}
 
 .formDisclaimer {
   font-style: italic;
-
 }
