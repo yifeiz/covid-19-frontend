@@ -3,13 +3,19 @@ import React from "react";
 import "./Para.css";
 
 const Para0 = () => (
-  <p>
-    Coronaviruses are a large family of viruses. Some coronaviruses cause
-    respiratory illness in people, ranging from mild common colds to severe
-    pneumonias, while others cause illness in animals only. Novel coronaviruses
-    are new strains of the virus that have not been previously identified in
-    humans.
-  </p>
+  <React.Fragment>
+    <p>
+      Coronaviruses are a large family of viruses. Some coronaviruses cause
+      respiratory illness in people, ranging from mild common colds to severe
+      cases of pneumonia, while others cause illness in animals only. Novel
+      coronaviruses are new strains of the virus that have not been previously
+      identified in humans.
+    </p>
+    <p>
+      Source: World Health Organization
+      (https://www.who.int/health-topics/coronavirus)
+    </p>
+  </React.Fragment>
 );
 
 export default Para0;

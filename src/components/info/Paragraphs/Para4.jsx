@@ -5,15 +5,26 @@ import "./Para.css";
 const Para4 = () => (
   <React.Fragment>
     <p>
-      If you are seeking help for mild or moderate COVID-19 symptoms, know that
-      there are no treatments at this time and you will be instructed to stay
-      home and use treatment (described below) to help with your symptoms.
+      If you are seeking help for mild or moderate COVID-19 symptoms, you can
+      contact Telehealth Ontario at 1-866-797-0000, your local public health
+      unit, or your primary care provider, but know that there are no treatments
+      at this time and you will be instructed to stay home and practice methods
+      of social distancing (described below). Do not visit an assessment centre
+      unless you have been referred by a health care professional.
     </p>
     <p>
       If you are seriously ill or experiencing severe symptoms (severe shortness
-      of breath, chest pain, serious weakness or lethargy that impairs ability
-      to carry out your regular activities) call 911 and inform them that you
-      may have COVID-19.
+      of breath, chest pain, serious weakness or lethargy that impairs the
+      ability to carry out your regular activities) call your healthcare
+      provider for medical advice. If you have a medical emergency and need to
+      call 911, notify the operator that you have or think you might have,
+      COVID-19. If possible, put on a facemask before medical help arrives.
+    </p>
+    <p>
+      Source: Government of Ontario
+      (https://www.ontario.ca/page/2019-novel-coronavirus) and Centers for
+      Disease Control and Prevention
+      (https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html)
     </p>
   </React.Fragment>
 );
