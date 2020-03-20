@@ -167,9 +167,7 @@ class SymptomForm extends React.Component {
               verifyCallback={this.verifyCallback}
             />
             <div className="submit">
-              <button className="red-button" disabled={!this.state.isVerified}>
-                Submit
-              </button>
+              <button className="submit-button red-button">Submit</button>
             </div>
           </form>
         </Col>
