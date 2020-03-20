@@ -69,6 +69,10 @@ button:focus {
   outline: 0 !important;
 }
 
+button:hover {
+  cursor: pointer !important;
+}
+
 .navbar {
   height: 75px;
   min-height: 40px;
