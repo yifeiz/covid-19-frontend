@@ -121,54 +121,54 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container fluid style={{ marginLeft: "5%" }}>
-        <Row>
-          <Col md="7">
-            <form
-              onSubmit={this.props.handleSubmit(this.onSubmit)}
-              className="ui form error"
-            >
-              <Table responsive>
-                <thead>
-                  <tr>
-                    <h4>Tell us how you feel!</h4>
-                    <th className="answer">Yes</th>
-                    <th className="answer">No</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.renderQuestions(questions)}
-                  <tr key="postal-code">
-                    <p className="question">
-                      What are the first three digits of your postal code?
-                    </p>
-                    <td colSpan="2">
-                      <Field
-                        name="postalCode"
-                        component={this.renderTextField}
-                      ></Field>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-              <Recaptcha
-                sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
-                render="explicit"
-                onloadCallback={this.recaptchaLoaded}
-                verifyCallback={this.verifyCallback}
-              />
+      <Row>
+        <Col md="7">
+          <form
+            onSubmit={this.props.handleSubmit(this.onSubmit)}
+            className="ui form error"
+          >
+            <Table responsive>
+              <thead>
+                <tr>
+                  <h4>Tell us how you feel!</h4>
+                  <th className="answer">Yes</th>
+                  <th className="answer">No</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.renderQuestions(questions)}
+                <tr key="postal-code">
+                  <p className="question">
+                    What are the first three digits of your postal code?
+                  </p>
+                  <td colSpan="2">
+                    <Field
+                      name="postalCode"
+                      component={this.renderTextField}
+                    ></Field>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            <Recaptcha
+              sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+              render="explicit"
+              onloadCallback={this.recaptchaLoaded}
+              verifyCallback={this.verifyCallback}
+            />
+            <div className="submit">
               <button className="red-button" disabled={!this.state.isVerified}>
                 Submit
               </button>
-            </form>
-          </Col>
-          <Col className="d-none d-md-block">
-            <span className="frame">
-              <img src={image} alt="Microscope Icon" />
-            </span>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </form>
+        </Col>
+        <Col className="d-none d-md-block">
+          <span className="frame">
+            <img src={image} alt="Microscope Icon" />
+          </span>
+        </Col>
+      </Row>
     );
   }
 }
