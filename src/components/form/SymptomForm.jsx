@@ -128,10 +128,20 @@ class SymptomForm extends React.Component {
               onSubmit={this.props.handleSubmit(this.onSubmit)}
               className="ui form error"
             >
+              <h4>Tell us how you feel!</h4>
+              <p className="formDisclaimer">
+                The screening questionnaire is not meant to act as a tool to
+                diagnose, and the information you receive is not a medical
+                assessment. You cannot be diagnosed with COVID simply by taking
+                this survey online. If you are experiencing severe symptoms,
+                seek medical attention. This service is not a substitute for
+                consulting with your doctor. The information we supply is from
+                publicly available sources and is subject to frequent change.
+              </p>
               <Table responsive>
                 <thead>
                   <tr>
-                    <h4>Tell us how you feel!</h4>
+                    <th className="answer">Question</th>
                     <th className="answer">Yes</th>
                     <th className="answer">No</th>
                   </tr>

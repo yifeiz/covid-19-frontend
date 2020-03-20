@@ -41,7 +41,7 @@ th.answer {
   font-size: 1.5rem !important;
   font-weight: 600 !important;
   padding-top: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .MuiFormControlLabel-root {
@@ -69,4 +69,8 @@ table {
 
 .MuiInputBase-input {
   border: 2px solid #6c757d !important;
+}
+
+.formDisclaimer {
+  font-style: italic;
 }
