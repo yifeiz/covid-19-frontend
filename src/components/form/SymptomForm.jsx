@@ -126,13 +126,14 @@ class SymptomForm extends React.Component {
           >
             <h4>Tell us how you feel!</h4>
             <p className="formDisclaimer">
-              The screening questionnaire is not meant to act as a tool to
-              diagnose, and the information you receive is not a medical
-              assessment. You cannot be diagnosed with COVID simply by taking
-              this survey online. If you are experiencing severe symptoms, seek
-              medical attention. This service is not a substitute for consulting
-              with your doctor. The information we supply is from publicly
-              available sources and is subject to frequent change.
+              The following questionnaire is designed to help assess your risk
+              factors for COVID-19 infection and to provide guidance on how to
+              keep yourself, your family, and your community healthy. The
+              questions are based on the best available guidance from Canadian
+              public health agencies and other stakeholders, and will be updated
+              regularly. Your answers are collected anonymously, and will be
+              aggregated to help healthcare providers gauge the spread of
+              COVID-19.
             </p>
             <Table responsive>
               <thead>
@@ -146,7 +147,8 @@ class SymptomForm extends React.Component {
                 {this.renderQuestions(questions)}
                 <tr key="postal-code">
                   <p className="question">
-                    What are the first three digits of your postal code?
+                    What are the first three characters of the postal code of
+                    your current residence?
                   </p>
                   <td colSpan="2">
                     <Field
@@ -157,6 +159,15 @@ class SymptomForm extends React.Component {
                 </tr>
               </tbody>
             </Table>
+            <p className="footerDisclaimer">
+              The screening questionnaire is not meant to act as a tool to
+              diagnose, and the information you receive is not a medical
+              assessment. You cannot be diagnosed with COVID simply by taking
+              this survey online. If you are experiencing severe symptoms, seek
+              medical attention. This service is not a substitute for consulting
+              with your doctor. The information we supply is from publicly
+              available sources and is subject to frequent change.
+            </p>
             <Recaptcha
               sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
               render="explicit"

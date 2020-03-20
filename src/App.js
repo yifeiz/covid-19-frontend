@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/info" exact component={Info} />
           <Route path="/track-your-symptoms" exact component={SymptomPage} />
         </Switch>
+        <Footer />
       </Router>
     </React.Fragment>
   );
