@@ -31,10 +31,44 @@ class AboutUs extends React.Component {
       "Benjamin Fine"
     ];
     return (
-      <div>
-        {users.map(name => (
-          <Profile name={name} />
-        ))}
+      <div className="App">
+        <section>
+          <h1 className="title"> About Us </h1>
+          <p className="description">
+            Here are the amazing volunteers who made this project possible!
+          </p>
+          <hr className="line" />
+        </section>
+        <section className="profiles">
+          <div className="container-fluid d-flex justify-content-center">
+            <div className="row">
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+              <div className="col-md-3">
+                <Profile />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

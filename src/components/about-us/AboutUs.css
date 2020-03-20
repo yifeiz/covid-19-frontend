@@ -1,4 +1,29 @@
-.profile-boxes {
-  height: 400px;
-  width: 400px;
+.title {
+  text-align: center;
+  font-family: "Open Sans";
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
+
+.description {
+  text-align: center;
+  font-family: "Open Sans";
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
+
+.profiles {
+  padding-top: 30px;
+}
+
+.col-md-3 {
+  padding-bottom: 30px;
+}
+
+.line {
+  border-color: black;
+  border-width: 4px;
+  width: 50px;
 }

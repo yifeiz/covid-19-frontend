@@ -1,3 +1,14 @@
-.card-container {
-  max-width: 345;
+.card-img-top {
+  position: static;
+  padding: 0;
+  max-width: 100%;
+}
+
+.card-text {
+  padding-top: 0px;
+}
+
+.row {
+  width: 50%;
+  padding: 0px;
 }
