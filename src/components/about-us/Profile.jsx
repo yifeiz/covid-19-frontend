@@ -13,7 +13,13 @@ const Profile = props => {
       </div>
       <div className="card-body text-dark">
         <p className="card-text">{props.name}</p>
-        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        <a
+          href="https://www.linkedin.com/in/yifei-zhang1/"
+          target="_blank"
+          classname="link"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
       </div>
     </div>
   );
