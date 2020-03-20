@@ -20,10 +20,13 @@ const Para3 = () => (
       toilets, phones, electronics, door handles, bedside tables, and television
       remotes
     </p>
-    <p>
-      Source: Centers for Disease Control and Prevention
-      (https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html)
-    </p>
+    <span>Source: </span>
+    <a
+      className="infoLink"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
+    >
+      Centers for Disease Control and Prevention
+    </a>
   </React.Fragment>
 );
 

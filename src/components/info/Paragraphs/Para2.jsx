@@ -23,10 +23,13 @@ const Para2 = () => (
       blood pressure, heart disease, lung disease, active cancer, dialysis, or
       diabetes) appear to develop serious illness more often than others
     </p>
-    <p>
-      Source: Public Health Ontario
-      (https://www.ontario.ca/page/2019-novel-coronavirus)
-    </p>
+    <span>Source: </span>
+    <a
+      className="infoLink"
+      href="https://www.ontario.ca/page/2019-novel-coronavirus"
+    >
+      Public Health Ontario
+    </a>
   </React.Fragment>
 );
 

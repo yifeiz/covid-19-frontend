@@ -16,10 +16,13 @@ const Para1 = () => (
         or eyes before washing your hands
       </li>
     </p>
-    <p>
-      Source: Centers for Disease Control and Prevention
-      (https://www.cdc.gov/coronavirus/2019-ncov/prepare/transmission.html)
-    </p>
+    <span>Source: </span>
+    <a
+      className="infoLink"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/transmission.html"
+    >
+      Centers for Disease Control and Prevention
+    </a>
   </p>
 );
 
