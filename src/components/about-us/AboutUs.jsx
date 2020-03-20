@@ -42,7 +42,7 @@ class AboutUs extends React.Component {
         </section>
         <section className="profiles">
           <div className="container-fluid d-flex justify-content-center">
-            <div className="row">
+            <div className="row about-us-row">
               {users.map(name => (
                 <div className="col-md-3">
                   <Profile name={name} />

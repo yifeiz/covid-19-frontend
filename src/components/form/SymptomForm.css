@@ -16,9 +16,9 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  padding-right: 15%;
-  padding-top: 15%;
+  padding-right: 10%;
   padding-left: 10%;
+  padding-top: 15%;
 }
 
 .frame {
@@ -41,11 +41,11 @@ th.answer {
   font-size: 1.5rem !important;
   font-weight: 600 !important;
   padding-top: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .MuiFormControlLabel-root {
-  margin-left: 10 !important;
+  margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
@@ -60,7 +60,22 @@ table {
 }
 
 .row {
-  padding-left: 120px;
+  margin: 0 !important;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 100px;
+}
+
+.col-md-7 {
+  padding: 0 !important;
+}
+
+#g-recaptcha {
+  float: right;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  display: block;
+  clear: both;
 }
 
 .makeStyles-root-91 {
@@ -68,5 +83,19 @@ table {
 }
 
 .MuiInputBase-input {
-  border: 2px solid #6c757d !important;
+  border: 2px solid white !important;
+}
+
+.submit {
+  padding-right: 20px;
+}
+
+.submit-button {
+  float: right;
+  display: block;
+  clear: both;
+}
+
+.formDisclaimer {
+  font-style: italic;
 }

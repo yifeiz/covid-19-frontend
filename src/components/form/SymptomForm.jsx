@@ -1,9 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Table, Container, Row, Col } from "reactstrap";
+import { Table, Row, Col } from "reactstrap";
 
-import { submitForm } from "../../actions";
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import FormControl from "@material-ui/core/FormControl";
@@ -18,6 +17,10 @@ class SymptomForm extends React.Component {
   state = { isVerified: false };
   recaptchaLoaded() {
     console.log("Loaded");
+  }
+
+  recaptchaExpired() {
+    this.setState({ isVerified: false });
   }
 
   verifyCallback = response => {
@@ -72,28 +75,22 @@ class SymptomForm extends React.Component {
   );
   renderQuestions = questions => {
     return questions.map(question => {
+      const label = `q${questions.indexOf(question) + 1}`;
+
       return (
-        <tr key={question}>
+        <tr key={label}>
           <p className="question">{question}</p>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="yes"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="yes"></Radio>
+              <Field value="y" name={label} component={this.renderRadioButton}>
+                <Radio value="y"></Radio>
               </Field>
             </Box>
           </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="no"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="no"></Radio>
+              <Field value="n" name={label} component={this.renderRadioButton}>
+                <Radio value="n"></Radio>
               </Field>
             </Box>
           </td>
@@ -103,7 +100,7 @@ class SymptomForm extends React.Component {
   };
 
   onSubmit = formValues => {
-    this.props.submitForm(formValues);
+    this.props.onSubmit(formValues);
   };
 
   onChange(value) {
@@ -121,63 +118,95 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Container fluid style={{ marginLeft: "5%" }}>
-        <Row>
-          <Col md="7">
-            <form
-              onSubmit={this.props.handleSubmit(this.onSubmit)}
-              className="ui form error"
-            >
-              <Table responsive>
-                <thead>
-                  <tr>
-                    <h4>Tell us how you feel!</h4>
-                    <th className="answer">Yes</th>
-                    <th className="answer">No</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.renderQuestions(questions)}
-                  <tr key="postal-code">
-                    <p className="question">
-                      What are the first three digits of your postal code?
-                    </p>
-                    <td colSpan="2">
-                      <Field
-                        name="postalCode"
-                        component={this.renderTextField}
-                      ></Field>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-              <Recaptcha
-                sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
-                render="explicit"
-                onloadCallback={this.recaptchaLoaded}
-                verifyCallback={this.verifyCallback}
-              />
+      <Row>
+        <Col md="7">
+          <form
+            onSubmit={this.props.handleSubmit(this.onSubmit)}
+            className="ui form error"
+          >
+            <h4>Tell us how you feel!</h4>
+            <p className="formDisclaimer">
+              The screening questionnaire is not meant to act as a tool to
+              diagnose, and the information you receive is not a medical
+              assessment. You cannot be diagnosed with COVID simply by taking
+              this survey online. If you are experiencing severe symptoms, seek
+              medical attention. This service is not a substitute for consulting
+              with your doctor. The information we supply is from publicly
+              available sources and is subject to frequent change.
+            </p>
+            <Table responsive>
+              <thead>
+                <tr>
+                  <th className="answer">Question</th>
+                  <th className="answer">Yes</th>
+                  <th className="answer">No</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.renderQuestions(questions)}
+                <tr key="postal-code">
+                  <p className="question">
+                    What are the first three digits of your postal code?
+                  </p>
+                  <td colSpan="2">
+                    <Field
+                      name="postalCode"
+                      component={this.renderTextField}
+                    ></Field>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            <Recaptcha
+              sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+              render="explicit"
+              onloadCallback={this.recaptchaLoaded}
+              verifyCallback={this.verifyCallback}
+              expiredCallback={this.recaptchaExpired}
+            />
+            <div className="submit">
               <button
-                className="ui button primary"
+                className="submit-button red-button"
                 disabled={!this.state.isVerified}
               >
                 Submit
               </button>
-            </form>
-          </Col>
-          <Col className="d-none d-md-block">
-            <span className="frame">
-              <img src={image} alt="Microscope Icon" />
-            </span>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </form>
+        </Col>
+        <Col className="d-none d-md-block">
+          <span className="frame">
+            <img src={image} alt="Microscope Icon" />
+          </span>
+        </Col>
+      </Row>
     );
   }
 }
 
 const validate = formValues => {
   const errors = {};
+  if (!formValues.q1) {
+    errors.q1 = "Required";
+  }
+  if (!formValues.q2) {
+    errors.q2 = "Required";
+  }
+  if (!formValues.q3) {
+    errors.q3 = "Required";
+  }
+  if (!formValues.q4) {
+    errors.q4 = "Required";
+  }
+  if (!formValues.q5) {
+    errors.q5 = "Required";
+  }
+  if (!formValues.q6) {
+    errors.q6 = "Required";
+  }
+  if (!formValues.q7) {
+    errors.q7 = "Required";
+  }
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal Code";
@@ -186,6 +215,7 @@ const validate = formValues => {
   ) {
     errors.postalCode = "Invalid Postal Code, should be formatted as A1A";
   }
+
   return errors;
 };
 
@@ -194,4 +224,4 @@ const formWrapped = reduxForm({
   validate
 })(SymptomForm);
 
-export default connect(null, { submitForm })(formWrapped);
+export default connect(null)(formWrapped);

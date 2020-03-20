@@ -58,19 +58,28 @@ p {
   letter-spacing: 0.5px;
 }
 
-.red-button:hover {
+.red-button:hover:enabled {
   border: 2px solid #f54263;
   background-color: white;
   color: #f54263;
   -webkit-transition: 0.09s ease-in;
 }
 
+.red-button:disabled {
+  background-color: #f8f9fa;
+  color: black;
+}
+
 button:focus {
   outline: 0 !important;
 }
 
+button:hover {
+  cursor: pointer !important;
+}
+
 .navbar {
-  height: 60px;
+  height: 75px;
   min-height: 40px;
 }
 
@@ -89,13 +98,15 @@ button:focus {
 }
 
 .navbar-collapse {
-  padding: 10px 75px;
+  padding: 0px 75px;
+  background-color: #f8f9fa;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    padding-top: 26.5px;
-    padding-bottom: 26.5px;
-    line-height: 27px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    line-height: 20px;
   }
 }
