@@ -45,7 +45,7 @@ th.answer {
 }
 
 .MuiFormControlLabel-root {
-  margin-left: 10 !important;
+  margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
@@ -60,7 +60,8 @@ table {
 }
 
 .row {
-  padding-left: 120px;
+  padding-left: 5%;
+  padding-right: 10%;
 }
 
 .makeStyles-root-91 {

@@ -157,10 +157,7 @@ class SymptomForm extends React.Component {
                 onloadCallback={this.recaptchaLoaded}
                 verifyCallback={this.verifyCallback}
               />
-              <button
-                className="ui button primary"
-                disabled={!this.state.isVerified}
-              >
+              <button className="red-button" disabled={!this.state.isVerified}>
                 Submit
               </button>
             </form>
