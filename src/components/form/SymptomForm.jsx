@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Table, Container, Row, Col } from "reactstrap";
 
-import { submitForm } from "../../actions";
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import FormControl from "@material-ui/core/FormControl";
@@ -15,7 +14,7 @@ import PostalTextField from "./FormCustomStyles";
 var Recaptcha = require("react-recaptcha");
 
 class SymptomForm extends React.Component {
-  state = { isVerified: false };
+  state = { isVerified: true };
   recaptchaLoaded() {
     console.log("Loaded");
   }
@@ -72,28 +71,22 @@ class SymptomForm extends React.Component {
   );
   renderQuestions = questions => {
     return questions.map(question => {
+      const label = `q${questions.indexOf(question) + 1}`;
+
       return (
-        <tr key={question}>
+        <tr key={label}>
           <p className="question">{question}</p>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="yes"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="yes"></Radio>
+              <Field value="y" name={label} component={this.renderRadioButton}>
+                <Radio value="y"></Radio>
               </Field>
             </Box>
           </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field
-                value="no"
-                name={question}
-                component={this.renderRadioButton}
-              >
-                <Radio value="no"></Radio>
+              <Field value="n" name={label} component={this.renderRadioButton}>
+                <Radio value="n"></Radio>
               </Field>
             </Box>
           </td>
@@ -103,7 +96,7 @@ class SymptomForm extends React.Component {
   };
 
   onSubmit = formValues => {
-    this.props.submitForm(formValues);
+    this.props.onSubmit(formValues);
   };
 
   onChange(value) {
@@ -194,4 +187,4 @@ const formWrapped = reduxForm({
   validate
 })(SymptomForm);
 
-export default connect(null, { submitForm })(formWrapped);
+export default connect(null)(formWrapped);

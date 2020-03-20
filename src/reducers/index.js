@@ -3,5 +3,5 @@ import { reducer as formReducer } from "redux-form";
 import submitReducer from "./submitReducer";
 export default combineReducers({
   form: formReducer,
-  response: submitReducer
+  HTML: submitReducer
 });
