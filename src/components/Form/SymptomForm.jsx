@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form";
 import { Table, Container, Row, Col } from "reactstrap";
 
 import { submitForm } from "../../actions";
-import image from "./science.png";
+import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -74,7 +74,7 @@ class SymptomForm extends React.Component {
     return questions.map(question => {
       return (
         <tr key={question}>
-          <th className="question">{question}</th>
+          <p className="question">{question}</p>
           <td className="answer">
             <Box display="flex" justifyContent="center">
               <Field
@@ -131,7 +131,7 @@ class SymptomForm extends React.Component {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th className="questionRow">Tell us how you feel!</th>
+                    <h4>Tell us how you feel!</h4>
                     <th className="answer">Yes</th>
                     <th className="answer">No</th>
                   </tr>
@@ -139,9 +139,9 @@ class SymptomForm extends React.Component {
                 <tbody>
                   {this.renderQuestions(questions)}
                   <tr key="postal-code">
-                    <th className="question">
+                    <p className="question">
                       What are the first three digits of your postal code?
-                    </th>
+                    </p>
                     <td colSpan="2">
                       <Field
                         name="postalCode"

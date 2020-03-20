@@ -1,7 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import icon from "../../assets/doctor.png";
-import world from "../../assets/world.png";
-import canada from "../../assets/canada.png";
 import "./home.css";
 
 class Home extends React.Component {
@@ -19,16 +18,10 @@ class Home extends React.Component {
               Your platform for up-to-date information about COVID-19 in your
               community and around the world.
             </p>
-            <button className="button">track your symptoms</button>
+            <Link to={"/track-your-symptoms"}>
+              <button className="red-button">track your symptoms</button>
+            </Link>
           </div>
-        </div>
-        <div className="world">
-          <img className="stat__image" src={world} alt="world" />
-          <p className="stat__text">214,894 cases</p>
-        </div>
-        <div className="canada">
-          <img className="stat__image" src={canada} alt="canada" />
-          <p className="stat__text">657 cases </p>
         </div>
       </div>
     );
