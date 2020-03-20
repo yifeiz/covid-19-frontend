@@ -1,43 +1,4 @@
-.home {
-  height: 90%;
-  width: 100%;
-  padding: 5%;
-  display: inline-flex;
-  position: relative;
-}
-
-.home__left {
-  width: 50%;
-  position: relative;
-}
-
-.home__icon {
-  width: 80%;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 20%;
-}
-
-.home__right {
-  width: 50%;
-  text-align: center;
-  position: relative;
-}
-
-.home__content {
-  position: absolute;
-  top: 45%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.title {
-  padding-bottom: 16px;
-}
-
-.description {
-  padding-bottom: 16px;
+.profile-boxes {
+  height: 400px;
+  width: 400px;
 }
