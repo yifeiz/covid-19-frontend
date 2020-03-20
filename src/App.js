@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import AboutUs from "./components/about-us/AboutUs";
 import Info from "./components/info/Info";
-import SymptomPage from "./components/Form/SymptomPage";
+import SymptomPage from "./components/form/SymptomPage";
 import history from "./history";
 import "./main.css";
 
