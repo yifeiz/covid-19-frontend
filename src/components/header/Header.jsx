@@ -67,6 +67,16 @@ class Header extends React.Component {
                 <h3>About Us</h3>
               </NavLink>
             </NavItem>
+            <NavItem className="navlink">
+              <NavLink
+                tag={RRNavLink}
+                exact
+                to="/heat-map"
+                activeClassName="active"
+              >
+                <h3>Heat Map</h3>
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
