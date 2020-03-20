@@ -4,6 +4,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Info from "./components/info/Info";
+import Footer from "./components/footer/Footer";
 import SymptomForm from "./components/form/SymptomForm";
 import history from "./history";
 import "./main.css";
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/info" exact component={Info} />
           <Route path="/track-your-symptoms" exact component={SymptomForm} />
         </Switch>
+        <Footer />
       </Router>
     </React.Fragment>
   );

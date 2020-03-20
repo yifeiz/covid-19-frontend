@@ -1,0 +1,8 @@
+.container {
+  height: 100% !important;
+}
+
+.cardStyle {
+  width: "60%" !important;
+  margin-bottom: "1rem" !important;
+}

@@ -6,6 +6,7 @@ import Para2 from "./Paragraphs/Para2";
 import Para3 from "./Paragraphs/Para3";
 import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
+import "./Info.css";
 
 class App extends Component {
   constructor(props) {
@@ -42,13 +43,16 @@ class App extends Component {
             <Card
               style={{
                 marginTop: index === 0 ? "3rem" : "auto",
-                width: "60%",
                 marginBottom: "1rem"
               }}
               key={index}
             >
               <CardHeader
-                style={{ borderBottom: "0px" }}
+                style={{
+                  borderBottom: "0px",
+                  backgroundColor: "#f8f9fa",
+                  borderRadius: "2px"
+                }}
                 onClick={this.toggle}
                 data-event={index}
               >
