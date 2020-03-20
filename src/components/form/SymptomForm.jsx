@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form";
 import { Table, Container, Row, Col } from "reactstrap";
 
 import { submitForm } from "../../actions";
-import image from "./science.png";
+import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -131,7 +131,7 @@ class SymptomForm extends React.Component {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th className="questionRow">Tell us how you feel!</th>
+                    <h4>Tell us how you feel!</h4>
                     <th className="answer">Yes</th>
                     <th className="answer">No</th>
                   </tr>
@@ -167,7 +167,7 @@ class SymptomForm extends React.Component {
           </Col>
           <Col className="d-none d-md-block">
             <span className="frame">
-              <img src={image} alt="Microscope Icon"/>
+              <img src={image} alt="Microscope Icon" />
             </span>
           </Col>
         </Row>

@@ -4,7 +4,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink
@@ -19,14 +18,16 @@ class Header extends React.Component {
 
   renderNav() {
     return (
-      <Navbar className="nav" color="light" light expand="md">
-        <NavbarBrand href="/">Flatten</NavbarBrand>
+      <Navbar color="light" light expand="md">
+        <NavLink href="/">
+          <h2>Flatten</h2>
+        </NavLink>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink tag={RRNavLink} exact to="/" activeClassName="active">
-                Home
+                <h3>Home</h3>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -36,7 +37,7 @@ class Header extends React.Component {
                 to="/Info"
                 activeClassName="active"
               >
-                Info
+                <h3>Info</h3>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -46,7 +47,7 @@ class Header extends React.Component {
                 to="/track-your-symptoms"
                 activeClassName="active"
               >
-                Track Your Symptoms
+                <h3>Track Your Symptoms</h3>
               </NavLink>
             </NavItem>
           </Nav>

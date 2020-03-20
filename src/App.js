@@ -1,11 +1,12 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
-import Header from "./Header";
-import Home from "./pages/Home";
-import Info from "./pages/Info";
-import SymptomForm from "./Form/SymptomForm";
-import history from "../history";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import Info from "./components/info/Info";
+import SymptomForm from "./components/form/SymptomForm";
+import history from "./history";
+import "./main.css";
 
 const App = () => {
   return (
