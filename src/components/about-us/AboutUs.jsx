@@ -42,30 +42,11 @@ class AboutUs extends React.Component {
         <section className="profiles">
           <div className="container-fluid d-flex justify-content-center">
             <div className="row">
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
-              <div className="col-md-3">
-                <Profile />
-              </div>
+              {users.map(name => (
+                <div className="col-md-3">
+                  <Profile name={name} />
+                </div>
+              ))}
             </div>
           </div>
         </section>

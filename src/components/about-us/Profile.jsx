@@ -9,7 +9,7 @@ const Profile = props => {
         <img src={placeholder} alt="profile" className="card-img-top" />
       </div>
       <div className="card-body text-dark">
-        <p className="card-text">Card Title</p>
+        <p className="card-text">{props.name}</p>
       </div>
     </div>
   );
