@@ -113,7 +113,7 @@ class SymptomForm extends React.Component {
       "Do you have a new or worsening cough?",
       "Are you experiencing shortness of breath (difficulty breathing, breathlessness)?",
       "Are you 60 years of age or older?",
-      "Do you have any of the following medical conditions: diabetes, heart disease, active cancer, history of stroke, asthma, COPD, dialysis",
+      "Do you have any of the following medical conditions: diabetes, heart disease, active cancer, history of stroke, asthma, COPD, dialysis, or are immunocompromised?",
       "Have you traveled outside of Canada within the last 14 days?",
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
@@ -162,11 +162,10 @@ class SymptomForm extends React.Component {
             <p className="footerDisclaimer">
               The screening questionnaire is not meant to act as a tool to
               diagnose, and the information you receive is not a medical
-              assessment. You cannot be diagnosed with COVID simply by taking
+              assessment. You cannot be diagnosed with COVID-19 simply by taking
               this survey online. If you are experiencing severe symptoms, seek
               medical attention. This service is not a substitute for consulting
-              with your doctor. The information we supply is from publicly
-              available sources and is subject to frequent change.
+              with your doctor."
             </p>
             <Recaptcha
               sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"

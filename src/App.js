@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import Info from "./components/info/Info";
 import SymptomPage from "./components/form/SymptomPage";
 import history from "./history";
+import Footer from "./components/footer/Footer";
 import "./main.css";
 
 const App = () => {
