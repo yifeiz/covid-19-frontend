@@ -69,8 +69,12 @@ button:focus {
   outline: 0 !important;
 }
 
+button:hover {
+  cursor: pointer !important;
+}
+
 .navbar {
-  height: 60px;
+  height: 75px;
   min-height: 40px;
 }
 
@@ -89,13 +93,15 @@ button:focus {
 }
 
 .navbar-collapse {
-  padding: 10px 75px;
+  padding: 0px 75px;
+  background-color: #f8f9fa;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    padding-top: 26.5px;
-    padding-bottom: 26.5px;
-    line-height: 27px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    line-height: 20px;
   }
 }

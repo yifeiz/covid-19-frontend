@@ -26,11 +26,17 @@ class Header extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} exact to="/" activeClassName="active">
+              <NavLink
+                className="navlink"
+                tag={RRNavLink}
+                exact
+                to="/"
+                activeClassName="active"
+              >
                 <h3>Home</h3>
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="navlink">
               <NavLink
                 tag={RRNavLink}
                 exact
@@ -42,6 +48,7 @@ class Header extends React.Component {
             </NavItem>
             <NavItem>
               <NavLink
+                className="navlink"
                 tag={RRNavLink}
                 exact
                 to="/track-your-symptoms"
