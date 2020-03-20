@@ -50,6 +50,16 @@ class Header extends React.Component {
                 <h3>Track Your Symptoms</h3>
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                tag={RRNavLink}
+                exact
+                to="/about-us"
+                activeClassName="active"
+              >
+                <h3>About Us</h3>
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
