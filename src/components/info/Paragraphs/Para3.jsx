@@ -12,14 +12,21 @@ const Para3 = () => (
       and water for at least 20 seconds (or use hand sanitizer made up of at
       least 60% alcohol), avoid touching your eyes nose or mouth with unwashed
       hands, avoid close contact with people who are sick, and avoid all
-      non-essential travel.
+      non-essential travel
     </p>
     <p>
-      As well, clean the following high-touch surfaces frequently with regular
-      household cleaners or diluted bleach (1 part bleach to 9 parts water):
-      toys, toilets, phones, electronics, door handles, bedside tables,
-      television remotes.
+      As well, clean high-touch surfaces frequently with regular household
+      cleaners or diluted bleach (1 part bleach to 9 parts water): such as toys,
+      toilets, phones, electronics, door handles, bedside tables, and television
+      remotes
     </p>
+    <span>Source: </span>
+    <a
+      className="infoLink"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
+    >
+      Centers for Disease Control and Prevention
+    </a>
   </React.Fragment>
 );
 

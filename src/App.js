@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import AboutUs from "./components/about-us/AboutUs";
 import Info from "./components/info/Info";
 import SymptomPage from "./components/form/SymptomPage";
+import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import Footer from "./components/footer/Footer";
 import "./main.css";
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/info" exact component={Info} />
           <Route path="/about-us" exact component={AboutUs} />
           <Route path="/track-your-symptoms" exact component={SymptomPage} />
+          <Route path="/heat-map" exact component={HeatMap} />
         </Switch>
         <Footer />
       </Router>

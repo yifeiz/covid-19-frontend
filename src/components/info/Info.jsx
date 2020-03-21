@@ -38,11 +38,12 @@ class App extends Component {
     const { cards, collapse } = this.state;
     return (
       <div className="container">
+        <h4>Frequently Asked Questions</h4>
         {cards.map((elem, index) => {
           return (
             <Card
               style={{
-                marginTop: index === 0 ? "3rem" : "auto",
+                marginTop: index === 0 ? "1rem" : "auto",
                 marginBottom: "1rem"
               }}
               key={index}
@@ -51,7 +52,8 @@ class App extends Component {
                 style={{
                   borderBottom: "0px",
                   backgroundColor: "#f8f9fa",
-                  borderRadius: "2px"
+                  borderRadius: "2px",
+                  fontFamily: "Open Sans"
                 }}
                 onClick={this.toggle}
                 data-event={index}

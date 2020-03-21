@@ -1,34 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import icon from "../../assets/doctor.png";
 import "./AboutUs.css";
 
 import Profile from "./Profile";
 
 class AboutUs extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    let users = [
-      "Shrey Jain",
-      "Yifei Zhang",
-      "Martin Staadacker",
-      "Charlie Chen",
-      "Sejal Jain",
-      "Maanav Dalal",
-      "Surya Krishnan",
-      "Arthur Allshire",
-      "Robert Li",
-      "Siyan Zhao",
-      "Rassam Yazdi",
-      "Owen Brake",
-      "William Wen",
-      "Minto Jain",
-      "Anastasia Razdaibiedina",
-      "Emily Tao",
-      "Benjamin Fine"
+    let volunteers = [
+      { name: "Shrey Jain", src: "./Headshots/shrey.png" },
+      { name: "Yifei Zhang", src: "./Headshots/yifei.png" },
+      { name: "Martin Staadacker", src: "./Headshots/martin.png" },
+      { name: "Arthur Allshire", src: "./Headshots/arthur.png" },
+      { name: "Charlie Chen", src: "./Headshots/charlie.png" },
+      { name: "Emily Tao", src: "./Headshots/emily.png" },
+      { name: "Surya Krishnan", src: "./Headshots/surya.png" },
+      { name: "Anastasia Razdaibiedina", src: "./Headshots/anastasia.png" },
+      { name: "Owen Brake", src: "./Headshots/owen.png" },
+      { name: "Samuel Hao", src: "./Headshots/samuel.png" },
+      { name: "William Wen", src: "./Headshots/william.png" },
+      { name: "Marzyeh Ghassemi", src: "./Headshots/marzyeh.png" },
+      { name: "Robert Li", src: "./Headshots/robert.png" },
+      { name: "Siyan Zhao", src: "./Headshots/siyan.png" },
+      { name: "Maanav Dalal", src: "./Headshots/maanav.png" },
+      { name: "Sejal Jain", src: "./Headshots/sejal.png" },
+      { name: "Minto Jain", src: "./Headshots/minto.png" },
+      { name: "Rassam Yazdi", src: "./Headshots/rassam.png" }
     ];
 
     return (
@@ -43,9 +38,13 @@ class AboutUs extends React.Component {
         <section className="profiles">
           <div className="container-fluid d-flex justify-content-center">
             <div className="row about-us-row">
-              {users.map(name => (
+              {volunteers.map((volunteer, index) => (
                 <div className="col-md-3">
-                  <Profile name={name} />
+                  <Profile
+                    name={volunteer.name}
+                    src={volunteer.src}
+                    key={index}
+                  />
                 </div>
               ))}
             </div>

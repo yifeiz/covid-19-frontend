@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Table, Row, Col } from "reactstrap";
+import { Table, Row, Col, Container } from "reactstrap";
 
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
@@ -118,78 +118,72 @@ class SymptomForm extends React.Component {
       "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?"
     ];
     return (
-      <Row>
-        <Col md="7">
-          <form
-            onSubmit={this.props.handleSubmit(this.onSubmit)}
-            className="ui form error"
-          >
-            <h4>Tell us how you feel!</h4>
-            <p className="formDisclaimer">
-              The following questionnaire is designed to help assess your risk
-              factors for COVID-19 infection and to provide guidance on how to
-              keep yourself, your family, and your community healthy. The
-              questions are based on the best available guidance from Canadian
-              public health agencies and other stakeholders, and will be updated
-              regularly. Your answers are collected anonymously, and will be
-              aggregated to help healthcare providers gauge the spread of
-              COVID-19.
-            </p>
-            <Table responsive>
-              <thead>
-                <tr>
-                  <th className="answer">Question</th>
-                  <th className="answer">Yes</th>
-                  <th className="answer">No</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.renderQuestions(questions)}
-                <tr key="postal-code">
-                  <p className="question">
-                    What are the first three characters of the postal code of
-                    your current residence?
-                  </p>
-                  <td colSpan="2">
-                    <Field
-                      name="postalCode"
-                      component={this.renderTextField}
-                    ></Field>
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-            <p className="footerDisclaimer">
-              The screening questionnaire is not meant to act as a tool to
-              diagnose, and the information you receive is not a medical
-              assessment. You cannot be diagnosed with COVID-19 simply by taking
-              this survey online. If you are experiencing severe symptoms, seek
-              medical attention. This service is not a substitute for consulting
-              with your doctor."
-            </p>
-            <Recaptcha
-              sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
-              render="explicit"
-              onloadCallback={this.recaptchaLoaded}
-              verifyCallback={this.verifyCallback}
-              expiredCallback={this.recaptchaExpired}
-            />
-            <div className="submit">
-              <button
-                className="submit-button red-button"
-                disabled={!this.state.isVerified}
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </Col>
-        <Col className="d-none d-md-block">
-          <span className="frame">
-            <img src={image} alt="Microscope Icon" />
-          </span>
-        </Col>
-      </Row>
+      <Container fluid>
+        <Row>
+          <Col md="7">
+            <form
+              onSubmit={this.props.handleSubmit(this.onSubmit)}
+              className="ui form error"
+            >
+              <h4>Tell us how you feel !</h4>
+              <p className="formDisclaimer">
+                The following questionnaire is designed to help assess your risk
+                factors for COVID-19 infection and to provide guidance on how to
+                keep yourself, your family, and your community healthy. The
+                questions are based on the best available guidance from Canadian
+                public health agencies and other stakeholders, and will be
+                updated regularly. Your answers are collected anonymously, and
+                will be aggregated to help healthcare providers gauge the spread
+                of COVID-19.
+              </p>
+              <Table responsive>
+                <thead>
+                  <tr>
+                    <th className="answer">Question</th>
+                    <th className="answer">Yes</th>
+                    <th className="answer">No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.renderQuestions(questions)}
+                  <tr key="postal-code">
+                    <p className="question">
+                      What are the first three characters of the postal code of
+                      your current residence?
+                    </p>
+                    <td colSpan="2">
+                      <Field
+                        name="postalCode"
+                        component={this.renderTextField}
+                      ></Field>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+              <Recaptcha
+                sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+                render="explicit"
+                onloadCallback={this.recaptchaLoaded}
+                verifyCallback={this.verifyCallback}
+                expiredCallback={this.recaptchaExpired}
+              />
+              <div className="submit">
+                <button
+                  className="submit-button red-button"
+                  disabled={!this.state.isVerified}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </Col>
+          <Col className="d-none d-md-block">
+            <span className="frame">
+              <img src={image} alt="Microscope Icon" />
+            </span>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
