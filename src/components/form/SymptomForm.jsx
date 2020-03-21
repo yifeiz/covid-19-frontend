@@ -57,11 +57,6 @@ const SymptomForm = props => {
     });
   };
 
-  const onSubmit = formValues => {
-    console.log(formValues);
-    props.onSubmit(formValues);
-  };
-
   return (
     <Container fluid>
       <Row>
@@ -70,13 +65,13 @@ const SymptomForm = props => {
           <p className="form-disclaimer">{FORM_DISCLAIMER}</p>
         </Col>
         <Col md="2" className="frame">
-          <img className="microscope-icon" src={image} alt="Microscope Icon" />
+          <img className="microscope-icon" src={image} alt="Microscope Icon"/>
         </Col>
       </Row>
       <Row>
         <Col md="12">
           <form
-            onSubmit={props.handleSubmit(onSubmit)}
+            onSubmit={props.handleSubmit(props.onSubmit)}
             className="ui form error"
           >
             <Table responsive>
