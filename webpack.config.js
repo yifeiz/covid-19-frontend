@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = function(_env, argv) {
   const isProduction = argv.mode === "production";
@@ -65,6 +66,7 @@ module.exports = function(_env, argv) {
       extensions: [".js", ".jsx"]
     },
     plugins: [
+      new CopyPlugin([{ from: "web.config", to: "web.config" }]),
       isProduction &&
         new MiniCssExtractPlugin({
           filename: "assets/css/[name].[contenthash:8].css",
