@@ -26,7 +26,7 @@ class Home extends React.Component {
             </p>
             <Link to={"/track-your-symptoms"}>
               <button className="red-button">
-                click to fill form and view map to see the spread of COVID
+                Click to fill form and view map to see the spread of COVID
               </button>
             </Link>
           </div>
