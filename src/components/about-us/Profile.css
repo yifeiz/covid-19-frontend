@@ -16,8 +16,9 @@
   padding-right: 0px !important;
 }
 
-.profilePic {
-  display: inline-block;
-  max-width: 100%;
-  height: 180px;
+.card:hover {
+  transition: 0.3s;
+  -webkit-box-shadow: 4px 4px 10px 0px rgb(211, 185, 185);
+  -moz-box-shadow: 4px 4px 10px 0px rgb(211, 185, 185);
+  box-shadow: 4px 4px 10px 0px rgb(211, 185, 185);
 }
