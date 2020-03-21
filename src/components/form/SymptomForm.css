@@ -49,12 +49,12 @@
 }
 
 th.answer {
+  text-align: center;
   font-family: "Open Sans";
   letter-spacing: 0.5px;
   font-size: 1.5rem !important;
   font-weight: 600 !important;
   padding-top: 40px;
-  text-align: left;
 }
 
 .MuiFormControlLabel-root {
