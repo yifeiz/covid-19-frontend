@@ -1,9 +1,9 @@
 .iframe-container {
   overflow: hidden;
-  padding-top: 56.25%;
   position: relative;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 1%;
 }
 
 .iframe-container iframe {
@@ -13,4 +13,11 @@
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+@media screen and (max-width: 370px) {
+  .iframe-container {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
