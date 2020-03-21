@@ -18,6 +18,11 @@ class SymptomPage extends React.Component {
     history.push("/Info");
   };
 
+  goToHeatMap = () => {
+    this.setState({ modalIsOpen: !this.state.modalIsOpen });
+    history.push("/heat-map");
+  };
+
   renderModal(data) {
     return (
       <Modal
@@ -30,6 +35,9 @@ class SymptomPage extends React.Component {
         <ModalFooter>
           <Button color="primary" onClick={this.exitModal}>
             More Info
+          </Button>
+          <Button color="primary" onClick={this.goToHeatMap}>
+            View Heat Map
           </Button>
         </ModalFooter>
       </Modal>
