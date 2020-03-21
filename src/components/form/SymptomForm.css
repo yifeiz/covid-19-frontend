@@ -83,7 +83,7 @@ table {
 }
 
 .MuiInputBase-input {
-  border: 2px solid white !important;
+  border: 2px solid #f8f9fa !important;
 }
 
 .submit {
@@ -97,5 +97,10 @@ table {
 }
 
 .formDisclaimer {
+  font-style: italic;
+}
+
+.footerDisclaimer {
+  padding-bottom: 1em;
   font-style: italic;
 }

@@ -1,0 +1,11 @@
+.footer {
+  float: bottom;
+  bottom: 0;
+  font-style: italic;
+  padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  background-color: #f8f9fa;
+  margin-top: auto;
+}

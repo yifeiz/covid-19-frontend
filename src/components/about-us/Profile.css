@@ -1,0 +1,15 @@
+.card-img-top {
+  position: static;
+  padding: 0;
+  max-width: 100%;
+}
+
+.card-text {
+  padding-top: 0px;
+}
+
+.about-us-row {
+  width: 50% !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
