@@ -29,7 +29,7 @@ class Header extends React.Component {
         </NavLink>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="nav-fill w-50" navbar>
+          <Nav className="nav-fill w-100" navbar>
             <NavItem>
               <NavLink
                 className="navlink"
