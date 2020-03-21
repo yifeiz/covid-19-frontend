@@ -5,7 +5,7 @@ const Profile = props => {
   return (
     <div className="card text-center">
       <div className="overflow">
-        <a href="https://www.linkedin.com/in/yifei-zhang1/">
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
           <img
             src={require(`${props.src}`)}
             alt={props.name}
