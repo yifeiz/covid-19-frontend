@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Table, Row, Col, Container } from "reactstrap";
+import Recaptcha from "react-recaptcha";
 
 import { validate } from "./SymptomFormUtils";
 import {
@@ -14,7 +15,6 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-var Recaptcha = require("react-recaptcha");
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
