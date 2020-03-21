@@ -7,7 +7,6 @@ import Recaptcha from "react-recaptcha";
 import { validate } from "./SymptomFormUtils";
 import {
   FORM_HEADER,
-  FORM_DISCLAIMER,
   FORM_QUESTIONS,
   FORM_POSTAL_CODE_QUESTION
 } from "./SymptomFormConstants";
@@ -18,21 +17,21 @@ import { PostalTextField, RadioButton } from "./SymptomFormFields";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
-  
+
   const recaptchaLoaded = () => {
     console.log("Loaded");
-  }
+  };
 
   const recaptchaExpired = () => {
     setIsVerified(false);
-  }
+  };
 
   const verifyCallback = response => {
     if (response) {
       setIsVerified(true);
     }
   };
-  
+
   const renderQuestions = questions => {
     return questions.map(question => {
       const label = `q${questions.indexOf(question) + 1}`;
@@ -42,14 +41,20 @@ const SymptomForm = props => {
           <p className="question">{question}</p>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field name={label} radioValue="y" component={RadioButton}>
-              </Field>
+              <Field
+                name={label}
+                radioValue="y"
+                component={RadioButton}
+              ></Field>
             </Box>
           </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
-              <Field name={label} radioValue="n" component={RadioButton}>
-              </Field>
+              <Field
+                name={label}
+                radioValue="n"
+                component={RadioButton}
+              ></Field>
             </Box>
           </td>
         </tr>
@@ -57,15 +62,30 @@ const SymptomForm = props => {
     });
   };
 
+  const FORM_DISCLAIMER = (
+    <p>
+      Your answers are collected <strong>anonymously</strong>, and will be
+      aggregated to help healthcare providers gauge the spread of COVID-19. The
+      following questionnaire is designed to help assess your risk factors for
+      COVID-19 infection to inform healthcare systems on guidance on how to keep
+      yourself, your family, and your community healthy through the preparation
+      allocation of resources are conducted in the most efficient manner. The
+      questions are based on the best available guidance from Canadian public
+      health agencies and other stakeholders, and will be updated regularly. You
+      cannot be diagnosed with COVID simply by taking this survey online. If you
+      are experiencing severe symptoms, seek medical attention.
+    </p>
+  );
+
   return (
     <Container fluid>
       <Row>
-        <Col md="10" >
+        <Col md="10">
           <h4 className="header">{FORM_HEADER}</h4>
           <p className="form-disclaimer">{FORM_DISCLAIMER}</p>
         </Col>
         <Col md="2" className="frame">
-          <img className="microscope-icon" src={image} alt="Microscope Icon"/>
+          <img className="microscope-icon" src={image} alt="Microscope Icon" />
         </Col>
       </Row>
       <Row>
@@ -87,7 +107,7 @@ const SymptomForm = props => {
                 <tr key="postal-code">
                   <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
                   <td colSpan="2">
-                    <Field name="postalCode" component={PostalTextField}/>
+                    <Field name="postalCode" component={PostalTextField} />
                   </td>
                 </tr>
               </tbody>
@@ -114,7 +134,7 @@ const SymptomForm = props => {
       </Row>
     </Container>
   );
-}
+};
 
 const formWrapped = reduxForm({
   form: "SymptomForm",

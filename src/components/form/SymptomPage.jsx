@@ -24,14 +24,32 @@ class SymptomPage extends React.Component {
   };
 
   renderModal(data) {
+    const modalDescription = (
+      <p>
+        Your answers are collected <strong>anonymously</strong>, and will be
+        aggregated to help healthcare providers gauge the spread of COVID-19.
+        The following questionnaire is designed to help assess your risk factors
+        for COVID-19 infection to inform healthcare systems on guidance on how
+        to keep yourself, your family, and your community healthy through the
+        preparation allocation of resources are conducted in the most efficient
+        manner. The questions are based on the best available guidance from
+        Canadian public health agencies and other stakeholders, and will be
+        updated regularly. You cannot be diagnosed with COVID simply by taking
+        this survey online. If you are experiencing severe symptoms, seek
+        medical attention.
+      </p>
+    );
+
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
         toggle={this.toggleModal}
         size="lg"
       >
-        <ModalHeader toggle={this.toggleModal}>Modal title</ModalHeader>
-        <ModalBody>{this.renderResponse(data)}</ModalBody>
+        <ModalHeader toggle={this.toggleModal}>
+          Thank you for your contribution!
+        </ModalHeader>
+        <ModalBody>{modalDescription}</ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.exitModal}>
             More Info
