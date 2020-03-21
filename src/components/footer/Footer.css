@@ -1,5 +1,11 @@
 .footer {
+  position: relative;
+  float: bottom;
+  top: 25%;
+  bottom: 0;
+  float: bottom;
   font-style: italic;
-  padding: 2% 10%;
+  padding: 1% 10%;
+  text-align: left;
   background-color: #f8f9fa;
 }
