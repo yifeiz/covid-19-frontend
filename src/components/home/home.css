@@ -1,27 +1,35 @@
 .home {
-  height: 90%;
+  height: 82%;
   width: 100%;
-  padding: 5%;
   display: inline-flex;
   position: relative;
 }
 
+.home__logo {
+  width: 600px;
+}
+
 .home__left {
+  background-image: url("../../assets/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 50%;
   position: relative;
 }
 
-.home__icon {
-  width: 80%;
+.home__label {
   position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
+  width: 400px;
+  bottom: 0;
   right: 0;
-  bottom: 20%;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  color: white !important;
+  text-align: right;
 }
 
 .home__right {
+  margin: 10%;
   width: 50%;
   text-align: center;
   position: relative;
@@ -34,10 +42,10 @@
   transform: translateY(-50%);
 }
 
-.title {
-  padding-bottom: 16px;
+.home__title {
+  padding-bottom: 16px !important;
 }
 
-.description {
-  padding-bottom: 16px;
+.home__subtitle {
+  padding-bottom: 32px !important;
 }

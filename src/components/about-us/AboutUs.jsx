@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import icon from "../../assets/doctor.png";
 import "./AboutUs.css";
 
 import Profile from "./Profile";

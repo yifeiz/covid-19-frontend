@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink as RRNavLink } from "react-router-dom";
+import logo from "../../assets/logo_nav.png";
 import {
   Collapse,
   Navbar,
@@ -24,11 +25,11 @@ class Header extends React.Component {
     return (
       <Navbar color="light" light expand="md">
         <NavLink href="/">
-          <h2>Flatten</h2>
+          <img className="header__logo" src={logo} />
         </NavLink>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="nav-fill w-100" navbar>
+          <Nav className="nav-fill w-50" navbar>
             <NavItem>
               <NavLink
                 className="navlink"
@@ -64,7 +65,7 @@ class Header extends React.Component {
                 <h3>Track Your Symptoms</h3>
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="navlink">
               <NavLink
                 tag={RRNavLink}
                 exact

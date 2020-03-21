@@ -10,6 +10,7 @@ body {
 
 #root {
   height: 100%;
+  min-height: 700px;
   width: 100%;
 }
 
@@ -22,7 +23,8 @@ h1 {
 h2 {
   font-family: "Open Sans";
   letter-spacing: 2px;
-  font-size: 1rem !important;
+  font-weight: 600 !important;
+  font-size: 1.2rem !important;
   padding-left: 60px;
   color: black !important;
 }
@@ -30,7 +32,7 @@ h2 {
 h3 {
   font-family: "Open Sans";
   letter-spacing: 0.5px;
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 h4 {
@@ -43,7 +45,8 @@ h4 {
 
 p {
   font-family: "Open Sans";
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1px;
+  font-size: 1.1rem;
 }
 
 .red-button {
@@ -51,10 +54,11 @@ p {
   border: none;
   border-radius: 24px !important;
   height: 60px;
-  width: 300px;
+  width: 100%;
   color: white;
   font-family: "Open Sans";
   font-weight: 300;
+  font-size: 1.3rem !important;
   letter-spacing: 0.5px;
 }
 
@@ -78,8 +82,12 @@ button:hover {
   cursor: pointer !important;
 }
 
+.header__logo {
+  width: 140px;
+}
+
 .navbar {
-  height: 75px;
+  height: 8%;
   min-height: 40px;
 }
 
@@ -101,6 +109,10 @@ button:hover {
   padding: 0px 75px;
   background-color: #f8f9fa;
   z-index: 2;
+}
+
+.nav-link {
+  width: max-content !important;
 }
 
 @media (min-width: 768px) {
