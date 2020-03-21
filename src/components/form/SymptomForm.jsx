@@ -80,14 +80,14 @@ class SymptomForm extends React.Component {
       return (
         <tr key={label}>
           <p className="question">{question}</p>
-          <td className="answer">
+          <td colSpan="1" className="answer">
             <Box display="flex" justifyContent="center">
               <Field value="y" name={label} component={this.renderRadioButton}>
                 <Radio value="y"></Radio>
               </Field>
             </Box>
           </td>
-          <td className="answer">
+          <td conSpan="1" className="answer">
             <Box display="flex" justifyContent="center">
               <Field value="n" name={label} component={this.renderRadioButton}>
                 <Radio value="n"></Radio>
@@ -120,12 +120,8 @@ class SymptomForm extends React.Component {
     return (
       <Container fluid>
         <Row>
-          <Col md="7">
-            <form
-              onSubmit={this.props.handleSubmit(this.onSubmit)}
-              className="ui form error"
-            >
-              <h4>Tell us how you feel !</h4>
+          <Col md="10" >
+              <h4 className="header">Tell us how you feel!</h4>
               <p className="formDisclaimer">
                 The following questionnaire is designed to help assess your risk
                 factors for COVID-19 infection and to provide guidance on how to
@@ -136,6 +132,17 @@ class SymptomForm extends React.Component {
                 will be aggregated to help healthcare providers gauge the spread
                 of COVID-19.
               </p>
+          </Col>
+          <Col md="2" className="frame">
+            <img className="microscope-icon" src={image} alt="Microscope Icon" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md="12">
+            <form
+              onSubmit={this.props.handleSubmit(this.onSubmit)}
+              className="ui form error"
+            >
               <Table responsive>
                 <thead>
                   <tr>
@@ -160,6 +167,12 @@ class SymptomForm extends React.Component {
                   </tr>
                 </tbody>
               </Table>
+            </form>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="12">
+            <div className="captcha">
               <Recaptcha
                 sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
                 render="explicit"
@@ -167,22 +180,18 @@ class SymptomForm extends React.Component {
                 verifyCallback={this.verifyCallback}
                 expiredCallback={this.recaptchaExpired}
               />
-              <div className="submit">
-                <button
-                  className="submit-button red-button"
-                  disabled={!this.state.isVerified}
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </Col>
-          <Col className="d-none d-md-block">
-            <span className="frame">
-              <img src={image} alt="Microscope Icon" />
-            </span>
+            </div>
+            <div className="submit">
+              <button
+                className="submit-button red-button"
+                disabled={!this.state.isVerified}
+              >
+                Submit
+              </button>
+            </div>
           </Col>
         </Row>
+
       </Container>
     );
   }
