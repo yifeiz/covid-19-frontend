@@ -20,7 +20,8 @@ class Home extends React.Component {
           <div className="home__content">
             <img className="home__logo" src={logo} />
             <p className="home__subtitle">
-              Your platform providing real time information regarding the
+              A platform for collecting and providing real time information
+              regarding the
               <b> true </b>
               spread of COVID-19 in your local community and around the nation.
             </p>
