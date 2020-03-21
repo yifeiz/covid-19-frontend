@@ -35,6 +35,53 @@
   position: relative;
 }
 
+@media screen and (max-width: 700px) {
+  .home__left {
+    display: none;
+  }
+
+  .home__right {
+    width: 100%;
+  }
+
+  .home__logo {
+    width: 95%;
+  }
+
+  .header__logo {
+    width: 86px !important;
+  }
+
+  .red-button {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .home {
+    flex-wrap: wrap-reverse !important;
+    text-align: center;
+  }
+
+  .home__left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .home__right {
+    width: 100%;
+    height: 50%;
+    margin: 0px;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .home__content {
+    top: 0% !important;
+    transform: none !important;
+  }
+}
+
 .home__content {
   position: absolute;
   top: 45%;
