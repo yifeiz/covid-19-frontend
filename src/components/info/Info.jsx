@@ -38,8 +38,8 @@ class App extends Component {
   render() {
     const { cards, collapse } = this.state;
     return (
-      <div className="container">
-        <h4>Frequently Asked Questions</h4>
+      <div className="info__container">
+        <h4 className="info__title">Frequently Asked Questions</h4>
         {cards.map((elem, index) => {
           return (
             <Card

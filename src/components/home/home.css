@@ -1,3 +1,9 @@
+@media screen and (max-width: 700px) {
+  .home__subtitle {
+    font-size: 1rem;
+  }
+}
+
 .home {
   height: 82%;
   width: 100%;
