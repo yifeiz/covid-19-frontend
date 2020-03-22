@@ -9,18 +9,21 @@ const Para6 = () => (
       getting an infection and developing severe complications due to their
       health, social and economic circumstances.
     </p>
-    <p>Vulnerable populations may include anyone who is:</p>
-    <ul class="infoList">
-      <li>an older adult </li>
-      <li>
-        has underlying medical conditions (e.g. heart disease, hypertension,
-        diabetes, chronic respiratory diseases, cancer)
-      </li>
-      <li>
-        at risk due to a compromised immune system from a medical condition or
-        treatment (e.g. chemotherapy)
-      </li>
-    </ul>
+    <p>
+      Vulnerable populations may include anyone who is:
+      <ul class="infoList">
+        <li>an older adult </li>
+        <li>
+          has underlying medical conditions (e.g. heart disease, hypertension,
+          diabetes, chronic respiratory diseases, cancer)
+        </li>
+        <li>
+          at risk due to a compromised immune system from a medical condition or
+          treatment (e.g. chemotherapy)
+        </li>
+      </ul>
+    </p>
+
     <span>Source: </span>
     <a
       className="infoLink"

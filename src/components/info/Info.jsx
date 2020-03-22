@@ -9,6 +9,7 @@ import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
 import Disclaimer from "../disclaimer/disclaimer";
 import Para6 from "./Paragraphs/Para6";
+import Para7 from "./Paragraphs/Para7";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 
@@ -29,7 +30,8 @@ class App extends Component {
         "How do I prevent myself and my loved ones from getting COVID-19?",
         "When should I see my family doctor or go to the hospital?",
         "What is social distancing and how do I do it?",
-        `What makes a citizen "Vulnerable"?`
+        `What makes a citizen "Vulnerable"?`,
+        `What makes a citizen a "Potential Case"?`
       ]
     };
   }
@@ -87,6 +89,7 @@ class App extends Component {
                     {index === 4 && <Para4 />}
                     {index === 5 && <Para5 />}
                     {index === 6 && <Para6 />}
+                    {index === 7 && <Para7 />}
                   </CardBody>
                 </Collapse>
               </Card>
