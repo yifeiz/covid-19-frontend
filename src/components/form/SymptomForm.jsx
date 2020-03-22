@@ -133,6 +133,11 @@ const SymptomForm = props => {
                 >
                   Submit
                 </button>
+                {!isVerified && (
+                  <body className="error">
+                    Please make sure to fill out all of the questions above.
+                  </body>
+                )}
               </div>
             </form>
           </Col>

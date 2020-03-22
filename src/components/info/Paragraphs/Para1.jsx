@@ -16,7 +16,6 @@ const Para1 = () => (
           nose, or eyes before washing your hands
         </li>
     </p>
-
     <span>Source: </span>
     <a
       className="infoLink"
