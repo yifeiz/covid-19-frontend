@@ -2,7 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 import volunteers from "./Volunteers"
 import Profile from "./Profile";
-import Footer from "../footer/Footer";
 
 const AboutUs = () => (
   <div className="App">

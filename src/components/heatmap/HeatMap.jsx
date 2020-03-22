@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./heatmap.css";
-import Footer from "../footer/Footer";
 
 class HeatMap extends React.Component {
   state = {
@@ -36,7 +35,9 @@ class HeatMap extends React.Component {
     const ratio = `${this.state.ratio}%`;
     return (
       <div className="iframe-container" style={{ paddingTop: ratio }}>
-        <iframe src="https://map.flatten.ca/">Sorry, the heat-map did not load.</iframe>
+        <iframe src="https://map.flatten.ca/">
+          Sorry, the heat-map did not load.
+        </iframe>
       </div>
     );
   }

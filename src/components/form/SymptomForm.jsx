@@ -14,7 +14,6 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import Footer from "../footer/Footer";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -79,7 +78,6 @@ const SymptomForm = props => {
   );
 
   return (
-
     <div className="form__padding">
       <Container fluid>
         <Row>
