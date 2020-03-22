@@ -41,6 +41,7 @@ const volunteers = [
   },
   {
     name: "Owen Brake",
+    src: "./Headshots/owen.png",
     link: "https://OwenBrake.com"
   },
   {

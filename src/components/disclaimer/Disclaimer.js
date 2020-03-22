@@ -2,9 +2,9 @@ import React from "react";
 
 import "./Disclaimer.css";
 
-const Disclaimer = props => (
+const Disclaimer = ({ children }) => (
   <div className="Disclaimer">
-    <p>{props.text}</p>
+    {children}
   </div>
 );
 
