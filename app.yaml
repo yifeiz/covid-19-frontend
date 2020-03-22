@@ -1,11 +1,22 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+# [START runtime]
+runtime: nodejs10
+# [END runtime]
 
+# [START handlers]
 handlers:
+  - url: /assets/js/(.*)
+    static_files: dist/assets/js/\1
+    upload: dist/assets/js/(.*)
+  - url: /assets/css/(.*)
+    static_files: dist/assets/css/\1
+    upload: dist/assets/css/(.*)
+  - url: /static/media/(.*)
+    static_files: dist/static/media/\1
+    upload: dist/static/media/(.*)
   - url: /
     static_files: dist/index.html
     upload: dist/index.html
-
-  - url: /
-    static_dir: dist
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
+# [END handlers]
