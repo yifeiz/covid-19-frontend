@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutUs.css";
 
 import Profile from "./Profile";
+import Footer from "../footer/Footer";
 
 class AboutUs extends React.Component {
   render() {
@@ -122,6 +123,7 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
     );
   }
