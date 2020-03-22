@@ -7,7 +7,7 @@ const Para1 = () => (
     <p>
       COVID-19 is believed to be spread most commonly from an infected person
       through:
-      <ul className="infoList">
+      <ul>
         <li>Respiratory droplets generated when they cough or sneeze</li>
         <li>
           Close, prolonged personal contact such as touching or shaking hands

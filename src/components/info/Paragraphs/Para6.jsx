@@ -11,7 +11,7 @@ const Para6 = () => (
     </p>
     <p>
       Vulnerable populations may include anyone who is:
-      <ul class="infoList">
+      <ul>
         <li>an older adult </li>
         <li>
           has underlying medical conditions (e.g. heart disease, hypertension,

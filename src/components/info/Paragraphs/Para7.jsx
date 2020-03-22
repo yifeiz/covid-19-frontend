@@ -9,15 +9,18 @@ const Para7 = () => (
       <ul class="infoList">
         <li>
           with fever (over 38 degrees Celsius) and/or new onset of (or
-          exacerbation of chronic) cough <strong>AND</strong>
+          exacerbation of chronic) cough
         </li>
+        <span>
+          <strong>AND</strong>
+        </span>
         <li>
           who meets the COVID-19 exposure criteria where:
           <ul>
             <li>
-              In the 14 days before the onset of illness, a person who has:
+              In the 14 days before onset of illness, a person who has:
               travelled to an affected area <strong>OR</strong> has had close
-              contact with a confirmed or probable case of COVID-19
+              contact with a confirmed or probable case of COVID-19{" "}
               <strong>OR</strong> had close contact with a person with acute
               respiratory illness who has been to an affected area within 14
               days prior to their illness onset <strong>OR</strong> had
@@ -44,12 +47,19 @@ const Para7 = () => (
         </li>
       </ul>
     </p>
+    <p className="infoNote">
+      Note: A close contact is defined as a person who provided care for the
+      patient, including healthcare workers, family members or other caregivers,
+      or who had other similar close physical contact or who lived with or
+      otherwise had close prolonged contact with a probable or confirmed case
+      while the case was ill.
+    </p>
 
     <span>Source: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.canada.ca/en/public-health/services/publications/diseases-conditions/vulnerable-populations-covid-19.html"
+      href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/health-professionals/national-case-definition.html"
     >
       Public Health Agency of Canada
     </a>
