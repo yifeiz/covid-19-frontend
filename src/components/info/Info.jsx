@@ -44,7 +44,7 @@ class App extends Component {
           return (
             <Card
               style={{
-                marginTop: index === 0 ? "1rem" : "auto",
+                marginTop: index === 0 ? "2rem" : "auto",
                 marginBottom: "1rem"
               }}
               key={index}

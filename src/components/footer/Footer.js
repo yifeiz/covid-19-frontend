@@ -3,7 +3,7 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => (
-  <div className="footer">
+  <div className="dislaimerFooter">
     <p>
       We are a group of scientists, engineers and clinicians who have created an
       online screening tool to provide information on COVID-19. This app is

@@ -1,4 +1,4 @@
-.footer {
+.dislaimerFooter {
   position: absolute;
   font-style: italic;
   padding: 1% 13%;
@@ -9,7 +9,30 @@
 }
 
 @media screen and (max-width: 600px) {
-  .footer {
+  .dislaimerFooter {
     margin-top: 15vh;
+    padding: 5% 13%;
+  }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 500px) and (min-width: 800px) and (min-height: 3px) {
+  .dislaimerFooter {
+    margin-top: 45vh;
+    padding: 3% 13%;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1100px) and (min-width: 700px) and (min-height: 1000px) {
+  /*Ipad*/
+  .dislaimerFooter {
+    padding: 3% 13%;
+    margin-top: 45vh;
+  }
+}
+
+@media screen and (max-width: 1100px) and (max-height: 1400px) and (min-width: 900px) and (min-height: 1100px) {
+  .dislaimerFooter {
+    padding: 3% 13%;
+    margin-top: 60vh;
   }
 }
