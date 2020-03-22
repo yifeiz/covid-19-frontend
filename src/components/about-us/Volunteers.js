@@ -21,6 +21,7 @@ const volunteers = [
   },
   {
     name: "Charlie Chen",
+    src: "./Headshots/charlie.png",
     link: "https://www.linkedin.com/in/hyu-chen/"
   },
   {
@@ -68,7 +69,8 @@ const volunteers = [
     link: "https://linkedin.com/in/wu-robert"
   },
   {
-    name: "Siyan Zhao"
+    name: "Siyan Zhao",
+    src: "./Headshots/siyan.png"
   },
   {
     name: "Maanav Dalal",

@@ -14,7 +14,7 @@ import "./main.css";
 const App = () => {
   return (
     <React.Fragment>
-      <Router history={history}>
+      <Router history={history} style={{ height: "auto" }}>
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -23,7 +23,6 @@ const App = () => {
           <Route path="/track-your-symptoms" exact component={SymptomPage} />
           <Route path="/heat-map" exact component={HeatMap} />
         </Switch>
-        <Footer />
       </Router>
     </React.Fragment>
   );
