@@ -2,7 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 
 import Profile from "./Profile";
-import Footer from "../footer/Footer";
 
 class AboutUs extends React.Component {
   render() {
@@ -50,7 +49,7 @@ class AboutUs extends React.Component {
       {
         name: "Owen Brake",
         src: "./Headshots/owen.png",
-        link: "OwenBrake.com"
+        link: "https://OwenBrake.com"
       },
       {
         name: "Samuel Hao",
@@ -79,7 +78,8 @@ class AboutUs extends React.Component {
       },
       {
         name: "Siyan Zhao",
-        src: "./Headshots/siyan.png"
+        src: "./Headshots/siyan.png",
+        link: "https://www.linkedin.com/in/siyanzhao/"
       },
       {
         name: "Maanav Dalal",
@@ -99,9 +99,9 @@ class AboutUs extends React.Component {
     ];
 
     return (
-      <div className="App">
+      <div className="about-us">
         <section>
-          <h1 className="title"> About Us </h1>
+          <h4 className="title"> The Team </h4>
           <p className="description">
             Here are the amazing volunteers who made this project possible!
           </p>
@@ -123,7 +123,6 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </section>
-        <Footer />
       </div>
     );
   }

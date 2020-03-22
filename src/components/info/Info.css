@@ -1,8 +1,24 @@
-.container {
-  height: 100% !important;
+@media screen and (max-width: 700px) {
+  .info__title {
+    font-size: 1.5rem !important;
+  }
+
+  .info__container {
+    height: 100% !important;
+    padding: 2% 10% !important;
+  }
+}
+
+.info__title {
+  padding-bottom: 10px;
+}
+
+.info__container {
+  height: max-content !important;
+  padding: 3% 20%;
 }
 
 .cardStyle {
-  width: "60%" !important;
-  margin-bottom: "1rem" !important;
+  width: 60% !important;
+  margin-bottom: 1rem !important;
 }

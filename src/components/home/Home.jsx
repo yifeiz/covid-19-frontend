@@ -8,12 +8,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         <div className="home__left">
-          <p className="home__label">
-            <i>
-              Fill in the form to see the heat-map for the spread of COVID-19 in
-              your community.
-            </i>
-          </p>
+          <p className="home__label"></p>
         </div>
 
         <div className="home__right">
@@ -21,9 +16,8 @@ class Home extends React.Component {
             <img className="home__logo" src={logo} />
             <p className="home__subtitle">
               A platform for collecting and providing real time information
-              regarding the
-              <b> true </b>
-              spread of COVID-19 in your local community and around the nation.
+              regarding the spread of COVID-19 in your local community and
+              around the nation.
             </p>
             <Link to={"/track-your-symptoms"}>
               <button className="red-button">
