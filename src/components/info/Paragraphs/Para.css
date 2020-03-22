@@ -1,3 +1,7 @@
 .infoLink {
   text-decoration: none !important;
 }
+
+.infoNote {
+  font-style: italic;
+}

@@ -14,6 +14,7 @@ const Para0 = () => (
     <span>Source: </span>
     <a
       className="infoLink"
+      target="_blank"
       href="https://www.who.int/health-topics/coronavirus"
     >
       World Health Organization

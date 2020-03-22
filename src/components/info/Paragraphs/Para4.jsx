@@ -10,7 +10,7 @@ const Para4 = () => (
       unit, or your primary care provider, but know that there are no treatments
       at this time and you will be instructed to stay home and practice methods
       of social distancing (described below). Do not visit an assessment centre
-      unless you have been referred by a health care professional.
+      unless you have been referred by a healthcare professional.
     </p>
     <p>
       If you are seriously ill or experiencing severe symptoms (severe shortness
@@ -23,6 +23,7 @@ const Para4 = () => (
     <span>Sources: </span>
     <a
       className="infoLink"
+      target="_blank"
       href="https://www.ontario.ca/page/2019-novel-coronavirus"
     >
       Government of Ontario
@@ -30,6 +31,7 @@ const Para4 = () => (
     <span>, </span>
     <a
       className="infoLink"
+      target="_blank"
       href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
     >
       Centers for Disease Control and Prevention

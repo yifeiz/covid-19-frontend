@@ -26,6 +26,7 @@ const Para2 = () => (
     <span>Source: </span>
     <a
       className="infoLink"
+      target="_blank"
       href="https://www.ontario.ca/page/2019-novel-coronavirus"
     >
       Public Health Ontario

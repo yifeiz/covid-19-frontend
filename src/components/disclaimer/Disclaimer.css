@@ -1,12 +1,6 @@
-@media screen and (max-width: 700px) {
-  p {
-    font-size: 1rem !important;
-  }
-}
-
 .Disclaimer {
   font-style: italic;
-  padding: 1.2% 13% 1.2% 13%;
+  padding: 1.2% 13%;
   text-align: left;
   background-color: #f8f9fa;
 }
@@ -14,27 +8,28 @@
 @media screen and (max-width: 500px) and (max-height: 900px) {
   /*Mobile Phone*/
   .Disclaimer {
-    padding: 5% 13% 5% 13%;
+    font-size: 1rem !important;
+    padding: 5% 8%;
   }
 }
 
 @media screen and (max-width: 900px) and (max-height: 500px) {
   /*Landscape Mobile Phone*/
   .Disclaimer {
-    padding: 3% 13% 3% 13%;
+    padding: 3% 13%;
   }
 }
 
 @media screen and (max-height: 1100px) and (max-width: 850px) and (min-height: 900px) and (min-width: 700px) {
   /*Tablet*/
   .Disclaimer {
-    padding: 2% 13% 2% 13%;
+    padding: 2% 13%;
   }
 }
 
 @media screen and (max-width: 1100px) and (max-height: 850px) and (min-width: 900px) and (min-height: 700px) {
   /*Landscape Tablet*/
   .Disclaimer {
-    padding: 2% 13% 2% 13%;
+    padding: 2% 13%;
   }
 }

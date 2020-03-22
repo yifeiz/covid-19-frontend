@@ -112,6 +112,13 @@ button:hover {
   z-index: 2;
 }
 
+@media screen and (max-height: 1100px) and (max-width: 850px) and (min-height: 900px) and (min-width: 700px) {
+  /*Tablet*/
+  .navbar-collapse {
+    padding: 0px 25px;
+  }
+}
+
 .nav-link {
   width: max-content !important;
 }

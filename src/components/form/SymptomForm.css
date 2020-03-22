@@ -126,7 +126,7 @@ table {
 }
 
 .MuiInputBase-input {
-  border: 2px solid #f8f9fa !important;
+  border: 2px solid #8f8f8f !important;
 }
 
 .submit {
@@ -141,6 +141,5 @@ table {
 .error {
   text-align: center;
   padding-top: 16px;
-  font-style: italic;
   color: red;
 }
