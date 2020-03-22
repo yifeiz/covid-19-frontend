@@ -30,7 +30,7 @@ class Sponsors extends React.Component {
 
     return (
       <div className="App">
-        <Disclaimer text={disclaimerText} />
+        <Disclaimer>{disclaimerText}</Disclaimer>
         <section>
           <h1 className="title"> Sponsors </h1>
           <p className="description">{description}</p>
