@@ -36,7 +36,7 @@ class App extends Component {
     });
   }
   render() {
-    const { cards, collapse } = this.state;
+    const { cards } = this.state;
     return (
       <div className="info__container">
         <h4 className="info__title">Frequently Asked Questions</h4>
@@ -61,7 +61,7 @@ class App extends Component {
               >
                 {cards[index]}
               </CardHeader>
-              <Collapse isOpen={collapse.has(index)}>
+              <Collapse isOpen={true}>
                 <CardBody
                   style={{
                     marginTop: "0rem",
