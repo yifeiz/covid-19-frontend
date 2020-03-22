@@ -1,34 +1,136 @@
 import React from "react";
 import "./AboutUs.css";
-import volunteers from "./Volunteers"
 import Profile from "./Profile";
 
+import Disclaimer from "../disclaimer/disclaimer";
+
+let disclaimerText = `We are a group of scientists, engineers and clinicians
+  who have created an online screening tool to provide information on COVID-19. 
+  This app is designed to help increase awareness and flatten the curve of the
+  spread of COVID-19 by informing Canadians and healthcare systems of relevant
+  information. `;
+
+const volunteers = [
+  {
+    name: "Shrey Jain",
+    src: "./Headshots/shrey.png",
+    link: "https://www.linkedin.com/in/shrey-j-9869b213a/"
+  },
+  {
+    name: "Yifei Zhang",
+    src: "./Headshots/yifei.png",
+    link: "https://www.linkedin.com/in/yifei-zhang1/"
+  },
+  {
+    name: "Martin Staadacker",
+    src: "./Headshots/martin.png",
+    link: "https://www.linkedin.com/in/staad/"
+  },
+  {
+    name: "Arthur Allshire",
+    src: "./Headshots/arthur.png",
+    link: "https://www.linkedin.com/in/arthur-allshire-56b06a16a/"
+  },
+  {
+    name: "Charlie Chen",
+    src: "./Headshots/charlie.png",
+    link: "https://www.linkedin.com/in/hyu-chen/"
+  },
+  {
+    name: "Emily Tao",
+    src: "./Headshots/emily.png",
+    link: "https://www.linkedin.com/in/emilytao2000/"
+  },
+  {
+    name: "Surya Krishnan",
+    src: "./Headshots/surya.png",
+    link: "https://www.linkedin.com/in/suryakrsh/"
+  },
+  {
+    name: "Anastasia Razdaibiedina",
+    src: "./Headshots/anastasia.png",
+    link: "https://www.linkedin.com/in/anastasia-razdaibiedina-438929197/"
+  },
+  {
+    name: "Owen Brake",
+    src: "./Headshots/owen.png",
+    link: "https://OwenBrake.com"
+  },
+  {
+    name: "Samuel Hao",
+    src: "./Headshots/samuel.png",
+    link: "https://www.linkedin.com/in/samuelhao/"
+  },
+  {
+    name: "William Wen",
+    src: "./Headshots/william.png",
+    link: "https://www.linkedin.com/in/william-wen360/"
+  },
+  {
+    name: "Minto Jain",
+    src: "./Headshots/minto.png",
+    link: "https://ca.linkedin.com/in/minto-jain-57b98144"
+  },
+  {
+    name: "Marzyeh Ghassemi",
+    src: "./Headshots/marzyeh.png",
+    link: "https://www.linkedin.com/in/marzyehghassemi"
+  },
+  {
+    name: "Robert Wu",
+    src: "./Headshots/robert.png",
+    link: "https://linkedin.com/in/wu-robert"
+  },
+  {
+    name: "Siyan Zhao",
+    src: "./Headshots/siyan.png"
+  },
+  {
+    name: "Maanav Dalal",
+    src: "./Headshots/maanav.png",
+    link: "https://www.linkedin.com/in/maanavdalal/"
+  },
+  {
+    name: "Sejal Jain",
+    src: "./Headshots/sejal.png",
+    link: "https://www.linkedin.com/in/sejal-jain-25029817b"
+  },
+  {
+    name: "Rassam Yazdi",
+    src: "./Headshots/rassam.png",
+    link: "https://www.linkedin.com/in/rassam-yazdi-3a256319a/"
+  }
+];
+
 const AboutUs = () => (
-  <div className="App">
-    <section>
-      <h1 className="title"> About Us </h1>
-      <p className="description">
-        Here are the amazing volunteers who made this project possible!
-      </p>
-      <hr className="line" />
-    </section>
-    <section className="profiles">
-      <div className="container-fluid d-flex justify-content-center">
-        <div className="row about-us-row">
-          {volunteers.map((volunteer, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-sm-5">
-              <Profile
-                link={volunteer.link}
-                name={volunteer.name}
-                src={volunteer.src}
-              />
-            </div>
-          ))}
+  <React.Fragment>
+    <Disclaimer text={disclaimerText} />
+    <div className="about-us">
+      <section>
+        <h4 className="title"> The Team </h4>
+        <p className="description">
+          Here are the amazing volunteers who made this project possible!
+        </p>
+        <hr className="line" />
+      </section>
+      <section className="profiles">
+        <div className="container-fluid d-flex justify-content-center">
+          <div className="row about-us-row">
+            {volunteers.map((volunteer, index) => (
+              <div className="col-lg-3 col-md-4 col-sm-5">
+                <Profile
+                  link={volunteer.link}
+                  name={volunteer.name}
+                  src={volunteer.src}
+                  key={index}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-    <Footer />
-  </div>
+      </section>
+    </div>
+  </React.Fragment>
 );
 
 export default AboutUs;
