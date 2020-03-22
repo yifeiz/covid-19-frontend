@@ -12,10 +12,8 @@
 }
 
 .dislaimerFooter {
-  position: absolute;
   font-style: italic;
   padding: 1% 13%;
-  margin-top: 30vh;
   left: 0;
   text-align: left;
   background-color: #f8f9fa;
