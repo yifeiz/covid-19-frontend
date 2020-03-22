@@ -64,17 +64,22 @@ const SymptomForm = props => {
   };
 
   const FORM_DISCLAIMER = (
-    <p>
-      Your answers are collected <strong>anonymously</strong>, and will be
-      aggregated to help healthcare providers gauge the spread of COVID-19. The
-      following questionnaire is designed to help assess your risk factors for
-      COVID-19 infection to inform healthcare systems on guidance on how to keep
-      yourself, your family, and your community healthy. The questions are based
-      on the best available guidance from Canadian public health agencies and
-      other stakeholders, and will be updated regularly. You cannot be diagnosed
-      with COVID simply by taking this survey online. If you are experiencing
-      severe symptoms, seek medical attention.
-    </p>
+    <React.Fragment>
+      <p>
+        Your answers are collected <strong>anonymously</strong>, and will be
+        aggregated to help healthcare providers gauge the spread of COVID-19.
+        The following questionnaire is designed to help assess your risk factors
+        for COVID-19 infection to inform healthcare systems on guidance on how
+        to keep yourself, your family, and your community healthy. The questions
+        are based on the best available guidance from Canadian public health
+        agencies and other stakeholders, and will be updated regularly. You
+        cannot be diagnosed with COVID simply by taking this survey online. If
+        you are experiencing severe symptoms, seek medical attention.
+      </p>
+      <p style={{ fontStyle: "Normal", fontWeight: "Bold" }}>
+        Please fill in this form even if you are experiencing no symptoms
+      </p>
+    </React.Fragment>
   );
 
   return (
