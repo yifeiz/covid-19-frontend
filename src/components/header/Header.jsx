@@ -80,6 +80,17 @@ class Header extends React.Component {
               <NavLink
                 tag={RRNavLink}
                 exact
+                to="/sponsors"
+                activeClassName="active"
+                onClick={this.resetNav}
+              >
+                <h3>Sponsors</h3>
+              </NavLink>
+            </NavItem>
+            <NavItem className="navlink">
+              <NavLink
+                tag={RRNavLink}
+                exact
                 to="/heat-map"
                 activeClassName="active"
                 onClick={this.resetNav}

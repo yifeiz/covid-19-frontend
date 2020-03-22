@@ -1,0 +1,25 @@
+.logo {
+  max-width: 400px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.company-row {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-logos {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 380px) {
+  .title {
+    font-size: 40px !important;
+  }
+}
