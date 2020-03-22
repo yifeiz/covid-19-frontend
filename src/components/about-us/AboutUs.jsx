@@ -50,7 +50,7 @@ class AboutUs extends React.Component {
       {
         name: "Owen Brake",
         src: "./Headshots/owen.png",
-        link: "OwenBrake.com"
+        link: "https://OwenBrake.com"
       },
       {
         name: "Samuel Hao",
