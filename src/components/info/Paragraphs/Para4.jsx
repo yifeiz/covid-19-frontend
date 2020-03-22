@@ -23,7 +23,7 @@ const Para4 = () => (
     <span>Sources: </span>
     <a
       className="infoLink"
-      href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
+      href="https://www.ontario.ca/page/2019-novel-coronavirus"
     >
       Government of Ontario
     </a>

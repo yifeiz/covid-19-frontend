@@ -7,6 +7,13 @@ import Para3 from "./Paragraphs/Para3";
 import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
+import Disclaimer from "../disclaimer/disclaimer";
+
+let disclaimerText = `We are a group of scientists, engineers and clinicians
+  who have created an online screening tool to provide information on COVID-19. 
+  This app is designed to help increase awareness and flatten the curve of the
+  spread of COVID-19 by informing Canadians and healthcare systems of relevant
+  information.`;
 
 class App extends Component {
   constructor(props) {
@@ -37,50 +44,53 @@ class App extends Component {
   render() {
     const { cards } = this.state;
     return (
-      <div className="info__container">
-        <h4 className="info__title">Frequently Asked Questions</h4>
-        {cards.map((elem, index) => {
-          return (
-            <Card
-              style={{
-                marginTop: index === 0 ? "2rem" : "auto",
-                marginBottom: "1rem"
-              }}
-              key={index}
-            >
-              <CardHeader
+      <React.Fragment>
+        <Disclaimer>{disclaimerText}</Disclaimer>
+        <div className="info__container">
+          <h4 className="info__title">Frequently Asked Questions</h4>
+          {cards.map((elem, index) => {
+            return (
+              <Card
                 style={{
-                  borderBottom: "0px",
-                  backgroundColor: "#f8f9fa",
-                  borderRadius: "2px",
-                  fontFamily: "Open Sans"
+                  marginTop: index === 0 ? "2rem" : "auto",
+                  marginBottom: "1rem"
                 }}
-                onClick={this.toggle}
-                data-event={index}
+                key={index}
               >
-                {cards[index]}
-              </CardHeader>
-              <Collapse isOpen={true}>
-                <CardBody
+                <CardHeader
                   style={{
-                    marginTop: "0rem",
-                    marginLeft: "1rem",
-                    marginRight: "1rem",
-                    padding: "1rem"
+                    borderBottom: "0px",
+                    backgroundColor: "#f8f9fa",
+                    borderRadius: "2px",
+                    fontFamily: "Open Sans"
                   }}
+                  onClick={this.toggle}
+                  data-event={index}
                 >
-                  {index === 0 && <Para0 />}
-                  {index === 1 && <Para1 />}
-                  {index === 2 && <Para2 />}
-                  {index === 3 && <Para3 />}
-                  {index === 4 && <Para4 />}
-                  {index === 5 && <Para5 />}
-                </CardBody>
-              </Collapse>
-            </Card>
-          );
-        })}
-      </div>
+                  {cards[index]}
+                </CardHeader>
+                <Collapse isOpen={true}>
+                  <CardBody
+                    style={{
+                      marginTop: "0rem",
+                      marginLeft: "1rem",
+                      marginRight: "1rem",
+                      padding: "1rem"
+                    }}
+                  >
+                    {index === 0 && <Para0 />}
+                    {index === 1 && <Para1 />}
+                    {index === 2 && <Para2 />}
+                    {index === 3 && <Para3 />}
+                    {index === 4 && <Para4 />}
+                    {index === 5 && <Para5 />}
+                  </CardBody>
+                </Collapse>
+              </Card>
+            );
+          })}
+        </div>
+      </React.Fragment>
     );
   }
 }

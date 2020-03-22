@@ -14,6 +14,7 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
+import Footer from "../footer/footer";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -68,82 +69,84 @@ const SymptomForm = props => {
       aggregated to help healthcare providers gauge the spread of COVID-19. The
       following questionnaire is designed to help assess your risk factors for
       COVID-19 infection to inform healthcare systems on guidance on how to keep
-      yourself, your family, and your community healthy through the preparation
-      allocation of resources are conducted in the most efficient manner. The
-      questions are based on the best available guidance from Canadian public
-      health agencies and other stakeholders, and will be updated regularly. You
-      cannot be diagnosed with COVID simply by taking this survey online. If you
-      are experiencing severe symptoms, seek medical attention.
+      yourself, your family, and your community healthy. The questions are based
+      on the best available guidance from Canadian public health agencies and
+      other stakeholders, and will be updated regularly. You cannot be diagnosed
+      with COVID simply by taking this survey online. If you are experiencing
+      severe symptoms, seek medical attention.
     </p>
   );
 
   return (
-    <div className="form__padding">
-      <Container fluid>
-        <Row>
-          <Col md="10">
-            <h4 className="header">{FORM_HEADER}</h4>
-            <p className="form-disclaimer">{FORM_DISCLAIMER}</p>
-          </Col>
-          <Col md="2" className="frame">
-            <img
-              className="microscope-icon"
-              src={image}
-              alt="Microscope Icon"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col md="12">
-            <form
-              onSubmit={props.handleSubmit(props.onSubmit)}
-              className="ui form error"
-            >
-              <Table responsive>
-                <thead>
-                  <tr>
-                    <th className="answer">Question</th>
-                    <th className="answer">Yes</th>
-                    <th className="answer">No</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {renderQuestions(FORM_QUESTIONS)}
-                  <tr key="postal-code">
-                    <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
-                    <td colSpan="2">
-                      <Field name="postalCode" component={PostalTextField} />
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-              <div className="captcha">
-                <Recaptcha
-                  sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
-                  render="explicit"
-                  onloadCallback={recaptchaLoaded}
-                  verifyCallback={verifyCallback}
-                  expiredCallback={recaptchaExpired}
-                />
-              </div>
-              <div className="submit">
-                <button
-                  className="submit-button red-button"
-                  disabled={!isVerified}
-                >
-                  Submit
-                </button>
-                {!isVerified && (
-                  <body className="error">
-                    Please make sure to fill out all of the questions above.
-                  </body>
-                )}
-              </div>
-            </form>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <React.Fragment>
+      <div className="form__padding">
+        <Container fluid>
+          <Row>
+            <Col md="10">
+              <h4 className="header">{FORM_HEADER}</h4>
+              <p className="form-disclaimer">{FORM_DISCLAIMER}</p>
+            </Col>
+            <Col md="2" className="frame">
+              <img
+                className="microscope-icon"
+                src={image}
+                alt="Microscope Icon"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md="12">
+              <form
+                onSubmit={props.handleSubmit(props.onSubmit)}
+                className="ui form error"
+              >
+                <Table responsive>
+                  <thead>
+                    <tr>
+                      <th className="answer">Question</th>
+                      <th className="answer">Yes</th>
+                      <th className="answer">No</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {renderQuestions(FORM_QUESTIONS)}
+                    <tr key="postal-code">
+                      <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
+                      <td colSpan="2">
+                        <Field name="postalCode" component={PostalTextField} />
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
+                <div className="captcha">
+                  <Recaptcha
+                    sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+                    render="explicit"
+                    onloadCallback={recaptchaLoaded}
+                    verifyCallback={verifyCallback}
+                    expiredCallback={recaptchaExpired}
+                  />
+                </div>
+                <div className="submit">
+                  <button
+                    className="submit-button red-button"
+                    disabled={!isVerified}
+                  >
+                    Submit
+                  </button>
+                  {!isVerified && (
+                    <body className="error">
+                      Please make sure to fill out all of the questions above.
+                    </body>
+                  )}
+                </div>
+              </form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Footer />
+    </React.Fragment>
   );
 };
 
