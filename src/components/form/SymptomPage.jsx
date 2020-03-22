@@ -49,11 +49,11 @@ class SymptomPage extends React.Component {
         </ModalHeader>
         <ModalBody>{modalDescription}</ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.exitModal}>
+          <Button color="info" onClick={this.exitModal}>
             More Info
           </Button>
-          <Button color="primary" onClick={this.goToHeatMap}>
-            View Heat Map
+          <Button color="success" onClick={this.goToHeatMap}>
+            Proceed to Heat Map
           </Button>
         </ModalFooter>
       </Modal>
