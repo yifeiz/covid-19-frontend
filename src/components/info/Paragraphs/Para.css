@@ -1,3 +1,7 @@
 .infoLink {
   text-decoration: none !important;
 }
+
+.infoList {
+  font-family: "Open Sans";
+}

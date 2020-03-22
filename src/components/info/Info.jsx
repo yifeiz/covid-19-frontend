@@ -8,6 +8,7 @@ import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
 import Disclaimer from "../disclaimer/disclaimer";
+import Para6 from "./Paragraphs/Para6";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 
@@ -20,14 +21,15 @@ class App extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      collapse: new Set(),
+      collapse: new Set([0, 1, 2, 3, 4, 5, 6, 7]),
       cards: [
         "What is a Coronavirus (COVID-19)?",
         "How does COVID-19 spread?",
         "What are the symptoms of COVID-19?",
         "How do I prevent myself and my loved ones from getting COVID-19?",
         "When should I see my family doctor or go to the hospital?",
-        "What is social distancing and how do I do it?"
+        "What is social distancing and how do I do it?",
+        `What makes a citizen "Vulnerable"?`
       ]
     };
   }
@@ -42,7 +44,7 @@ class App extends Component {
     });
   }
   render() {
-    const { cards } = this.state;
+    const { cards, collapse } = this.state;
     return (
       <React.Fragment>
         <Disclaimer text={disclaimerText} />
@@ -69,7 +71,7 @@ class App extends Component {
                 >
                   {cards[index]}
                 </CardHeader>
-                <Collapse isOpen={true}>
+                <Collapse isOpen={collapse.has(index)}>
                   <CardBody
                     style={{
                       marginTop: "0rem",
@@ -84,6 +86,7 @@ class App extends Component {
                     {index === 3 && <Para3 />}
                     {index === 4 && <Para4 />}
                     {index === 5 && <Para5 />}
+                    {index === 6 && <Para6 />}
                   </CardBody>
                 </Collapse>
               </Card>
