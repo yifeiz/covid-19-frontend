@@ -1,0 +1,16 @@
+.logo {
+  max-width: 200px;
+  padding: 20px;
+}
+
+.company-row {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 380px) {
+  .title {
+    font-size: 40px !important;
+  }
+}
