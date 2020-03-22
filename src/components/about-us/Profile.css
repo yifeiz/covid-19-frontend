@@ -1,3 +1,7 @@
+.card {
+  margin-bottom: 32px;
+}
+
 .card-img-top {
   position: static;
   padding: 0;

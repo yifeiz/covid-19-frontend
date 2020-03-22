@@ -1,9 +1,34 @@
 @media screen and (max-width: 700px) {
+  .form__padding {
+    padding: 0px !important;
+  }
+
+  .table-responsive {
+    padding: 0x !important;
+  }
+
+  .header {
+    font-size: 1.5rem !important;
+  }
+
+  .form-disclaimer {
+    font-size: 1rem !important;
+  }
+
+  .col-md-12 {
+    padding: 0px !important;
+  }
+
+  .microscope-icon {
+    width: 70%;
+  }
+
   .row {
     padding: 0px !important;
   }
   .question {
-    padding: 0px !important;
+    padding: 15px !important;
+    font-size: 1rem;
   }
 
   .answer {
@@ -12,6 +37,10 @@
     padding-left: 0px !important;
     font-size: 1rem !important;
   }
+}
+
+.form__padding {
+  padding: 3% 20%;
 }
 
 .question {
@@ -42,7 +71,8 @@
   padding: 20px 0px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   border-top: none !important;
   border-bottom: none !important;
   padding-left: 30px;
@@ -77,7 +107,7 @@ table {
   padding-bottom: 20px;
 }
 
-.header{
+.header {
   padding-bottom: 15px;
 }
 
@@ -101,8 +131,16 @@ table {
 
 .submit {
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .form-disclaimer {
   font-style: italic;
+}
+
+.error {
+  text-align: center;
+  padding-top: 16px;
+  font-style: italic;
+  color: red;
 }

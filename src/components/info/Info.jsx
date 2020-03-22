@@ -7,7 +7,6 @@ import Para3 from "./Paragraphs/Para3";
 import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
-import Footer from "../footer/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -36,10 +35,10 @@ class App extends Component {
     });
   }
   render() {
-    const { cards, collapse } = this.state;
+    const { cards } = this.state;
     return (
-      <div className="container">
-        <h4>Frequently Asked Questions</h4>
+      <div className="info__container">
+        <h4 className="info__title">Frequently Asked Questions</h4>
         {cards.map((elem, index) => {
           return (
             <Card
@@ -61,7 +60,7 @@ class App extends Component {
               >
                 {cards[index]}
               </CardHeader>
-              <Collapse isOpen={collapse.has(index)}>
+              <Collapse isOpen={true}>
                 <CardBody
                   style={{
                     marginTop: "0rem",
@@ -81,7 +80,6 @@ class App extends Component {
             </Card>
           );
         })}
-        <Footer />
       </div>
     );
   }

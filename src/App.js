@@ -9,7 +9,7 @@ import Info from "./components/info/Info";
 import SymptomPage from "./components/form/SymptomPage";
 import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
-import Footer from "./components/footer/Footer";
+import Disclaimer from "./components/disclaimer/disclaimer";
 import "./main.css";
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
         <Header />
+        <Disclaimer />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/info" exact component={Info} />

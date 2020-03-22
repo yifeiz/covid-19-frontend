@@ -65,7 +65,6 @@ class SymptomPage extends React.Component {
   renderResponse(data) {
     if (data) {
       const response = data.response;
-      console.log(response);
 
       return response.map(display => {
         return this.renderHTML(display);
