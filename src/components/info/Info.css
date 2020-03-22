@@ -1,6 +1,8 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) and (max-height: 900px) {
+  /*Mobile Phone*/
   .info__title {
     font-size: 1.5rem !important;
+    padding-top: 5% !important;
   }
 
   .info__container {
@@ -10,7 +12,8 @@
 }
 
 .info__title {
-  padding-bottom: 10px;
+  padding-top: 0%;
+  padding-bottom: 1%;
 }
 
 .info__container {

@@ -23,6 +23,7 @@ const Para3 = () => (
     <span>Source: </span>
     <a
       className="infoLink"
+      target="_blank"
       href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
     >
       Centers for Disease Control and Prevention

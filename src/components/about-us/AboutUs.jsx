@@ -111,6 +111,12 @@ const AboutUs = () => (
         <p className="description">
           Here are the amazing volunteers who made this project possible!
         </p>
+        <p className="contact">
+          Contact Us:{" "}
+          <a className="infoLink" href="mailto:flattenofficial@gmail.com">
+            flattenofficial@gmail.com
+          </a>
+        </p>
         <hr className="line" />
       </section>
       <section className="profiles">
