@@ -35,7 +35,7 @@ class HeatMap extends React.Component {
     const ratio = `${this.state.ratio}%`;
     return (
       <div className="iframe-container" style={{ paddingTop: ratio }}>
-        <iframe src="http://map.flatten.ca/">It's not working</iframe>
+        <iframe src="https://map.flatten.ca/">It's not working</iframe>
       </div>
     );
   }
