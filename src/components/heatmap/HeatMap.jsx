@@ -5,7 +5,6 @@ import { Button, Modal, ModalHeader, ModalFooter } from "reactstrap";
 import { readCookie } from "../../actions";
 import "./heatmap.css";
 import history from "../../history";
-
 class HeatMap extends React.Component {
   state = {
     width: 0,
@@ -45,7 +44,7 @@ class HeatMap extends React.Component {
 
   renderModal = cookieExists => {
     return (
-      <Modal isOpen={!cookieExists} size="xl" centered>
+      <Modal isOpen={cookieExists} size="xl" centered>
         <ModalHeader className="header-container">
           Please fill out our form to access this page
         </ModalHeader>

@@ -11,12 +11,25 @@ import history from "./history";
 import Disclaimer from "./components/disclaimer/disclaimer";
 import "./main.css";
 
+let heatmapdisclaimerText = `All results are from preliminary models based 
+  on evolving data. Models will continue to undergo testing and further
+  development, and results should not be considered final or peer-reviewed.
+  All findings should be interpreted with caution.`;
+
 const App = () => {
   return (
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
         <Header />
-        <Disclaimer />
+        <Switch>
+          <Route
+            path="/heat-map"
+            exact
+            render={props => (
+              <Disclaimer {...props} text={heatmapdisclaimerText} />
+            )}
+          />
+        </Switch>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/info" exact component={Info} />
