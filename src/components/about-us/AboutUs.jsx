@@ -49,7 +49,7 @@ class AboutUs extends React.Component {
       {
         name: "Owen Brake",
         src: "./Headshots/owen.png",
-        link: "OwenBrake.com"
+        link: "https://OwenBrake.com"
       },
       {
         name: "Samuel Hao",
@@ -98,9 +98,9 @@ class AboutUs extends React.Component {
     ];
 
     return (
-      <div className="App">
+      <div className="about-us">
         <section>
-          <h1 className="title"> About Us </h1>
+          <h4 className="title"> The Team </h4>
           <p className="description">
             Here are the amazing volunteers who made this project possible!
           </p>

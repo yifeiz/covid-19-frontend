@@ -1,3 +1,16 @@
+
+@media screen and (max-width: 700px) {
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+.footer {
+  height: max-content;
+  font-style: italic;
+  padding: 3% 10%;
+}
+
 .dislaimerFooter {
   font-style: italic;
   padding: 1% 13%;
