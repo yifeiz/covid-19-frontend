@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, fade } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField"
+import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
@@ -25,17 +25,12 @@ const postalStyle = makeStyles(theme => ({
   focused: {}
 }));
 
-export const PostalTextField = ({
-  label,
-  input,
-  meta,
-  ...props
-}) => {
+export const PostalTextField = ({ label, input, meta, ...props }) => {
   const classes = postalStyle();
 
   return (
-    <TextField 
-      InputProps={{ classes, disableUnderline: true }} 
+    <TextField
+      InputProps={{ classes, disableUnderline: true }}
       placeholder={label}
       error={meta.touched && meta.invalid}
       helperText={meta.touched && meta.error}
@@ -43,17 +38,14 @@ export const PostalTextField = ({
       {...props}
     />
   );
-}
+};
 
 export const RadioButton = ({ radioValue, children, input, ...props }) => {
   return (
     <FormControl>
       <RadioGroup row {...input} {...props}>
-        <FormControlLabel
-          value={radioValue}
-          control={<Radio />}
-        />
+        <FormControlLabel value={radioValue} control={<Radio />} />
       </RadioGroup>
     </FormControl>
   );
-}
+};

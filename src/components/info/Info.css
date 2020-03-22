@@ -10,11 +10,11 @@
 }
 
 .info__title {
-  padding-bottom: 36px;
+  padding-bottom: 10px;
 }
 
 .info__container {
-  height: 100% !important;
+  height: max-content !important;
   padding: 3% 20%;
 }
 

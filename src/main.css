@@ -87,6 +87,7 @@ button:hover {
 }
 
 .navbar {
+  box-shadow: 0px 1px 8px 0.5px #ccc;
   height: 10%;
   min-height: 40px;
 }

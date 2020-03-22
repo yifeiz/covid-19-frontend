@@ -21,3 +21,12 @@
     margin-right: 0%;
   }
 }
+
+.modal-header {
+  justify-content: center !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center !important;
+}
