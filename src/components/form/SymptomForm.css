@@ -131,8 +131,16 @@ table {
 
 .submit {
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .form-disclaimer {
   font-style: italic;
+}
+
+.error {
+  text-align: center;
+  padding-top: 16px;
+  font-style: italic;
+  color: red;
 }
