@@ -78,7 +78,8 @@ class AboutUs extends React.Component {
       },
       {
         name: "Siyan Zhao",
-        src: "./Headshots/siyan.png"
+        src: "./Headshots/siyan.png",
+        link: "https://www.linkedin.com/in/siyanzhao/"
       },
       {
         name: "Maanav Dalal",
