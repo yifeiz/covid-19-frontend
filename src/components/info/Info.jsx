@@ -7,7 +7,6 @@ import Para3 from "./Paragraphs/Para3";
 import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
-import Footer from "../footer/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -81,7 +80,6 @@ class App extends Component {
             </Card>
           );
         })}
-        <Footer />
       </div>
     );
   }
