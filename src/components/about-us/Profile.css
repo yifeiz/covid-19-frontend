@@ -14,12 +14,6 @@
   padding-top: 0px;
 }
 
-.about-us-row {
-  width: 60% !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-}
-
 .card:hover {
   transition: 0.3s;
   -webkit-box-shadow: 4px 4px 10px 0px rgb(211, 185, 185);
