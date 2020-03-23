@@ -29,10 +29,20 @@ const SymptomForm = props => {
 
   const verifyCallback = response => {
     if (response) {
+      console.log(response);
       setIsVerified(true);
+      props.change("reactVerification", response);
     }
   };
 
+  const TextInput = ({ input, label, meta }) => {
+    return (
+      <div className="hidden">
+        <label> {label} </label>
+        <input {...input} />
+      </div>
+    );
+  };
   const renderQuestions = questions => {
     return questions.map(question => {
       const label = `q${questions.indexOf(question) + 1}`;
@@ -67,11 +77,12 @@ const SymptomForm = props => {
     <React.Fragment>
       <p>
         Your answers are collected <strong>anonymously</strong>, and will be
-        aggregated to help healthcare providers gauge the spread of COVID-19.
-        The following questionnaire is designed to help assess your risk factors
-        for COVID-19 infection to inform healthcare systems on guidance on how
-        to keep yourself, your family, and your community healthy. The questions
-        are based on the best available guidance from Canadian public health
+        aggregated to help healthcare providers gauge the spread of COVID-19.The
+        following questionnaire is designed to help assess your risk factors for
+        COVID-19 infection. Completed questionnaires will be used to inform
+        healthcare systems. This website also has guidance on how to keep
+        yourself, your family, and your community healthy. The questions are
+        based on the best available guidance from Canadian public health
         agencies and other stakeholders, and will be updated regularly. You
         cannot be diagnosed with COVID simply by taking this survey online. If
         you are experiencing severe symptoms, seek medical attention.
@@ -119,6 +130,11 @@ const SymptomForm = props => {
                       <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
                       <td colSpan="2">
                         <Field name="postalCode" component={PostalTextField} />
+                        <Field
+                          component={TextInput}
+                          name="reactVerification"
+                          type="hidden"
+                        />
                       </td>
                     </tr>
                   </tbody>

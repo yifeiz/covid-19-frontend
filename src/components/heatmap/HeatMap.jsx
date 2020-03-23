@@ -44,7 +44,7 @@ class HeatMap extends React.Component {
 
   renderModal = cookieExists => {
     return (
-      <Modal isOpen={!cookieExists} size="xl" centered>
+      <Modal isOpen={false} size="xl" centered>
         <ModalHeader className="header-container">
           Please fill out our form to access this page
         </ModalHeader>
@@ -64,7 +64,7 @@ class HeatMap extends React.Component {
     const ratio = `${this.state.ratio}%`;
     return (
       <div className="iframe-container" style={{ paddingTop: ratio }}>
-        <iframe src="https://map-54ec7.web.app/">
+        <iframe src="https://flatten-271620.web.app/">
           Sorry, the heat-map did not load.
         </iframe>
         {this.renderModal(this.props.cookieExists)}

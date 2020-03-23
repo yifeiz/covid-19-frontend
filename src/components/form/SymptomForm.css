@@ -143,3 +143,7 @@ table {
   padding-top: 16px;
   color: red;
 }
+
+.hidden {
+  display: none !important;
+}
