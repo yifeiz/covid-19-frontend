@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./home.css";
-import Disclaimer from "../disclaimer/disclaimer";
+import Disclaimer from "../disclaimer/Disclaimer";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 

@@ -14,7 +14,7 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -39,7 +39,9 @@ const SymptomForm = props => {
 
       return (
         <tr key={label}>
-          <p className="question">{question}</p>
+          <td>
+            <p className="question">{question}</p>
+          </td>
           <td className="answer">
             <Box display="flex" justifyContent="center">
               <Field
@@ -89,7 +91,7 @@ const SymptomForm = props => {
           <Row>
             <Col md="10">
               <h4 className="header">{FORM_HEADER}</h4>
-              <p className="form-disclaimer">{FORM_DISCLAIMER}</p>
+              <div className="form-disclaimer">{FORM_DISCLAIMER}</div>
             </Col>
             <Col md="2" className="frame">
               <img
@@ -116,7 +118,9 @@ const SymptomForm = props => {
                   <tbody>
                     {renderQuestions(FORM_QUESTIONS)}
                     <tr key="postal-code">
-                      <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
+                      <td>
+                        <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
+                      </td>
                       <td colSpan="2">
                         <Field name="postalCode" component={PostalTextField} />
                       </td>
@@ -140,9 +144,9 @@ const SymptomForm = props => {
                     Submit
                   </button>
                   {!isVerified && (
-                    <body className="error">
+                    <div className="error">
                       Please make sure to fill out all of the questions above.
-                    </body>
+                    </div>
                   )}
                 </div>
               </form>
