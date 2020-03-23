@@ -1,7 +1,12 @@
 # [START runtime]
 runtime: nodejs10
+env: flex
 # [END runtime]
 
+network:
+  instance_tag: frontend-source
+  name: flatten-staging-frontend
+  subnetwork_name: frontend-subnet
 # [START handlers]
 handlers:
   - url: /assets/js/(.*)
