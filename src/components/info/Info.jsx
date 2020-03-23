@@ -7,7 +7,7 @@ import Para3 from "./Paragraphs/Para3";
 import Para4 from "./Paragraphs/Para4";
 import Para5 from "./Paragraphs/Para5";
 import "./Info.css";
-import Disclaimer from "../disclaimer/disclaimer";
+import Disclaimer from "../disclaimer/Disclaimer";
 import Para6 from "./Paragraphs/Para6";
 import Para7 from "./Paragraphs/Para7";
 import Para8 from "./Paragraphs/Para8";

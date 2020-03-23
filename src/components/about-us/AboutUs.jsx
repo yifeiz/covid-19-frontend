@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
 import Profile from "./Profile";
-import Disclaimer from "../disclaimer/disclaimer";
+import Disclaimer from "../disclaimer/Disclaimer";
 import volunteers from "./Volunteers";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
