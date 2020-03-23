@@ -37,6 +37,9 @@ const AboutUs = () => (
                   name={volunteer.name}
                   src={volunteer.src}
                   key={index}
+                  role={volunteer.role}
+                  degrees={volunteer.degrees}
+                  titles={volunteer.titles}
                 />
               </div>
             ))}
