@@ -13,6 +13,9 @@ handlers:
   - url: /static/media/(.*)
     static_files: dist/static/media/\1
     upload: dist/static/media/(.*)
+  - url: /logo_nav.png
+    static_files: dist/logo_nav.png
+    upload: dist/logo_nav.png
   - url: /
     static_files: dist/index.html
     upload: dist/index.html

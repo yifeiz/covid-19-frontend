@@ -44,7 +44,7 @@ class HeatMap extends React.Component {
 
   renderModal = cookieExists => {
     return (
-      <Modal isOpen={!cookieExists} size="xl" centered>
+      <Modal isOpen={false} size="xl" centered>
         <ModalHeader className="header-container">
           Please fill out our form to access this page
         </ModalHeader>

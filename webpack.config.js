@@ -68,7 +68,7 @@ module.exports = function(_env, argv) {
     plugins: [
       new CopyPlugin([
         { from: "web.config", to: "web.config" },
-        { from: "logo_nav.png", to: "logo_nav.png" }
+        { from: "favicon.ico", to: "favicon.ico" }
       ]),
       isProduction &&
         new MiniCssExtractPlugin({
