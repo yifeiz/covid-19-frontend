@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://backend-staging-dot-flatten-staging-271921.appspot.com/",
+  baseURL: "https://api.staging.flatten.ca/",
   withCredentials: true
 });
