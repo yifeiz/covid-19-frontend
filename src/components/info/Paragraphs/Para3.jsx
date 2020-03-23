@@ -20,6 +20,20 @@ const Para3 = () => (
       toilets, phones, electronics, door handles, bedside tables, and television
       remotes
     </p>
+    <p>
+      For a list of cleaners and disinfectants effective against COVID-19, refer
+      to the following Government of Canada resource:
+      <a
+        className="infoLink"
+        target="_blank"
+        href="https://www.canada.ca/en/health-canada/services/drugs-health-products/disinfectants/covid-19/list.html"
+      >
+        {" "}
+        List of hard-surface disinfectants for use against coronavirus
+        (COVID-19)
+      </a>
+    </p>
+
     <span>Source: </span>
     <a
       className="infoLink"

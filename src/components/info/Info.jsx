@@ -11,7 +11,8 @@ import Disclaimer from "../disclaimer/Disclaimer";
 import Para6 from "./Paragraphs/Para6";
 import Para7 from "./Paragraphs/Para7";
 import Para8 from "./Paragraphs/Para8";
-import Para9 from "./Paragraphs/Para9";
+import Para9 from "./Paragraphs/Para10";
+import Para10 from "./Paragraphs/Para9";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 
@@ -24,7 +25,7 @@ class App extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      collapse: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+      collapse: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
       cards: [
         "What is a Coronavirus (COVID-19)?",
         "How does COVID-19 spread?",
@@ -35,6 +36,7 @@ class App extends Component {
         `What makes a citizen "Vulnerable"?`,
         `What makes a citizen a "Potential Case"?`,
         `What makes a citizen a "Confirmed Case"?`,
+        "What public health/medical expertise does our team have?",
         `External Resources`
       ]
     };
@@ -66,6 +68,7 @@ class App extends Component {
               >
                 <CardHeader
                   style={{
+                    fontWeight: "bold",
                     borderBottom: "0px",
                     backgroundColor: "#f8f9fa",
                     borderRadius: "2px",
@@ -96,6 +99,7 @@ class App extends Component {
                     {index === 7 && <Para7 />}
                     {index === 8 && <Para8 />}
                     {index === 9 && <Para9 />}
+                    {index === 10 && <Para10 />}
                   </CardBody>
                 </Collapse>
               </Card>
