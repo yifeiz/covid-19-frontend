@@ -29,10 +29,20 @@ const SymptomForm = props => {
 
   const verifyCallback = response => {
     if (response) {
+      console.log(response);
       setIsVerified(true);
+      props.change("reactVerification", response);
     }
   };
 
+  const TextInput = ({ input, label, meta }) => {
+    return (
+      <div className="hidden">
+        <label> {label} </label>
+        <input {...input} />
+      </div>
+    );
+  };
   const renderQuestions = questions => {
     return questions.map(question => {
       const label = `q${questions.indexOf(question) + 1}`;
@@ -120,6 +130,11 @@ const SymptomForm = props => {
                       <p className="question">{FORM_POSTAL_CODE_QUESTION}</p>
                       <td colSpan="2">
                         <Field name="postalCode" component={PostalTextField} />
+                        <Field
+                          component={TextInput}
+                          name="reactVerification"
+                          type="hidden"
+                        />
                       </td>
                     </tr>
                   </tbody>
