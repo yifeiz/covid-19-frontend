@@ -66,7 +66,10 @@ module.exports = function(_env, argv) {
       extensions: [".js", ".jsx"]
     },
     plugins: [
-      new CopyPlugin([{ from: "web.config", to: "web.config" }]),
+      new CopyPlugin([
+        { from: "web.config", to: "web.config" },
+        { from: "logo_nav.png", to: "logo_nav.png" }
+      ]),
       isProduction &&
         new MiniCssExtractPlugin({
           filename: "assets/css/[name].[contenthash:8].css",
