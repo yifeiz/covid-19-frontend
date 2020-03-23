@@ -9,7 +9,7 @@ const volunteers = [
     name: "Yifei Zhang",
     src: "./Headshots/yifei.png",
     link: "https://www.linkedin.com/in/yifei-zhang1/",
-    role: "DevOps Team Lead"
+    role: "Dev Team Lead and DevOps Engineer"
   },
   {
     name: "Martin Staadacker",
