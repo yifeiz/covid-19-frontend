@@ -20,7 +20,7 @@ const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
 
   const recaptchaLoaded = () => {
-    console.log("Loaded");
+    //console.log("Loaded");
   };
 
   const recaptchaExpired = () => {
