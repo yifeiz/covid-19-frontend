@@ -4,12 +4,12 @@
   }
 }
 
-.infoLink {
+.emailLink {
   color: #212529;
   text-decoration: none !important;
 }
 
-.infoLink:hover {
+.emailLink:hover {
   color: grey;
 }
 
