@@ -11,8 +11,8 @@ import Disclaimer from "../disclaimer/Disclaimer";
 import Para6 from "./Paragraphs/Para6";
 import Para7 from "./Paragraphs/Para7";
 import Para8 from "./Paragraphs/Para8";
-import Para9 from "./Paragraphs/Para10";
-import Para10 from "./Paragraphs/Para9";
+import Para9 from "./Paragraphs/Para9";
+import Para10 from "./Paragraphs/Para10";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 
