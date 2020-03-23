@@ -16,10 +16,10 @@ handlers:
     secure: always
     static_files: dist/static/media/\1
     upload: dist/static/media/(.*)
-  - url: /logo_nav.png
+  - url: /favicon.ico
     secure: always
-    static_files: dist/logo_nav.png
-    upload: dist/logo_nav.png
+    static_files: dist/favicon.ico
+    upload: dist/favicon.ico
   - url: /
     secure: always
     static_files: dist/index.html
