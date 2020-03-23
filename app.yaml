@@ -20,10 +20,7 @@ handlers:
     static_files: dist/index.html
     upload: dist/index.html
   - url: /.*
+    secure: always
     static_files: dist/index.html
     upload: dist/index.html
-  - url: /.*
-    script: auto
-    secure: always
-    redirect_http_response_code: 301
 # [END handlers]
