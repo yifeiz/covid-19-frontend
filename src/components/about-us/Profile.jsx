@@ -1,7 +1,7 @@
 import React from "react";
 import "./Profile.css";
 
-const Profile = ({ link, src, name }) => (
+const Profile = ({ link, src, name, role, titles, degrees }) => (
   <div className="card text-center">
     <div className="overflow">
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -13,7 +13,12 @@ const Profile = ({ link, src, name }) => (
       </a>
     </div>
     <div className="card-body text-dark">
-      <p className="card-text">{name}</p>
+      <p className="card-text-name">
+        {name}
+        {degrees}
+      </p>
+      <p className="card-text-role">{role}</p>
+      <p className="card-text">{titles}</p>
     </div>
   </div>
 );

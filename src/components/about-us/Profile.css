@@ -12,6 +12,19 @@
 
 .card-text {
   padding-top: 0px;
+  margin-bottom: 5px;
+}
+
+.card-text-name {
+  padding-top: 0px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card-text-role {
+  padding-top: 0px;
+  margin-bottom: 5px;
+  font-style: italic;
 }
 
 .card:hover {
