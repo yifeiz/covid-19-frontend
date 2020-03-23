@@ -1,12 +1,7 @@
 # [START runtime]
-runtime: custom
-env: flex
+runtime: nodejs10
 # [END runtime]
 
-network:
-  instance_tag: frontend-source
-  name: flatten-staging-frontend
-  subnetwork_name: frontend-subnet
 # [START handlers]
 handlers:
   - url: /assets/js/(.*)
@@ -27,4 +22,8 @@ handlers:
   - url: /.*
     static_files: dist/index.html
     upload: dist/index.html
+  - url: /.*
+    script: auto
+    secure: always
+    redirect_http_response_code: 301
 # [END handlers]
