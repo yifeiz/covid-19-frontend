@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./home.css";
-import Disclaimer from "../disclaimer/disclaimer";
+import Disclaimer from "../disclaimer/Disclaimer";
 
 let disclaimerText = `We are a group of scientists, engineers and clinicians
   who have created an online screening tool to provide information on COVID-19. 
@@ -23,8 +23,8 @@ const Home = () => (
           <img className="home__logo" src={logo} />
           <p className="home__subtitle">
             A platform for collecting and providing real time information
-            regarding the spread of COVID-19 in your local community and
-            around the nation.
+            regarding the spread of COVID-19 in your local community and around
+            the nation.
           </p>
           <Link to={"/track-your-symptoms"}>
             <button className="red-button">

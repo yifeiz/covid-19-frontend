@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sponsors.css";
 
-import Disclaimer from "../disclaimer/disclaimer";
+import Disclaimer from "../disclaimer/Disclaimer";
 
 class Sponsors extends React.Component {
   render() {

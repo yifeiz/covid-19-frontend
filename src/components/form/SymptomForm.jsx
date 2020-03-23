@@ -14,7 +14,7 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
