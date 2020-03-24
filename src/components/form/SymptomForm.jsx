@@ -29,7 +29,6 @@ const SymptomForm = props => {
 
   const verifyCallback = response => {
     if (response) {
-      console.log(response);
       setIsVerified(true);
       props.change("reactVerification", response);
     }
