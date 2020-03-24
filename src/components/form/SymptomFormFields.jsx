@@ -54,19 +54,6 @@ const RadioStyle = makeStyles(theme=> ({
   checked: {
     color: primaryColor + "!important"
   },
-  checkedIcon: {
-    width: "20px",
-    height: "20px",
-    border: "1px solid rgba(" + blackColor + ", .54)",
-    borderRadius: "3px"
-  },
-  uncheckedIcon: {
-    width: "0px",
-    height: "0px",
-    padding: "10px",
-    border: "1px solid rgba(" + blackColor + ", .54)",
-    borderRadius: "3px"
-  },
   radio: {
     color: primaryColor + "!important"
   },
