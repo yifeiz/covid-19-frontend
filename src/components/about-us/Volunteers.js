@@ -36,7 +36,7 @@ const volunteers = [
     src: "./Headshots/geoffrey.png",
     role: "Advisor",
     degrees: ", PhD",
-    titles: "Chief Scientific Advisor at Vector Institute PhD"
+    titles: "Chief Scientific Advisor at Vector Institute"
   },
   {
     name: "Marzyeh Ghassemi",
@@ -53,6 +53,14 @@ const volunteers = [
     role: "Advisor",
     degrees: ", MHPE, MD, FRSCS",
     titles: "Intensivist"
+  },
+  {
+    name: "Aby Mathews Maluvelil",
+    src: "./Headshots/aby.png",
+    link: "https://www.linkedin.com/in/drabymathews",
+    role: "Advisor",
+    degrees: "",
+    titles: "Healthcare IT Specialist"
   },
   {
     name: "Anastasia Razdaibiedina",
