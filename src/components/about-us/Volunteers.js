@@ -15,13 +15,19 @@ const volunteers = [
     name: "Martin Staadacker",
     src: "./Headshots/martin.png",
     link: "https://www.linkedin.com/in/staad/",
-    role: "Maps Team Lead and DevOps Engineer"
+    role: "Maps Team Systems Integration Lead and DevOps Engineer"
   },
   {
     name: "Arthur Allshire",
     src: "./Headshots/arthur.png",
     link: "https://www.linkedin.com/in/arthur-allshire-56b06a16a/",
-    role: "Machine Learning and DevOps Engineer"
+    role: " Cloud Team Lead and DevOps Engineer"
+  },
+  {
+    name: "Surya Krishnan",
+    src: "./Headshots/surya.png",
+    link: "https://www.linkedin.com/in/suryakrsh/",
+    role: "Maps Team Front End Lead and DevOps Engineer"
   },
   {
     name: "Shafi  U. Bhuiyan",
@@ -39,14 +45,6 @@ const volunteers = [
     titles: "Chief Scientific Advisor at Vector Institute"
   },
   {
-    name: "Marzyeh Ghassemi",
-    src: "./Headshots/marzyeh.png",
-    link: "https://www.linkedin.com/in/marzyehghassemi",
-    role: "Advisor",
-    degrees: ", PhD",
-    titles: "CIFAR AI Chair and Canada Research Chair"
-  },
-  {
     name: "Minto Jain",
     src: "./Headshots/minto.png",
     link: "https://ca.linkedin.com/in/minto-jain-57b98144",
@@ -54,6 +52,15 @@ const volunteers = [
     degrees: ", MHPE, MD, FRSCS",
     titles: "Intensivist"
   },
+  {
+    name: "Marzyeh Ghassemi",
+    src: "./Headshots/marzyeh.png",
+    link: "https://www.linkedin.com/in/marzyehghassemi",
+    role: "Advisor",
+    degrees: ", PhD",
+    titles: "CIFAR AI Chair and Canada Research Chair"
+  },
+
   {
     name: "Aby Mathews Maluvelil",
     src: "./Headshots/aby.png",
@@ -66,12 +73,6 @@ const volunteers = [
     name: "Anastasia Razdaibiedina",
     src: "./Headshots/anastasia.png",
     link: "https://www.linkedin.com/in/anastasia-razdaibiedina-438929197/",
-    role: "Software Developer"
-  },
-  {
-    name: "Surya Krishnan",
-    src: "./Headshots/surya.png",
-    link: "https://www.linkedin.com/in/suryakrsh/",
     role: "Software Developer"
   },
   {
@@ -163,6 +164,12 @@ const volunteers = [
     name: "Eric Zhai",
     src: "",
     link: "https://www.linkedin.com/in/eric-zhai/",
+    role: "Software Developer"
+  },
+  {
+    name: "Ivan Nesterovic",
+    src: "./Headshots/ivan.png",
+    link: "linkedin.com/in/ivan-nesterovic/",
     role: "Software Developer"
   }
 ];
