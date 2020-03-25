@@ -169,8 +169,14 @@ const volunteers = [
   {
     name: "Ivan Nesterovic",
     src: "./Headshots/ivan.png",
-    link: "linkedin.com/in/ivan-nesterovic/",
+    link: "https://www.linkedin.com/in/ivan-nesterovic/",
     role: "Software Developer"
+  },
+  {
+    name: "Miraal Kabir",
+    src: "./Headshots/miraal.png",
+    link: "https://www.linkedin.com/in/miraalkabir/",
+    role: "UI/UX"
   }
 ];
 
