@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Button, Modal, ModalHeader, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import { readCookie } from "../../actions";
 import "./heatmap.css";
@@ -9,7 +9,8 @@ class HeatMap extends React.Component {
   state = {
     width: 0,
     height: 0,
-    ratio: 190
+    ratio: 190,
+    modalIsOpen: true
   };
 
   componentDidMount() {
@@ -39,21 +40,27 @@ class HeatMap extends React.Component {
   };
 
   goHome = () => {
-    history.push("/");
+    this.setState({ modalIsOpen: false });
   };
 
   renderModal = cookieExists => {
     return (
-      <Modal isOpen={!cookieExists} size="xl" centered>
-        <ModalHeader className="header-container">
-          Please fill out our form to access this page
-        </ModalHeader>
+      <Modal
+        isOpen={!cookieExists && this.state.modalIsOpen}
+        size="xl"
+        centered
+      >
+        <ModalHeader>Have you filled out our form?</ModalHeader>
+        <ModalBody>
+          We'd really appreciate it if you'd fill out the form if you haven't
+          already. Thank you!
+        </ModalBody>
         <ModalFooter className="button-container">
           <Button color="primary" onClick={this.goToHeatMap}>
             Take me to the form
           </Button>
           <Button color="secondary" onClick={this.goHome}>
-            Bring me to the home page
+            Continue to map
           </Button>
         </ModalFooter>
       </Modal>

@@ -5,23 +5,13 @@ import "./Para.css";
 const Para9 = () => (
   <React.Fragment>
     <p>
-      <a href="https://covid-19.ontario.ca/self-assessment/#q0">
-        <p>Ontario COVID-19 self-assessment</p>
-      </a>
-    </p>
-    <p>
-      <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">
-        <p>
-          Government of Canada Coronavirus disease (COVID-19) Outbreak Updates
-        </p>
-      </a>
-    </p>
-    <p>
-      <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public">
-        <p>
-          World Health Organization (WHO) Coronavirus disease (COVID-19) Advice
-        </p>
-      </a>
+      Our team is advised by an intensivist, Dr. Jain, as well as Dr. Bhuyian,
+      Chair of the Canadian Coalition for Global Health Research. We are also
+      working with Internationally Trained Medical Doctors (ITMD’s) and public
+      health networks affiliated with Dr. Bhuyian. We have had Dr. Jain, 36
+      ITMD’s, Dr. Bhuyian, and public health experts provide us with the
+      guidance necessary to ask the right questions and ensure we provide the
+      right information for Canadians today to help flatten the curve.
     </p>
   </React.Fragment>
 );

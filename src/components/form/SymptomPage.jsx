@@ -24,6 +24,22 @@ class SymptomPage extends React.Component {
   };
 
   renderModal(data) {
+    return (
+      <Modal
+        isOpen={this.state.modalIsOpen}
+        toggle={this.toggleModal}
+        size="lg"
+      >
+        <ModalHeader toggle={this.toggleModal}>
+          Thank you for your contribution!
+        </ModalHeader>
+        <ModalBody>{this.renderResponse(data)}</ModalBody>
+        {this.renderButtons(data)}
+      </Modal>
+    );
+  }
+
+  renderResponse(data) {
     const modalDescription = (
       <div>
         <h3 style={{ color: "red", fontWeight: "bold" }}>
@@ -45,54 +61,34 @@ class SymptomPage extends React.Component {
       </div>
     );
 
+    if (data) {
+      return modalDescription;
+    }
     return (
-      <Modal
-        isOpen={this.state.modalIsOpen}
-        toggle={this.toggleModal}
-        size="lg"
-      >
-        <ModalHeader toggle={this.toggleModal}>
-          Thank you for your contribution!
-        </ModalHeader>
-        <ModalBody>{modalDescription}</ModalBody>
-        <ModalFooter>
-          <Button color="info" onClick={this.exitModal}>
-            More Info
-          </Button>
-          <Button color="success" onClick={this.goToHeatMap}>
-            Proceed to Heat Map
-          </Button>
-        </ModalFooter>
-      </Modal>
+      <div>
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div>Your response is being submitted, please wait ...</div>
+      </div>
     );
   }
 
-  renderResponse(data) {
+  renderButtons(data) {
+    let active = false;
     if (data) {
-      const response = data.response;
-
-      return response.map(display => {
-        return this.renderHTML(display);
-      });
+      active = true;
     }
-    return;
-  }
-
-  renderHTML(list) {
-    switch (list[0]) {
-      case "p":
-        return <div>{list[1]}</div>;
-      case "a":
-        return <a href={list[2]}>{list[1]}</a>;
-      case "l":
-        return (
-          <ul>
-            {list[1].map(li => {
-              return <li>{this.renderHTML(li)}</li>;
-            })}
-          </ul>
-        );
-    }
+    return (
+      <ModalFooter>
+        <Button color="info" onClick={this.exitModal} disabled={!active}>
+          More Info
+        </Button>
+        <Button color="success" onClick={this.goToHeatMap} disabled={!active}>
+          Proceed to Heat Map
+        </Button>
+      </ModalFooter>
+    );
   }
 
   onSubmit = formValues => {

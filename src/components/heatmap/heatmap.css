@@ -26,6 +26,10 @@
   justify-content: center !important;
 }
 
+.modal-body {
+  text-align: center !important;
+}
+
 .button-container {
   display: flex;
   justify-content: center !important;
