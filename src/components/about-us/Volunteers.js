@@ -131,7 +131,8 @@ const volunteers = [
   },
   {
     name: "Robert Li",
-    src: "",
+    src: "./Headshots/robert.png",
+    link: "https://www.linkedin.com/in/jianing-robert-li",
     role: "Machine Learning"
   },
   {
