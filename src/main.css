@@ -130,3 +130,18 @@ button:hover {
     line-height: 20px;
   }
 }
+
+.share {
+  height: 100%;
+}
+
+.share-button {
+  margin: 0;
+  margin-left: 3px;
+  margin-right: 3px;
+  position: relative;
+  top: 50%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
