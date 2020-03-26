@@ -79,9 +79,9 @@ const SymptomForm = props => {
       <p>
         Your answers are collected and will be aggregated and made available
         publicly, including through our website to help healthcare providers,
-        researchers and others to gauge the spread of COVID-19 and inform
-        efforts that help keep yourself, your family and your community healthy.
-        The following questionnaire is designed to help collect information
+        researchers, and others gauge the spread of COVID-19 and inform efforts
+        that help keep yourself, your family, and your community healthy. The
+        following questionnaire is designed to help collect information
         regarding your risk factors for COVID-19 infection. The questions are
         based on the best available guidance from Canadian public health
         agencies and other stakeholders and will be updated regularly. This
@@ -89,7 +89,7 @@ const SymptomForm = props => {
         self-assessment for COVID-19. If you suspect you may have COVID-19,
         please seek medical attention. Please review our Terms of Service and
         Privacy Policy carefully and if you do not agree to our Terms of Service
-        or are not comfortable with our collection, use and disclosure the
+        or are not comfortable with our collection, use, and disclosure of the
         information you provide, do not complete this Survey (though we would
         appreciate if you could provide feedback to us at
         flattenofficial@gmail.com on how we may be able to address your
