@@ -10,6 +10,7 @@ import SymptomPage from "./components/form/SymptomPage";
 import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import Disclaimer from "./components/disclaimer/Disclaimer";
+import ContactUs from "./components/contact-us/ReportAnIssueForm";
 import "./main.css";
 
 let heatmapDisclaimerText = `All results are from preliminary models based 
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/sponsors" exact component={Sponsors} />
           <Route path="/track-your-symptoms" exact component={SymptomPage} />
           <Route path="/heat-map" exact component={HeatMap} />
+          <Route path="/contact-us" exact component={ContactUs} />
         </Switch>
       </Router>
     </React.Fragment>
