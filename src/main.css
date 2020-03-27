@@ -129,4 +129,16 @@ button:hover {
     padding-bottom: 26px;
     line-height: 20px;
   }
+
+  .share {
+    height: 100%;
+  }
+
+  .share-button {
+    transform: translate(0%, -15%);
+  }
+}
+
+.share-button {
+  margin-right: 5px;
 }
