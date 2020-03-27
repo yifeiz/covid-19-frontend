@@ -3,7 +3,7 @@ const volunteers = [
     name: "Shrey Jain",
     src: "./Headshots/shrey.png",
     link: "https://www.linkedin.com/in/shrey-j-9869b213a/",
-    role: "Leader of Flatten"
+    role: "President"
   },
   {
     name: "Yifei Zhang",
