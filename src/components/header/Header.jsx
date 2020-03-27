@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink as RRNavLink } from "react-router-dom";
 import logo from "../../assets/logo_nav.png";
+import ShareButtons from "./Share.jsx";
 import {
   Collapse,
   Navbar,
@@ -96,6 +97,11 @@ class Header extends React.Component {
                 onClick={this.resetNav}
               >
                 <h3>Heat Map</h3>
+              </NavLink>
+            </NavItem>
+            <NavItem className="navlink">
+              <NavLink>
+              <ShareButtons />
               </NavLink>
             </NavItem>
           </Nav>
