@@ -10,6 +10,7 @@ const fbQuote = "";
 const twitterTitle = "";
 const mailSubject = "";
 const mailBody = "";
+const size = 28;
 
 function ShareButtons(props) {
     return <div className="share">
@@ -18,14 +19,14 @@ function ShareButtons(props) {
                     quote={fbQuote}
                     className="share-button"
                 >
-                    <FacebookIcon size={32} round />
+                    <FacebookIcon size={size} round />
                 </FacebookShareButton>
                 <TwitterShareButton
                     url={shareUrl}
                     title={twitterTitle}
                     className="share-button"
                 >
-                    <TwitterIcon size={32} round />
+                    <TwitterIcon size={size} round />
                 </TwitterShareButton>
                 <EmailShareButton
                     url={shareUrl}
@@ -33,7 +34,7 @@ function ShareButtons(props) {
                     body={mailBody}
                     className="share-button"
                 >
-                    <EmailIcon size={32} round />
+                    <EmailIcon size={size} round />
                 </EmailShareButton>
             </div>
 

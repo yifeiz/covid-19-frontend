@@ -100,7 +100,9 @@ class Header extends React.Component {
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
-                <ShareButtons />
+              <NavLink>
+              <ShareButtons />
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
