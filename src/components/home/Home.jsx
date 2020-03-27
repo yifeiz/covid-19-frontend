@@ -22,9 +22,9 @@ const Home = () => (
         <div className="home__content">
           <img className="home__logo" src={logo} />
           <p className="home__subtitle">
-            A platform for collecting and providing real time information
-            regarding the spread of COVID-19 in your local community and around
-            the nation.
+            FLATTEN is a not-for-profit organization platform for collecting and
+            providing real time information regarding the spread of COVID-19 in
+            your local community and around the nation.
           </p>
           <Link to={"/track-your-symptoms"}>
             <button className="red-button">
