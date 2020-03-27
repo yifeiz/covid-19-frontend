@@ -87,13 +87,7 @@ const SymptomForm = props => {
         agencies and other stakeholders and will be updated regularly. This
         survey is not intended to facilitate any kind of diagnosis or
         self-assessment for COVID-19. If you suspect you may have COVID-19,
-        please seek medical attention. Please review our Terms of Service and
-        Privacy Policy carefully and if you do not agree to our Terms of Service
-        or are not comfortable with our collection, use, and disclosure of the
-        information you provide, do not complete this Survey (though we would
-        appreciate if you could provide feedback to us at
-        flattenofficial@gmail.com on how we may be able to address your
-        concerns).
+        please seek medical attention.
       </p>
       <p style={{ fontStyle: "Normal", fontWeight: "Bold" }}>
         Please fill in this form even if you are experiencing no symptoms
