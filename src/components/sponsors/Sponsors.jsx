@@ -18,9 +18,10 @@ class Sponsors extends React.Component {
       }
     ];
 
-    const description = `This platform would not be possible without having all of our team members 
-                         volunteer their hard work towards this project as well as support from the 
-                         following organizations.`;
+    const description = `FLATTEN is a not-for-profit organization platform for collecting 
+    and providing real time information regarding the spread of COVID-19 in your local 
+    community and around the nation. Although we cannot yet provide tax reciepts, we are 
+    accepting donations and you can contact us at the email below should you be interested.`;
 
     const disclaimerText = `We are a group of scientists, engineers and clinicians
     who have created an online screening tool to provide information on COVID-19. 
@@ -34,6 +35,12 @@ class Sponsors extends React.Component {
         <section>
           <h1 className="title"> Sponsors </h1>
           <p className="description">{description}</p>
+          <p className="contact">
+            Contact Us:{" "}
+            <a className="emailLink" href="mailto:flattenofficial@gmail.com">
+              flattenofficial@gmail.com
+            </a>
+          </p>
           <hr className="line" />
         </section>
         <section className="sponsor-logos">
