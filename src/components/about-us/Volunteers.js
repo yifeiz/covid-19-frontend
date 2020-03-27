@@ -47,7 +47,7 @@ const volunteers = [
   {
     name: "Minto Jain",
     src: "./Headshots/minto.png",
-    link: "https://ca.linkedin.com/in/minto-jain-57b98144",
+    link: "https://www.linkedin.com/in/minto-jain-19380333/",
     role: "Advisor",
     degrees: ", MHPE, MD, FRSCS",
     titles: "Intensivist"
@@ -131,7 +131,8 @@ const volunteers = [
   },
   {
     name: "Robert Li",
-    src: "",
+    src: "./Headshots/robert.png",
+    link: "https://www.linkedin.com/in/jianing-robert-li",
     role: "Machine Learning"
   },
   {
