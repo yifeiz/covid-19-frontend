@@ -23,17 +23,11 @@ class Sponsors extends React.Component {
     community and around the nation. Although we cannot yet provide tax reciepts, we are 
     accepting donations and you can contact us at the email below should you be interested.`;
 
-    const disclaimerText = `We are a group of scientists, engineers and clinicians
-    who have created an online screening tool to provide information on COVID-19. 
-    This app is designed to help increase awareness and flatten the curve of the
-    spread of COVID-19 by informing Canadians and healthcare systems of relevant
-    information. `;
-
     return (
       <div className="App">
-        <Disclaimer>{disclaimerText}</Disclaimer>
+        <Disclaimer />
         <section>
-          <h1 className="title"> Sponsors </h1>
+          <h4 className="sponsors__title">Sponsors</h4>
           <p className="description">{description}</p>
           <p className="contact">
             Contact Us:{" "}

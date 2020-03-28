@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import SymptomForm from "./SymptomForm";
 import { submitForm } from "../../actions";
+import Disclaimer from "../disclaimer/Disclaimer";
 import history from "../../history";
 
 class SymptomPage extends React.Component {
@@ -46,18 +47,6 @@ class SymptomPage extends React.Component {
           Please update the form if you experience any changes in your
           condition.
         </h3>
-        <p>
-          Your answers are collected <strong>anonymously</strong>, and will be
-          aggregated to help healthcare providers gauge the spread of COVID-19.
-          The following questionnaire is designed to help assess your risk
-          factors for COVID-19 infection to inform healthcare systems on
-          guidance on how to keep yourself, your family, and your community
-          healthy. The questions are based on the best available guidance from
-          Canadian public health agencies and other stakeholders, and will be
-          updated regularly. You cannot be diagnosed with COVID simply by taking
-          this survey online. If you are experiencing severe symptoms, seek
-          medical attention.
-        </p>
       </div>
     );
 
@@ -99,6 +88,8 @@ class SymptomPage extends React.Component {
   render() {
     return (
       <div>
+        <Disclaimer />
+
         <SymptomForm onSubmit={this.onSubmit} />
         <div>{this.renderModal(this.props.data)}</div>
       </div>
