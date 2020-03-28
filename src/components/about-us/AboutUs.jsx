@@ -4,15 +4,9 @@ import Profile from "./Profile";
 import Disclaimer from "../disclaimer/Disclaimer";
 import volunteers from "./Volunteers";
 
-let disclaimerText = `We are a group of scientists, engineers and clinicians
-  who have created an online screening tool to provide information on COVID-19. 
-  This app is designed to help increase awareness and flatten the curve of the
-  spread of COVID-19 by informing Canadians and healthcare systems of relevant
-  information.`;
-
 const AboutUs = () => (
   <React.Fragment>
-    <Disclaimer>{disclaimerText}</Disclaimer>
+    <Disclaimer />
     <div className="about-us">
       <section>
         <h4 className="title"> The Team </h4>
