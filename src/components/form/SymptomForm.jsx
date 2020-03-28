@@ -76,11 +76,16 @@ const SymptomForm = props => {
   const FORM_DISCLAIMER = (
     <React.Fragment>
       <p>
-        Your answers are collected and will be aggregated and made available
-        publicly, including through our website to help healthcare providers,
-        researchers, and others gauge the spread of COVID-19 and inform efforts
-        that help keep yourself, your family, and your community healthy. The
-        following questionnaire is designed to help collect information
+        Your answers are collected and will be made available publicly,
+        including through our website to help healthcare providers, researchers,
+        and others gauge the spread of COVID-19 and inform efforts that help
+        keep yourself, your family, and your community healthy.{" "}
+        <b>
+          We will use our good faith efforts to ensure your answers are shared
+          in an aggregated manner, such as in the form of the heat map that you
+          can view by following the link in our navigation panel above.
+        </b>{" "}
+        The following questionnaire is designed to help collect information
         regarding your risk factors for COVID-19 infection. The questions are
         based on the best available guidance from Canadian public health
         agencies and other stakeholders and will be updated regularly. This
