@@ -1,11 +1,12 @@
-import db from "../apis/db.staging";
+import db from "../apis/db";
 
 export const submitForm = formValues => async dispatch => {
   let submitSuccess;
   try {
     const response = await db.post("/submit", formValues);
     submitSuccess = response.data;
-  } catch {
+  } catch(e) {
+    console.error(e);
     submitSuccess = false;
   }
 
