@@ -11,12 +11,6 @@ import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import "./main.css";
 
-let heatmapDisclaimerText = `All results are from preliminary models based on evolving data. 
-  Models will continue to undergo testing and further development, and results should not be
-  considered final or peer-reviewed. All findings should be interpreted with caution. 
-  This model does not determine areas that are safe or at risk. It simply identifies 
-  the status of the individuals reporting on FLATTEN in a given region.`;
-
 const App = () => {
   return (
     <React.Fragment>

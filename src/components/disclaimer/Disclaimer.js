@@ -18,6 +18,7 @@ const Disclaimer = () => (
       {" "}
       Terms of Service
     </a>
+    .
   </div>
 );
 

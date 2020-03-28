@@ -19,6 +19,7 @@ const DisclaimerMap = () => (
       {" "}
       Terms of Service
     </a>
+    .
   </div>
 );
 
