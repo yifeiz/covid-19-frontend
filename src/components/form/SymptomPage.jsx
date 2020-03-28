@@ -64,17 +64,19 @@ class SymptomPage extends React.Component {
       );
     } else {
       return (
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+        <>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
           <div>Your response is being submitted, please wait ...</div>
-        </div>
+        </>
       );
     }
   }
 
   renderModalFooter() {
     const { submissionStatus } = this.props;
-    
+
     return (
       <>
         <Button color="info" onClick={this.exitModal} disabled={!submissionStatus}>
