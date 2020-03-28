@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import SymptomForm from "./SymptomForm";
 import { submitForm } from "../../actions";
+import Disclaimer from "../disclaimer/Disclaimer";
 import history from "../../history";
 
 class SymptomPage extends React.Component {
@@ -87,6 +88,8 @@ class SymptomPage extends React.Component {
   render() {
     return (
       <div>
+        <Disclaimer />
+
         <SymptomForm onSubmit={this.onSubmit} />
         <div>{this.renderModal(this.props.data)}</div>
       </div>

@@ -14,7 +14,6 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import Footer from "../footer/Footer";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -169,6 +168,12 @@ const SymptomForm = props => {
                     expiredCallback={recaptchaExpired}
                   />
                 </div>
+                <div style={{ paddingBottom: "10px" }}>
+                  By submitting account, you certify you are at least age of the
+                  majority in your province/territory and agree to Flattens
+                  Terms of Use and Privacy policy. If you do not feel
+                  comfortable with this, please do not submit.
+                </div>
                 <div className="submit">
                   <button
                     className="submit-button red-button"
@@ -187,7 +192,6 @@ const SymptomForm = props => {
           </Row>
         </Container>
       </div>
-      <Footer />
     </React.Fragment>
   );
 };
