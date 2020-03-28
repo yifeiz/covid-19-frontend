@@ -14,12 +14,6 @@ import Para8 from "./Paragraphs/Para8";
 import Para9 from "./Paragraphs/Para9";
 import Para10 from "./Paragraphs/Para10";
 
-let disclaimerText = `We are a group of scientists, engineers and clinicians
-  who have created an online screening tool to provide information on COVID-19. 
-  This app is designed to help increase awareness and flatten the curve of the
-  spread of COVID-19 by informing Canadians and healthcare systems of relevant
-  information.`;
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -55,7 +49,7 @@ class App extends Component {
     const { cards, collapse } = this.state;
     return (
       <React.Fragment>
-        <Disclaimer>{disclaimerText}</Disclaimer>
+        <Disclaimer />
         <div className="info__container">
           <h4 className="info__title">Frequently Asked Questions</h4>
           {cards.map((elem, index) => {
