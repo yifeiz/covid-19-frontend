@@ -34,6 +34,7 @@ export const PostalTextField = ({ label, input, meta, ...props }) => {
       placeholder={label}
       error={meta.touched && meta.invalid}
       helperText={meta.touched && meta.error}
+      inputProps={{ maxLength: 3 }}
       {...input}
       {...props}
     />
