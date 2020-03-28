@@ -1,9 +1,15 @@
-import db from "../apis/db";
+import db from "../apis/db.staging";
 
 export const submitForm = formValues => async dispatch => {
-  const response = await db.post("/submit", formValues);
+  let submitSuccess;
+  try {
+    const response = await db.post("/submit", formValues);
+    submitSuccess = response.data;
+  } catch {
+    submitSuccess = false;
+  }
 
-  dispatch({ type: "SUBMIT_FORM", payload: response.data });
+  dispatch({ type: "SUBMIT_FORM", payload: submitSuccess });
 };
 
 export const readCookie = () => async dispatch => {
