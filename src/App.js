@@ -9,7 +9,6 @@ import Info from "./components/info/Info";
 import SymptomPage from "./components/form/SymptomPage";
 import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
-import Disclaimer from "./components/disclaimer/Disclaimer";
 import "./main.css";
 
 let heatmapDisclaimerText = `All results are from preliminary models based on evolving data. 
@@ -23,15 +22,6 @@ const App = () => {
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
         <Header />
-        <Switch>
-          <Route
-            path="/heat-map"
-            exact
-            render={props => (
-              <Disclaimer {...props}>{heatmapDisclaimerText}</Disclaimer>
-            )}
-          />
-        </Switch>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/info" exact component={Info} />

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import { readCookie } from "../../actions";
+import DisclaimerMap from "../disclaimer/DisclaimerMap";
 import "./heatmap.css";
 import history from "../../history";
 class HeatMap extends React.Component {
@@ -70,12 +71,15 @@ class HeatMap extends React.Component {
   render() {
     const ratio = `${this.state.ratio}%`;
     return (
-      <div className="iframe-container" style={{ paddingTop: ratio }}>
-        <iframe src="https://flatten-271620.web.app/">
-          Sorry, the heat-map did not load.
-        </iframe>
-        {this.renderModal(this.props.cookieExists)}
-      </div>
+      <React.Fragment>
+        <DisclaimerMap />
+        <div className="iframe-container" style={{ paddingTop: ratio }}>
+          <iframe src="https://flatten-271620.web.app/">
+            Sorry, the heat-map did not load.
+          </iframe>
+          {this.renderModal(this.props.cookieExists)}
+        </div>
+      </React.Fragment>
     );
   }
 }
