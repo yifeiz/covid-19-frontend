@@ -16,7 +16,7 @@ class SymptomPage extends React.Component {
 
   exitModal = () => {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
-    history.push("/info");
+    history.push("/Info");
   };
 
   goToHeatMap = () => {
@@ -24,13 +24,7 @@ class SymptomPage extends React.Component {
     history.push("/heat-map");
   };
 
-  renderModal() {
-    const { submissionStatus } = this.props;
-
-    const headerText = submissionStatus === false ?
-      "Something went wrong..." :
-      "Thank you for your contribution!";
-
+  renderModal(data) {
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
@@ -38,53 +32,52 @@ class SymptomPage extends React.Component {
         size="lg"
       >
         <ModalHeader toggle={this.toggleModal}>
-          {headerText}
+          Thank you for your contribution!
         </ModalHeader>
-        <ModalBody>
-          {this.renderModalBody()}
-        </ModalBody>
-        <ModalFooter>
-          {this.renderModalFooter()}
-        </ModalFooter>
+        <ModalBody>{this.renderResponse(data)}</ModalBody>
+        {this.renderButtons(data)}
       </Modal>
     );
   }
 
-  renderModalBody() {
-    const { submissionStatus } = this.props;
+  renderResponse(data) {
+    const modalDescription = (
+      <div>
+        <h3 style={{ color: "red", fontWeight: "bold" }}>
+          Please update the form if you experience any changes in your
+          condition.
+        </h3>
+      </div>
+    );
 
-    if (typeof submissionStatus === "boolean") {
-      const modalBody = submissionStatus ? 
-        "Please update the form if you experience any changes in your condition." :
-        "Uh oh, the form submission failed. Please refresh the page and try again.";
-      return (
-        <div style={{ color: "red", fontWeight: "bold" }}>
-          {modalBody}
-        </div>
-      );
-    } else {
-      return (
+    if (data) {
+      return modalDescription;
+    }
+    return (
+      <div>
         <div class="spinner-border" role="status">
           <span class="sr-only">Loading...</span>
-          <div>Your response is being submitted, please wait ...</div>
         </div>
-      );
-    }
+        <div>Your response is being submitted, please wait ...</div>
+      </div>
+    );
   }
 
-  renderModalFooter() {
-    const { submissionStatus } = this.props;
-    
+  renderButtons(data) {
+    let active = false;
+    if (data) {
+      active = true;
+    }
     return (
-      <>
-        <Button color="info" onClick={this.exitModal} disabled={!submissionStatus}>
+      <ModalFooter>
+        <Button color="info" onClick={this.exitModal} disabled={!active}>
           More Info
         </Button>
-        <Button color="success" onClick={this.goToHeatMap} disabled={!submissionStatus}>
+        <Button color="success" onClick={this.goToHeatMap} disabled={!active}>
           Proceed to Heat Map
         </Button>
-      </>
-    )
+      </ModalFooter>
+    );
   }
 
   onSubmit = formValues => {
@@ -94,17 +87,23 @@ class SymptomPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <Disclaimer />
+
         <SymptomForm onSubmit={this.onSubmit} />
-        {this.renderModal()}
-      </>
+        <div>{this.renderModal(this.props.data)}</div>
+      </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  submissionStatus: state.HTML ? state.HTML.response : null
-});
+const mapStateToProps = state => {
+  if (state.HTML) {
+    return {
+      data: state.HTML.response
+    };
+  }
+  return state;
+};
 
 export default connect(mapStateToProps, { submitForm })(SymptomPage);
