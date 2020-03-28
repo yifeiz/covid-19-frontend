@@ -27,7 +27,7 @@ class Sponsors extends React.Component {
       <div className="App">
         <Disclaimer />
         <section>
-          <h1 className="title"> Sponsors </h1>
+          <h4 className="sponsors__title">Sponsors</h4>
           <p className="description">{description}</p>
           <p className="contact">
             Contact Us:{" "}

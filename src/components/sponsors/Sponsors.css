@@ -1,3 +1,9 @@
+.sponsors__title {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 0%;
+}
+
 .logo {
   max-width: 400px;
   padding: 20px;

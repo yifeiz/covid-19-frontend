@@ -106,7 +106,7 @@ const SymptomForm = props => {
         on how we may be able to address your concerns).
       </p>
       <p style={{ fontStyle: "Normal", fontWeight: "Bold" }}>
-        Please fill in this form even if you are experiencing no symptoms
+        Please fill in this form even if you are experiencing no symptoms.
       </p>
     </React.Fragment>
   );
