@@ -1,5 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { readCookie } from "./actions";
 
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -11,7 +13,7 @@ import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import "./main.css";
 
-const App = () => {
+const App = cookieExists => {
   return (
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
@@ -28,5 +30,4 @@ const App = () => {
     </React.Fragment>
   );
 };
-
 export default App;
