@@ -1,8 +1,8 @@
 import backend from "../apis/backend";
 
-export const submitForm = formValues => async dispatch => {
+export const submitForm = (formValues, tokenId) => async dispatch => {
+  formValues.tokenId = tokenId
   const response = await backend.post("/submit", formValues);
-
   dispatch({ type: "SUBMIT_FORM", payload: response.data });
 };
 
@@ -19,36 +19,19 @@ export const readCookie = () => async dispatch => {
 };
 
 export const SignIn = (response) => async dispatch => {
-  //TODO check if user exists/create new user
-  console.log(response)
   if (response.profileObj) {
-    
     backend.post("/login", {tokenId: response.tokenId})
-    console.log(response.profileObj)
-    console.log(response.profileObj.imageUrl)
     localStorage.setItem('imageURL', response.profileObj.imageUrl);
     dispatch({
       type: "SIGN_IN",
-      payload: true
+      payload: response.tokenId
     });
   }
 };
 
-export const SignOut = (profile) => async dispatch => {
-  //TODO check if user exists/create new user
-  if (profile) {
+export const SignOut = () => async dispatch => {
     dispatch({
       type: "SIGN_OUT",
       payload: true
     });
-  }
-};
-
-export const SetUser = (user) => async dispatch => {
-  //TODO check if user exists/create new user
-  if(user) {
-    dispatch({
-      type: "SET_USER"
-    })
-  }
 };
