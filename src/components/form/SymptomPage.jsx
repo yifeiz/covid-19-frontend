@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import SymptomForm from "./SymptomForm";
 import { submitForm } from "../../actions";
+import { SignIn } from "../../actions";
 import Disclaimer from "../disclaimer/Disclaimer";
 import history from "../../history";
 
@@ -42,6 +43,7 @@ class SymptomPage extends React.Component {
 
   renderResponse(data) {
     const modalDescription = (
+      
       <div>
         <h3 style={{ color: "red", fontWeight: "bold" }}>
           Please update the form if you experience any changes in your
@@ -81,7 +83,7 @@ class SymptomPage extends React.Component {
   }
 
   onSubmit = formValues => {
-    this.props.submitForm(formValues);
+    this.props.submitForm(formValues, this.props.tokenId);
     this.toggleModal();
   };
 
@@ -89,7 +91,6 @@ class SymptomPage extends React.Component {
     return (
       <div>
         <Disclaimer />
-
         <SymptomForm onSubmit={this.onSubmit} />
         <div>{this.renderModal(this.props.data)}</div>
       </div>
@@ -98,12 +99,16 @@ class SymptomPage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  if (state.HTML) {
-    return {
-      data: state.HTML.response
-    };
+  let map = {}
+  if (state.account.tokenId) {
+      map.tokenId = state.account.tokenId
+  } else {
+    map.tokenId = null
   }
-  return state;
+  if (state.HTML) {
+      map.data= state.HTML.response
+  }
+  return map;
 };
 
-export default connect(mapStateToProps, { submitForm })(SymptomPage);
+export default connect(mapStateToProps, { submitForm, SignIn })(SymptomPage);
