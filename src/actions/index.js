@@ -17,3 +17,34 @@ export const readCookie = () => async dispatch => {
     dispatch({ type: "NO_COOKIE", payload: false });
   }
 };
+
+export const SignIn = (profile) => async dispatch => {
+  //TODO check if user exists/create new user
+  console.log(profile)
+  if (profile) {
+    localStorage.setItem('imageURL', profile.imageURL);
+    dispatch({
+      type: "SIGN_IN",
+      payload: true
+    });
+  }
+};
+
+export const SignOut = (profile) => async dispatch => {
+  //TODO check if user exists/create new user
+  if (profile) {
+    dispatch({
+      type: "SIGN_OUT",
+      payload: true
+    });
+  }
+};
+
+export const SetUser = (user) => async dispatch => {
+  //TODO check if user exists/create new user
+  if(user) {
+    dispatch({
+      type: "SET_USER"
+    })
+  }
+};

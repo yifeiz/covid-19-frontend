@@ -2,6 +2,9 @@
   .home__subtitle {
     font-size: 1rem;
   }
+  .google-signin-button {
+    width:100% !important;
+  }
 }
 
 .home {
@@ -101,4 +104,18 @@
 
 .home__subtitle {
   padding-bottom: 32px !important;
+}
+
+.google-signin-button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 24px !important;
+  height: 60px;
+  width: 220px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0, 0, 0, 0;
 }
