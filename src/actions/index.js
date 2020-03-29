@@ -1,13 +1,13 @@
-import db from "../apis/db";
+import backend from "../apis/backend";
 
 export const submitForm = formValues => async dispatch => {
-  const response = await db.post("/submit", formValues);
+  const response = await backend.post("/submit", formValues);
 
   dispatch({ type: "SUBMIT_FORM", payload: response.data });
 };
 
 export const readCookie = () => async dispatch => {
-  const { data } = await db.get("/read-cookie");
+  const { data } = await backend.get("/read-cookie");
   if (data.exists) {
     dispatch({
       type: "COOKIE_EXISTS",
@@ -18,11 +18,15 @@ export const readCookie = () => async dispatch => {
   }
 };
 
-export const SignIn = (profile) => async dispatch => {
+export const SignIn = (response) => async dispatch => {
   //TODO check if user exists/create new user
-  console.log(profile)
-  if (profile) {
-    localStorage.setItem('imageURL', profile.imageURL);
+  console.log(response)
+  if (response.profileObj) {
+    
+    backend.post("/login", {tokenId: response.tokenId})
+    console.log(response.profileObj)
+    console.log(response.profileObj.imageUrl)
+    localStorage.setItem('imageURL', response.profileObj.imageUrl);
     dispatch({
       type: "SIGN_IN",
       payload: true
