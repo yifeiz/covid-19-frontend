@@ -1,9 +1,17 @@
-import backend from "../apis/backend";
+import db from "../apis/db";
 
 export const submitForm = (formValues, tokenId) => async dispatch => {
-  formValues.tokenId = tokenId
-  const response = await backend.post("/submit", formValues);
-  dispatch({ type: "SUBMIT_FORM", payload: response.data });
+  formValues.tokenId = tokenId;
+  let submitSuccess;
+  try {
+    const response = await db.post("/submit", formValues);
+    submitSuccess = response.data;
+  } catch(e) {
+    console.error(e);
+    submitSuccess = false;
+  }
+
+  dispatch({ type: "SUBMIT_FORM", payload: submitSuccess });
 };
 
 export const readCookie = () => async dispatch => {

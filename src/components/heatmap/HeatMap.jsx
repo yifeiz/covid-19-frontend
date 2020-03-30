@@ -37,7 +37,7 @@ class HeatMap extends React.Component {
   };
 
   goToHeatMap = () => {
-    history.push("/track-your-symptoms");
+    history.push("/log-your-health");
   };
 
   goHome = () => {

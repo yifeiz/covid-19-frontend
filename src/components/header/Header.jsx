@@ -63,7 +63,44 @@ class Header extends React.Component {
   resetNav = () => {
     this.setState({ isOpen: false });
   };
-
+  renderNavItem(link, name) {
+    return (
+      <NavItem>
+        <NavLink
+          className="navlink"
+          tag={RRNavLink}
+          exact
+          to={link}
+          activeClassName="active"
+          onClick={this.resetNav}
+        >
+          <h3>{name}</h3>
+        </NavLink>
+      </NavItem>
+    );
+  }
+  renderNavItems() {
+    if (!this.state.loggedIn) {
+      return (
+        <React.Fragment>
+          {this.renderNavItem("/", "Home")}
+          {this.renderNavItem("/Info", "Info")}
+          {this.renderNavItem("/about-us", "The Team")}
+          {this.renderNavItem("/sponsors", "Sponsors")}
+        </React.Fragment>
+      );
+    }
+    return (
+      <React.Fragment>
+        {this.renderNavItem("/", "Home")}
+        {this.renderNavItem("/Info", "Info")}
+        {this.renderNavItem("/log-your-health", "Log your Health")}
+        {this.renderNavItem("/heat-map", "Heat Map")}
+        {this.renderNavItem("/about-us", "The Team")}
+        {this.renderNavItem("/sponsors", "Sponsors")}
+      </React.Fragment>
+    );
+  }
   renderNav() {
     let loginLogoutButton = null
     let mobileLogin = null
@@ -147,77 +184,10 @@ class Header extends React.Component {
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="nav-fill w-100" navbar>
-            <NavItem>
-              <NavLink
-                className="navlink"
-                tag={RRNavLink}
-                exact
-                to="/"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Home</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/Info"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Info</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className="navlink"
-                tag={RRNavLink}
-                exact
-                to="/track-your-symptoms"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Track Your Symptoms</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/about-us"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>The Team</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/sponsors"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Sponsors</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/heat-map"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Heat Map</h3>
-              </NavLink>
-            </NavItem>
+            {this.renderNavItems()}
             <NavItem className="navlink">
               <NavLink>
-              <ShareButtons />
+                <ShareButtons />
               </NavLink>
             </NavItem>
             {loginLogoutButton}
@@ -232,3 +202,4 @@ class Header extends React.Component {
 }
 
 export default connect(null ,{ SignIn, SignOut })(Header);
+
