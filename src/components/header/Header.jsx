@@ -167,7 +167,9 @@ class Header extends React.Component {
         />
       );
     }
-    if (this.state.isLoggedIn) {
+    console.log(this.props.tokenId);
+
+    if (this.props.tokenId) {
       loginLogoutButton = (
         <GoogleLogout
           clientId={OAuth()}
@@ -280,4 +282,15 @@ class Header extends React.Component {
   }
 }
 
-export default connect(null, { SignIn, SignOut })(Header);
+const mapStateToProps = state => {
+  let map = {};
+
+  if (state.account.tokenId) {
+    map.tokenId = state.account.tokenId;
+  } else {
+    map.tokenId = null;
+  }
+  return map;
+};
+
+export default connect(mapStateToProps, { SignIn, SignOut })(Header);
