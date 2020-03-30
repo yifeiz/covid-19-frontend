@@ -102,3 +102,8 @@
 .home__subtitle {
   padding-bottom: 32px !important;
 }
+
+.home__information {
+  padding-top: 16px;
+  font-size: 0.9rem !important;
+}
