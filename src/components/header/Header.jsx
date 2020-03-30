@@ -52,9 +52,8 @@ class Header extends React.Component {
       <React.Fragment>
         {this.renderNavItem("/", "Home")}
         {this.renderNavItem("/Info", "Info")}
-        {this.renderNavItem("/track-your-symptoms", "Log Health")}
+        {this.renderNavItem("/track-your-symptoms", "Log your Health")}
         {this.renderNavItem("/heat-map", "Heat Map")}
-
         {this.renderNavItem("/about-us", "The Team")}
         {this.renderNavItem("/sponsors", "Sponsors")}
       </React.Fragment>
