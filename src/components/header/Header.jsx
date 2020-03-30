@@ -59,11 +59,11 @@ class Header extends React.Component {
                 className="navlink"
                 tag={RRNavLink}
                 exact
-                to="/track-your-symptoms"
+                to="/log-your-health"
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Track Your Symptoms</h3>
+                <h3>Log Your Health</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
@@ -101,7 +101,7 @@ class Header extends React.Component {
             </NavItem>
             <NavItem className="navlink">
               <NavLink>
-              <ShareButtons />
+                <ShareButtons />
               </NavLink>
             </NavItem>
           </Nav>
