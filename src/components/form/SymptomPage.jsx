@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import SymptomForm from "./SymptomForm";
 import { submitForm } from "../../actions";
+import { SignIn } from "../../actions";
 import Disclaimer from "../disclaimer/Disclaimer";
 import history from "../../history";
 
@@ -25,7 +26,7 @@ class SymptomPage extends React.Component {
   };
 
   renderModal() {
-    const { submissionStatus } = this.props;
+    const { submissionStatus } = this.props.map;
 
     const headerText = submissionStatus === false ?
       "Something went wrong..." :
@@ -50,9 +51,9 @@ class SymptomPage extends React.Component {
     );
   }
 
-  renderModalBody() {
-    const { submissionStatus } = this.props;
 
+  renderModalBody() {
+    const { submissionStatus } = this.props.map;
     if (typeof submissionStatus === "boolean") {
       const modalBody = submissionStatus ? 
         "Please update the form if you experience any changes in your condition." :
@@ -75,7 +76,7 @@ class SymptomPage extends React.Component {
   }
 
   renderModalFooter() {
-    const { submissionStatus } = this.props;
+    const { submissionStatus } = this.props.map;
 
     return (
       <>
@@ -90,7 +91,7 @@ class SymptomPage extends React.Component {
   }
 
   onSubmit = formValues => {
-    this.props.submitForm(formValues);
+    this.props.submitForm(formValues, this.props.tokenId);
     this.toggleModal();
   };
 
@@ -105,8 +106,20 @@ class SymptomPage extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  submissionStatus: state.HTML ? state.HTML.response : null
-});
+const mapStateToProps = state => {
+  let map = {}
+  map.submissionStatus = state.HTML ? state.HTML.response : null
 
-export default connect(mapStateToProps, { submitForm })(SymptomPage);
+  if (state.account.tokenId) {
+      map.tokenId = state.account.tokenId
+  } else {
+    map.tokenId = null
+  }
+  if (state.HTML) {
+      map.data= state.HTML.response
+  }
+  return map;
+};
+
+
+export default connect(mapStateToProps, { submitForm, SignIn })(SymptomPage);

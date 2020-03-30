@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./home.css";
 import Disclaimer from "../disclaimer/Disclaimer";
+import { GoogleLogin } from 'react-google-login';
+import { SignIn } from "../../actions/index";
 
 const Home = () => (
   <React.Fragment>
@@ -35,9 +38,20 @@ const Home = () => (
             </i>
           </p>
         </div>
-      </div>
-    </div>
-  </React.Fragment>
-);
+      </React.Fragment>
+    )
+  }
+}
 
-export default Home;
+const mapStateToProps = state => {
+  if (state.cookieExists) {
+    return {
+      cookieExists: state.cookieExists.exists
+    };
+  }
+  return {
+    cookieExists: false
+  };
+};
+
+export default connect(mapStateToProps, { SignIn })(Home);
