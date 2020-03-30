@@ -20,7 +20,7 @@ const Home = () => (
             providing real time information regarding the spread of COVID-19 in
             your local community and around the nation.
           </p>
-          <Link to={"/track-your-symptoms"}>
+          <Link to={"/log-your-health"}>
             <button className="red-button">
               Click to fill form and view map to see the spread of COVID
             </button>
