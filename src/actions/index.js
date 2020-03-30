@@ -11,7 +11,7 @@ export const submitForm = (formValues, tokenId) => async dispatch => {
     submitSuccess = false;
   }
 
-  dispatch({ type: "SUBMIT_FORM", payload: response.data });
+  dispatch({ type: "SUBMIT_FORM", payload: submitSuccess });
 };
 
 export const readCookie = () => async dispatch => {

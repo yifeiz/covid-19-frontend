@@ -17,7 +17,7 @@ class SymptomPage extends React.Component {
 
   exitModal = () => {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
-    history.push("/Info");
+    history.push("/info");
   };
 
   goToHeatMap = () => {
@@ -102,12 +102,12 @@ class SymptomPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Disclaimer />
 
         <SymptomForm onSubmit={this.onSubmit} />
-        <div>{this.renderModal(this.props.data)}</div>
-      </div>
+        <div>{this.renderModal()}</div>
+      </React.Fragment>
     );
   }
 }
