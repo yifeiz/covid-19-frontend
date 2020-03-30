@@ -101,7 +101,6 @@ class SymptomPage extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <>
         <Disclaimer />
@@ -115,7 +114,6 @@ class SymptomPage extends React.Component {
 const mapStateToProps = state => {
   let map = {};
   map.submissionStatus = state.HTML ? state.HTML.response : null;
-  console.log(map.submissionStatus);
 
   if (state.account.tokenId) {
     map.tokenId = state.account.tokenId;
