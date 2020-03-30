@@ -1,6 +1,13 @@
 steps:
   - name: gcr.io/cloud-builders/gsutil
     args: ["cp", "src/apis/backend.$_BRANCH.js", "src/apis/backend.js"]
+  - name: gcr.io/cloud-builders/gsutil
+    args:
+      [
+        "cp",
+        "src/components/header/OAuth.$_BRANCH.js",
+        "src/components/header/OAuth.js",
+      ]
   - name: "gcr.io/cloud-builders/npm"
     entrypoint: "npm"
     args: ["install"]
