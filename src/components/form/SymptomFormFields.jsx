@@ -42,7 +42,7 @@ export const PostalTextField = ({ label, input, meta, ...props }) => {
 };
 const blackColor = "0,0,0";
 const primaryColor = "#4287f5";
-const RadioStyle = makeStyles(theme=> ({
+const RadioStyle = makeStyles(theme => ({
   root: {
     padding: "13px",
     "&:hover": {
@@ -72,18 +72,17 @@ const RadioStyle = makeStyles(theme=> ({
     borderRadius: "50%"
   }
 }));
-const CheckboxRadio = (props) => {
+const CheckboxRadio = props => {
   const classes = RadioStyle();
   return (
     <Radio
       icon={<FiberManualRecord className={classes.radioUnchecked} />}
       checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
-      classes={{checked: classes.radio}}
+      classes={{ checked: classes.radio }}
       {...props}
     />
   );
-}
-
+};
 
 export const RadioButton = ({ radioValue, children, input, ...props }) => {
   return (

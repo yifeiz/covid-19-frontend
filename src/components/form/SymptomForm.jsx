@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Table, Row, Col, Container } from "reactstrap";
 import Recaptcha from "react-recaptcha";
+import Checkbox from "@material-ui/core/Checkbox";
+import Box from "@material-ui/core/Box";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { validate } from "./SymptomFormUtils";
 import {
@@ -12,7 +15,6 @@ import {
 } from "./SymptomFormConstants";
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
-import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
 import { RecaptchaKey } from "./Recaptcha.js";
 
@@ -42,6 +44,21 @@ const SymptomForm = props => {
       </div>
     );
   };
+
+  const renderCheckbox = ({ input, label }) => (
+    <div className={props.tokenId ? "disabled" : ""}>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={input.value ? true : false}
+            onChange={input.onChange}
+          />
+        }
+        label={label}
+      />
+    </div>
+  );
+
   const renderQuestions = questions => {
     return questions.map(question => {
       const label = `q${questions.indexOf(question) + 1}`;
@@ -117,6 +134,9 @@ const SymptomForm = props => {
     </React.Fragment>
   );
 
+  if (props.tokenId) {
+    props.change("terms", true);
+  }
   return (
     <React.Fragment>
       <div className="form__padding">
@@ -174,12 +194,17 @@ const SymptomForm = props => {
                     expiredCallback={recaptchaExpired}
                   />
                 </div>
-                <div style={{ paddingBottom: "10px" }}>
-                  By submitting account, you certify you are at least age of the
-                  majority in your province/territory and agree to Flattens
-                  Terms of Use and Privacy policy. If you do not feel
-                  comfortable with this, please do not submit.
+                <div>
+                  <Field
+                    name="terms"
+                    component={renderCheckbox}
+                    label="By submitting, you certify you are at least age of the
+                    majority in your province/territory and agree to Flattens'
+                    Terms of Use and Privacy Policy. If you do not feel
+                    comfortable with this, please do not submit."
+                  />
                 </div>
+                <div style={{ paddingBottom: "10px" }}></div>
                 <div className="submit">
                   <button
                     className="submit-button red-button"
