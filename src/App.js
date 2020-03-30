@@ -15,12 +15,6 @@ import "./main.css";
 import Protected from "./components/notLoggedIn/notLoggedIn";
 
 const App = props => {
-  console.log(props);
-  if (props.loggedIn) {
-    console.log("YES!!!");
-  } else {
-    console.log("NOOOOOO");
-  }
   return (
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
