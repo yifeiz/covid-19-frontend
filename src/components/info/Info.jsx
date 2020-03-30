@@ -81,6 +81,7 @@ class App extends Component {
                       marginRight: "1rem",
                       padding: "1rem",
                       fontFamily: "Open Sans"
+                      
                     }}
                   >
                     {index === 0 && <Para0 />}

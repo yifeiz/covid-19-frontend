@@ -5,7 +5,7 @@ import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
-
+import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 const postalStyle = makeStyles(theme => ({
   root: {
     border: "4px solid #e2e2e1",
@@ -34,17 +34,62 @@ export const PostalTextField = ({ label, input, meta, ...props }) => {
       placeholder={label}
       error={meta.touched && meta.invalid}
       helperText={meta.touched && meta.error}
+      inputProps={{ maxLength: 3 }}
       {...input}
       {...props}
     />
   );
 };
+const blackColor = "0,0,0";
+const primaryColor = "#4287f5";
+const RadioStyle = makeStyles(theme=> ({
+  root: {
+    padding: "13px",
+    "&:hover": {
+      backgroundColor: "unset"
+    }
+  },
+  labelRoot: {
+    marginLeft: "-14px"
+  },
+  checked: {
+    color: primaryColor + "!important"
+  },
+  radio: {
+    color: primaryColor + "!important"
+  },
+  radioChecked: {
+    width: "23px",
+    height: "23px",
+    border: "1px solid " + primaryColor,
+    borderRadius: "50%"
+  },
+  radioUnchecked: {
+    width: "0px",
+    height: "0px",
+    padding: "10px",
+    border: "1px solid rgba(" + blackColor + ", .54)",
+    borderRadius: "50%"
+  }
+}));
+const CheckboxRadio = (props) => {
+  const classes = RadioStyle();
+  return (
+    <Radio
+      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
+      classes={{checked: classes.radio}}
+      {...props}
+    />
+  );
+}
+
 
 export const RadioButton = ({ radioValue, children, input, ...props }) => {
   return (
     <FormControl>
       <RadioGroup row {...input} {...props}>
-        <FormControlLabel value={radioValue} control={<Radio />} />
+        <FormControlLabel value={radioValue} control={<CheckboxRadio />} />
       </RadioGroup>
     </FormControl>
   );

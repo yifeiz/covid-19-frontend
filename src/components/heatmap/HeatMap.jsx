@@ -37,7 +37,7 @@ class HeatMap extends React.Component {
   };
 
   goToHeatMap = () => {
-    history.push("/track-your-symptoms");
+    history.push("/log-your-health");
   };
 
   goHome = () => {
@@ -46,11 +46,7 @@ class HeatMap extends React.Component {
 
   renderModal = cookieExists => {
     return (
-      <Modal
-        isOpen={!cookieExists && this.state.modalIsOpen}
-        size="xl"
-        centered
-      >
+      <Modal isOpen={false} size="xl" centered>
         <ModalHeader>Have you filled out our form?</ModalHeader>
         <ModalBody>
           We'd really appreciate it if you'd fill out the form if you haven't

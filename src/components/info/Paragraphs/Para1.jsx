@@ -4,7 +4,7 @@ import "./Para.css";
 
 const Para1 = () => (
   <React.Fragment>
-    <p>
+    <div>
       COVID-19 is believed to be spread most commonly from an infected person
       through:
       <ul>
@@ -17,7 +17,7 @@ const Para1 = () => (
           nose, or eyes before washing your hands
         </li>
       </ul>
-    </p>
+    </div>
     <span>Source: </span>
     <a
       className="infoLink"
