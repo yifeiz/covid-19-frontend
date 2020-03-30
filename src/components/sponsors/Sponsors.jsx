@@ -41,7 +41,7 @@ class Sponsors extends React.Component {
           <div className="container-fluid d-flex justify-content-center">
             <div className="row company-row">
               {companies.map((company, index) => (
-                <div key={index}>
+                <div>
                   <a
                     href={company.link}
                     target="_blank"

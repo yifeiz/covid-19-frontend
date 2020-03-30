@@ -14,7 +14,6 @@ import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import { RecaptchaKey } from "./Recaptcha.js";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -167,7 +166,7 @@ const SymptomForm = props => {
                 </Table>
                 <div className="captcha">
                   <Recaptcha
-                    sitekey={RecaptchaKey()}
+                    sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
                     render="explicit"
                     onloadCallback={recaptchaLoaded}
                     verifyCallback={verifyCallback}

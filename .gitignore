@@ -24,6 +24,3 @@ yarn-error.log*
 
 /dist
 /src/apis/db.js
-/src/apis/backend.js
-/src/components/header/OAuth.js
-/src/components/form/Recaptcha.js
