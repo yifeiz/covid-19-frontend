@@ -1,6 +1,6 @@
 steps:
   - name: gcr.io/cloud-builders/gsutil
-    args: ["cp", "src/apis/db.$_BRANCH.js", "src/apis/db.js"]
+    args: ["cp", "src/apis/backend.$_BRANCH.js", "src/apis/backend.js"]
   - name: "gcr.io/cloud-builders/npm"
     entrypoint: "npm"
     args: ["install"]

@@ -1,12 +1,12 @@
-import db from "../apis/db";
+import backend from "../apis/backend";
 
 export const submitForm = (formValues, tokenId) => async dispatch => {
   formValues.tokenId = tokenId;
   let submitSuccess;
   try {
-    const response = await db.post("/submit", formValues);
+    const response = await backend.post("/submit", formValues);
     submitSuccess = response.data;
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     submitSuccess = false;
   }
@@ -26,10 +26,10 @@ export const readCookie = () => async dispatch => {
   }
 };
 
-export const SignIn = (response) => async dispatch => {
+export const SignIn = response => async dispatch => {
   if (response.profileObj) {
-    backend.post("/login", {tokenId: response.tokenId})
-    localStorage.setItem('imageURL', response.profileObj.imageUrl);
+    backend.post("/login", { tokenId: response.tokenId });
+    localStorage.setItem("imageURL", response.profileObj.imageUrl);
     dispatch({
       type: "SIGN_IN",
       payload: response.tokenId
@@ -38,8 +38,8 @@ export const SignIn = (response) => async dispatch => {
 };
 
 export const SignOut = () => async dispatch => {
-    dispatch({
-      type: "SIGN_OUT",
-      payload: true
-    });
+  dispatch({
+    type: "SIGN_OUT",
+    payload: true
+  });
 };

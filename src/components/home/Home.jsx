@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./home.css";
 import Disclaimer from "../disclaimer/Disclaimer";
-import { GoogleLogin } from 'react-google-login';
-import { SignIn } from "../../actions/index";
 
 const Home = () => (
   <React.Fragment>
@@ -38,10 +36,10 @@ const Home = () => (
             </i>
           </p>
         </div>
-      </React.Fragment>
-    )
-  }
-}
+      </div>
+    </div>
+  </React.Fragment>
+);
 
 const mapStateToProps = state => {
   if (state.cookieExists) {
@@ -54,4 +52,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { SignIn })(Home);
+export default connect(mapStateToProps)(Home);
