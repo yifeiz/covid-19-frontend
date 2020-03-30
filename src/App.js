@@ -1,7 +1,6 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
-import { readCookie } from "./actions";
 
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -13,7 +12,15 @@ import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import "./main.css";
 
-const App = cookieExists => {
+import Protected from "./components/notLoggedIn/notLoggedIn";
+
+const App = props => {
+  console.log(props);
+  if (props.loggedIn) {
+    console.log("YES!!!");
+  } else {
+    console.log("NOOOOOO");
+  }
   return (
     <React.Fragment>
       <Router history={history} style={{ height: "auto" }}>
@@ -23,11 +30,22 @@ const App = cookieExists => {
           <Route path="/info" exact component={Info} />
           <Route path="/about-us" exact component={AboutUs} />
           <Route path="/sponsors" exact component={Sponsors} />
-          <Route path="/log-your-health" exact component={SymptomPage} />
+          <Route
+            path="/log-your-health"
+            exact
+            component={props.loggedIn ? SymptomPage : Protected}
+          />
           <Route path="/heat-map" exact component={HeatMap} />
         </Switch>
       </Router>
     </React.Fragment>
   );
 };
-export default App;
+
+const mapStateToProps = state => {
+  if (state.account) {
+    return { loggedIn: state.account.tokenId };
+  }
+  return { loggedIn: null };
+};
+export default connect(mapStateToProps)(App);
