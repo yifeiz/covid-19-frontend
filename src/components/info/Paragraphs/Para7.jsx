@@ -4,9 +4,9 @@ import "./Para.css";
 
 const Para7 = () => (
   <React.Fragment>
-    <p>
+    <div>
       A person:
-      <ul class="infoList">
+      <ul className="infoList">
         <li>
           with fever (over 38 degrees Celsius) and/or new onset of (or
           exacerbation of chronic) cough
@@ -46,7 +46,7 @@ const Para7 = () => (
           treatment (e.g. chemotherapy)
         </li>
       </ul>
-    </p>
+    </div>
     <p className="infoNote">
       Note: A close contact is defined as a person who provided care for the
       patient, including healthcare workers, family members or other caregivers,

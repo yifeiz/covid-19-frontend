@@ -3,7 +3,7 @@ const volunteers = [
     name: "Shrey Jain",
     src: "./Headshots/shrey.png",
     link: "https://www.linkedin.com/in/shrey-j-9869b213a/",
-    role: "President"
+    role: "President and Director"
   },
   {
     name: "Yifei Zhang",
@@ -56,7 +56,7 @@ const volunteers = [
     name: "Marzyeh Ghassemi",
     src: "./Headshots/marzyeh.png",
     link: "https://www.linkedin.com/in/marzyehghassemi",
-    role: "Advisor",
+    role: "Advisor and Director",
     degrees: ", PhD",
     titles: "CIFAR AI Chair and Canada Research Chair"
   },
@@ -68,6 +68,14 @@ const volunteers = [
     role: "Advisor",
     degrees: "",
     titles: "Healthcare IT Specialist"
+  },
+  {
+    name: "Nick Frosst",
+    src: "./Headshots/nick.png",
+    link: "https://www.linkedin.com/in/nick-frosst-19b80463/",
+    role: "Advisor and Director",
+    degrees: "",
+    titles: "Founder of Cohere"
   },
   {
     name: "Anastasia Razdaibiedina",
@@ -145,7 +153,7 @@ const volunteers = [
     name: "Rassam Yazdi",
     src: "./Headshots/rassam.png",
     link: "https://www.linkedin.com/in/rassam-yazdi-3a256319a/",
-    role: "Outreach"
+    role: "Software Developer"
   },
 
   {
