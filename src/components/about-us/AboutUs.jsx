@@ -25,7 +25,7 @@ const AboutUs = () => (
         <div className="container-fluid d-flex justify-content-center">
           <div className="row about-us-row">
             {volunteers.map((volunteer, index) => (
-              <div key={index}className="col-lg-3 col-md-4 col-sm-5">
+              <div className="col-lg-3 col-md-4 col-sm-5">
                 <Profile
                   link={volunteer.link}
                   name={volunteer.name}
