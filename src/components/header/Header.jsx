@@ -81,8 +81,9 @@ class Header extends React.Component {
     if (!this.props.tokenId) {
       return (
         <React.Fragment>
-          {this.renderNavItem("/Info", "Info")}
+          {this.renderNavItem("/log-your-health", "Log your Health")}
           {this.renderNavItem("/heat-map", "Heat Map")}
+          {this.renderNavItem("/Info", "Info")}
           {this.renderNavItem("/about-us", "The Team")}
           {this.renderNavItem("/sponsors", "Sponsors")}
           {this.renderNavItem("/", "Login")}
@@ -91,9 +92,9 @@ class Header extends React.Component {
     }
     return (
       <React.Fragment>
-        {this.renderNavItem("/Info", "Info")}
         {this.renderNavItem("/log-your-health", "Log your Health")}
         {this.renderNavItem("/heat-map", "Heat Map")}
+        {this.renderNavItem("/Info", "Info")}
         {this.renderNavItem("/about-us", "The Team")}
         {this.renderNavItem("/sponsors", "Sponsors")}
       </React.Fragment>
