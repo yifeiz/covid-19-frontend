@@ -2,7 +2,7 @@ import React from "react";
 import "./Profile.css";
 
 const Profile = ({ link, src, name, role, titles, degrees }) => (
-  <div className="card text-center h-100">
+  <div className="card text-center">
     <div className="overflow">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img

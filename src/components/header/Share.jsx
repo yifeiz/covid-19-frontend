@@ -10,7 +10,7 @@ const fbQuote = "";
 const twitterTitle = "";
 const mailSubject = "";
 const mailBody = "";
-const size = 24;
+const size = 28;
 
 function ShareButtons(props) {
     return <div className="share">

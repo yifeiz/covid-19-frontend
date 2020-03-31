@@ -9,7 +9,7 @@ const Para6 = () => (
       getting an infection and developing severe complications due to their
       health, social and economic circumstances.
     </p>
-    <div>
+    <p>
       Vulnerable populations may include anyone who is:
       <ul>
         <li>an older adult </li>
@@ -22,7 +22,7 @@ const Para6 = () => (
           treatment (e.g. chemotherapy)
         </li>
       </ul>
-    </div>
+    </p>
 
     <span>Source: </span>
     <a
