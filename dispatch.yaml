@@ -4,3 +4,5 @@ dispatch:
     service: production
   - url: "flatten.ca/"
     service: default
+  - url: "fr.flatten.ca/*"
+    service: default-fr

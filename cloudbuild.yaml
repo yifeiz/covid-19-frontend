@@ -7,6 +7,10 @@ steps:
   - name: "gcr.io/cloud-builders/npm"
     entrypoint: "npm"
     args: ["run", "build"]
+  - name: gcr.io/cloud-builders/gsutil
+    args: ["cp", "app.$_BRANCH.yaml", "app.yaml"]
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "dispatch.yaml"]
 timeout: "1600s"
