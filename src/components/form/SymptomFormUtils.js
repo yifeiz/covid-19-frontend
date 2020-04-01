@@ -33,5 +33,9 @@ export const validate = formValues => {
     errors.postalCode = "Invalid postal code. Should be formatted as A1A";
   }
 
+  if (!formValues.terms) {
+    errors.terms = "Required";
+  }
+
   return errors;
 };
