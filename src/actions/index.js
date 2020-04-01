@@ -1,4 +1,4 @@
-import db from "../apis/db";
+import db from "../apis/db.staging";
 
 export const submitForm = formValues => async dispatch => {
   const response = await db.post("/submit", formValues);
