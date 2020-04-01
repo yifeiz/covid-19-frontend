@@ -16,13 +16,13 @@ const Home = () => (
         <div className="home__content">
           <img className="home__logo" src={logo} />
           <p className="home__subtitle">
-            FLATTEN is a not-for-profit organization platform for collecting and
-            providing real time information regarding the spread of COVID-19 in
-            your local community and around the nation.
+            Flatten est une plateforme pour organismes sans but lucratif qui
+            collige des renseignements en temps réel au sujet de la propagation
+            de la COVID-19 localement et partout au pays.
           </p>
           <Link to={"/track-your-symptoms"}>
             <button className="red-button">
-              Click to fill form and view map to see the spread of COVID
+              Cliquez sur le formulaire et suivez la propagation de la COVID-19
             </button>
           </Link>
         </div>
