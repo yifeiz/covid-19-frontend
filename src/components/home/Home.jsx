@@ -16,7 +16,7 @@ const Home = () => (
         <div className="home__content">
           <img className="home__logo" src={logo} />
           <p className="home__subtitle">
-            Flatten est une plateforme pour organismes sans but lucratif qui
+            FLATTEN est une plateforme pour organismes sans but lucratif qui
             collige des renseignements en temps réel au sujet de la propagation
             de la COVID-19 localement et partout au pays.
           </p>

@@ -12,9 +12,9 @@ const Disclaimer = () => (
     santé, des données pertinentes. Si vous avez des préoccupations, veuillez
     lire notre{" "}
     <a href="https://drive.google.com/open?id=1dbkrOLBBp_yqus-oeQ_JXdanDbdb8u-6">
-      Politique de confidentialité
-    </a>
-    , ainsi que nos{" "}
+      Politique de confidentialité,
+    </a>{" "}
+    ainsi que nos{" "}
     <a href="https://drive.google.com/open?id=1Cb9yb1zFXrQs0TKIAytx-16vCuHpJBDc">
       Conditions d’utilisation
     </a>
