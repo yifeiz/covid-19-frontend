@@ -147,8 +147,8 @@ const SymptomForm = props => {
                   <thead>
                     <tr>
                       <th className="answer">Question</th>
-                      <th className="answer">Yes</th>
-                      <th className="answer">No</th>
+                      <th className="answer">Oui</th>
+                      <th className="answer">Non</th>
                     </tr>
                   </thead>
                   <tbody>
