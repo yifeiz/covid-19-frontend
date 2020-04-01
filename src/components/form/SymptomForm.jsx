@@ -174,25 +174,26 @@ const SymptomForm = props => {
                     render="explicit"
                     onloadCallback={recaptchaLoaded}
                     verifyCallback={verifyCallback}
+                    hl="fr"
                     expiredCallback={recaptchaExpired}
                   />
                 </div>
                 <div style={{ paddingBottom: "10px" }}>
-                  By submitting account, you certify you are at least age of the
-                  majority in your province/territory and agree to Flattens
-                  Terms of Use and Privacy policy. If you do not feel
-                  comfortable with this, please do not submit.
+                  En soumettant votre compte, vous confirmez avoir au moins 18
+                  ans et vous consentez aux Conditions d’utilisation et à la
+                  Politique de confidentialité de Flattens. Si vous n’êtes pas à
+                  l’aise, ne soumettez pas vos réponses.
                 </div>
                 <div className="submit">
                   <button
                     className="submit-button red-button"
                     disabled={!isVerified}
                   >
-                    Submit
+                    Soumettez
                   </button>
                   {!isVerified && (
                     <div className="error">
-                      Please make sure to fill out all of the questions above.
+                      Assurez-vous d’avoir répondu à toutes les questions ci-dessous.
                     </div>
                   )}
                 </div>
