@@ -21,6 +21,9 @@ export const validate = formValues => {
   if (!formValues.q7) {
     errors.q7 = "Required";
   }
+  if (!formValues.q8) {
+    errors.q8 = "Required";
+  }
 
   if (!formValues.postalCode) {
     errors.postalCode = "You must enter a postal code";

@@ -85,7 +85,7 @@ class Header extends React.Component {
           {this.renderNavItem("/heat-map", "Heat Map")}
           {this.renderNavItem("/Info", "Info")}
           {this.renderNavItem("/about-us", "The Team")}
-          {this.renderNavItem("/sponsors", "Sponsors")}
+          {this.renderNavItem("/supporters", "Supporters")}
           {this.renderNavItem("/", "Login")}
         </React.Fragment>
       );
@@ -96,7 +96,7 @@ class Header extends React.Component {
         {this.renderNavItem("/heat-map", "Heat Map")}
         {this.renderNavItem("/Info", "Info")}
         {this.renderNavItem("/about-us", "The Team")}
-        {this.renderNavItem("/sponsors", "Sponsors")}
+        {this.renderNavItem("/supporters", "Supporters")}
       </React.Fragment>
     );
   }
