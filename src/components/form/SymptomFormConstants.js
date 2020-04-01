@@ -1,14 +1,14 @@
-export const FORM_HEADER = "Tell us how you feel!";
+export const FORM_HEADER = "Dites-nous ce que vous Ressentez!";
 
 export const FORM_QUESTIONS = [
-  "Do you have a fever, chills or shakes?",
-  "Do you have a new or worsening cough?",
-  "Are you experiencing shortness of breath (difficulty breathing, breathlessness)?",
-  "Are you 60 years of age or older?",
-  "Do you have any of the following medical conditions: diabetes, heart disease, active cancer, history of stroke, asthma, COPD, dialysis, or are immunocompromised?",
-  "Have you traveled outside of Canada within the last 14 days?",
-  "Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days or has been diagnosed with COVID-19?",
-  "Have you been diagnosed with COVID-19?"
+  "Faites-vous de la fièvre, ou avez-vous des frissons ou des tremblements?",
+  "Avez-vous une nouvelle toux, ou une toux qui empire?",
+  "Avez-vous le souffle court (difficultés à respirer,  essoufflement)?",
+  "Avez-vous 60 ans ou plus?",
+  "Souffrez-vous de l’une de ces atteintes: diabète, maladie cardio-vasculaire, cancer actif, antécédents d’AVC, asthme, MPOC, dialyse, ou êtes vous immunodéprimé(e)?",
+  "Avez-vous voyagé à l’extérieur du Canada au cours de 14 derniers jours?",
+  "Avez-vous été en contact rapproché avec une personne qui tousse, qui fait de la fièvre, ou qui est malade, et qui a voyagé à l’extérieur du Canada au cours des 14 derniers jours, ou qui a reçu un diagnostic de COVID-19?",
+  "Avez-vous reçu un diagnostic de COVID-19?"
 ];
 
 export const FORM_POSTAL_CODE_QUESTION =
