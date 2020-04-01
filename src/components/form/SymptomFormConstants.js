@@ -8,6 +8,7 @@ export const FORM_QUESTIONS = [
   "Souffrez-vous de l’une de ces atteintes: diabète, maladie cardio-vasculaire, cancer actif, antécédents d’AVC, asthme, MPOC, dialyse, ou êtes vous immunodéprimé(e)?",
   "Avez-vous voyagé à l’extérieur du Canada au cours de 14 derniers jours?",
   "Avez-vous été en contact rapproché avec une personne qui tousse, qui fait de la fièvre, ou qui est malade, et qui a voyagé à l’extérieur du Canada au cours des 14 derniers jours, ou qui a reçu un diagnostic de COVID-19?",
+  "Avez-vous reçu un diagnostic de COVID-19?"
 ];
 
 export const FORM_POSTAL_CODE_QUESTION =
