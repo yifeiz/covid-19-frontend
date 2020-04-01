@@ -40,7 +40,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Home</h3>
+                <h3>Accueil</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
@@ -51,7 +51,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Info</h3>
+                <h3>Information</h3>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -63,7 +63,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Track Your Symptoms</h3>
+                <h3>Formulaire</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
@@ -74,7 +74,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>The Team</h3>
+                <h3>Qui sommes-nous?</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
@@ -96,7 +96,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Heat Map</h3>
+                <h3>Page de la carte</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">

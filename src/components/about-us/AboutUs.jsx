@@ -9,12 +9,14 @@ const AboutUs = () => (
     <Disclaimer />
     <div className="about-us">
       <section>
-        <h4 className="title"> The Team </h4>
+        <h4 className="title">L'équipe </h4>
         <p className="description">
-          Here are the amazing volunteers who made this project possible!
+          Nous sommes un groupe de scientifiques, ingénieurs et cliniciens, qui
+          avons créé un formulaire et une carte numériques afin de fournir des
+          renseignements au sujet de la pandémie de COVID-19.
         </p>
         <p className="contact">
-          Contact Us:{" "}
+          Vous pouvez nous joindre au:{" "}
           <a className="emailLink" href="mailto:flattenofficial@gmail.com">
             flattenofficial@gmail.com
           </a>

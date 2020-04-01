@@ -22,7 +22,7 @@ class App extends Component {
       collapse: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
       cards: [
         "What is a Coronavirus (COVID-19)?",
-        "How does COVID-19 spread?",
+        "Comment la COVID-19 se propage-t-elle?",
         "What are the symptoms of COVID-19?",
         "How do I prevent myself and my loved ones from getting COVID-19?",
         "When should I see my family doctor or go to the hospital?",

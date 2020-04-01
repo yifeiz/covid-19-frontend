@@ -51,17 +51,17 @@ class HeatMap extends React.Component {
         size="xl"
         centered
       >
-        <ModalHeader>Have you filled out our form?</ModalHeader>
+        <ModalHeader>Avez-vous complété votre formulaire?</ModalHeader>
         <ModalBody>
-          We'd really appreciate it if you'd fill out the form if you haven't
-          already. Thank you!
+          Nous apprécierions que vous complétiez le formulaire si ce n’est pas
+          déjà fait. Merci!
         </ModalBody>
         <ModalFooter className="button-container">
           <Button color="primary" onClick={this.goToHeatMap}>
-            Take me to the form
+            Aller au formulaire
           </Button>
           <Button color="secondary" onClick={this.goHome}>
-            Continue to map
+            Aller à la carte
           </Button>
         </ModalFooter>
       </Modal>
@@ -75,7 +75,7 @@ class HeatMap extends React.Component {
         <DisclaimerMap />
         <div className="iframe-container" style={{ paddingTop: ratio }}>
           <iframe src="https://flatten-271620.web.app/">
-            Sorry, the heat-map did not load.
+            Désolé, la la représentation graphique n'a pas été chargée.
           </iframe>
           {this.renderModal(this.props.cookieExists)}
         </div>
