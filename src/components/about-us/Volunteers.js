@@ -155,14 +155,6 @@ const volunteers = [
     link: "https://www.linkedin.com/in/rassam-yazdi-3a256319a/",
     role: "Software Developer"
   },
-
-  {
-    name: "Lingkai Shen",
-    src: "./Headshots/lingkai.png",
-    link: "https://www.linkedin.com/in/lingkai-shen/",
-    role: "Software Developer"
-  },
-
   {
     name: "Maanav Dalal",
     src: "./Headshots/maanav.png",
