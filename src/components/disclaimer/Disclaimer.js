@@ -18,7 +18,7 @@ const Disclaimer = () => (
     <a href="https://drive.google.com/open?id=1Cb9yb1zFXrQs0TKIAytx-16vCuHpJBDc">
       Conditions d’utilisation
     </a>
-    .
+    .{" "}
   </div>
 );
 
