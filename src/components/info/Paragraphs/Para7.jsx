@@ -4,64 +4,91 @@ import "./Para.css";
 
 const Para7 = () => (
   <React.Fragment>
-    <div>
-      A person:
-      <ul className="infoList">
+    <p>
+      Une personne:
+      <ul class="infoList">
         <li>
-          with fever (over 38 degrees Celsius) and/or new onset of (or
-          exacerbation of chronic) cough
+          présentant une fièvre (plus de 38 degrés Celsius) ET/OU montrant
+          l'apparition d'une toux (ou exacerbation de la toux chronique)
         </li>
         <span>
-          <strong>AND</strong>
+          <strong>ET</strong>
         </span>
         <li>
-          who meets the COVID-19 exposure criteria where:
+          qui répond aux critères d'exposition du COVID-19, soit qu’au cours des
+          14 jours qui ont précédé le début des symptômes, la personne:
           <ul>
             <li>
-              In the 14 days before onset of illness, a person who has:
-              travelled to an affected area <strong>OR</strong> has had close
-              contact with a confirmed or probable case of COVID-19{" "}
-              <strong>OR</strong> had close contact with a person with acute
-              respiratory illness who has been to an affected area within 14
-              days prior to their illness onset <strong>OR</strong> had
-              laboratory exposure to biological material (e.g. primary clinical
-              specimens, virus culture isolates) known to contain COVID-19.
+              A voyagé vers une{" "}
+              <a
+                className="infoLink"
+                target="_blank"
+                href="https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus/professionnels-sante/liste-regions-touchees-covid-19.html"
+              >
+                région touchée
+              </a>
+            </li>
+            <b>OU</b>
+            <li>
+              A été en contact étroit avec un cas confirmé ou probable du
+              COVID-19
+            </li>
+            <b>OU</b>
+            <li>
+              A été en contact étroit avec une personne atteinte d'une maladie
+              respiratoire aiguë qui s'était rendue dans une{" "}
+              <a
+                className="infoLink"
+                target="_blank"
+                href="https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus/professionnels-sante/liste-regions-touchees-covid-19.html"
+              >
+                région touchée
+              </a>{" "}
+              dans les 14 jours précédant le début de la maladie;
+            </li>
+            <b>OU</b>
+            <li>
+              A été exposée en laboratoire à du matériel biologique (p. ex.
+              échantillons cliniques primaires, isolats de cultures de virus)
+              qu'on savait contenir du COVID-19.
             </li>
           </ul>
         </li>
         <li>
-          in whom laboratory diagnosis of COVID-19 is:
+          <strong>ET</strong> pour laquelle le diagnostic de laboratoire pour
+          COVID-19:
           <ul>
-            <li>inconclusive</li>
-            <li>negative (if specimen quality or timing is suspect)</li>
+            <li>mène à un diagnostic qui n'est pas décisif;</li>
             <li>
-              positive but not confirmed by the National Microbiology Laboratory
-              (NML) or a provincial public health laboratory by nucleic acid
-              amplification tests (NAAT).
+              est négatif (si la qualité ou le moment du prélèvement est
+              suspect);
+            </li>
+            <li>
+              est positif, mais n'a pas été confirmé par le Laboratoire national
+              de microbiologie (LNM) ou le laboratoire de santé publique d'une
+              province ou d'un territoire au moyen de tests d'amplification des
+              acides nucléiques (TAAN).
             </li>
           </ul>
-        </li>
-        <li>
-          at risk due to a compromised immune system from a medical condition or
-          treatment (e.g. chemotherapy)
         </li>
       </ul>
-    </div>
+    </p>
     <p className="infoNote">
-      Note: A close contact is defined as a person who provided care for the
-      patient, including healthcare workers, family members or other caregivers,
-      or who had other similar close physical contact or who lived with or
-      otherwise had close prolonged contact with a probable or confirmed case
-      while the case was ill.
+      Un contact étroit est défini comme étant une personne qui a prodigué des
+      soins au patient, y compris les travailleurs de la santé, les membres de
+      la famille ou d'autres personnes soignantes, ou encore une personne ayant
+      eu un contact physique étroit, ou qui a vécu avec le cas ou qui a eu
+      autrement un contact étroit prolongé avec un cas probable ou confirmé
+      alors que ce dernier était malade.
     </p>
 
     <span>Source: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/health-professionals/national-case-definition.html"
+      href="https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus/professionnels-sante/definition-nationale-cas.html "
     >
-      Public Health Agency of Canada
+      Agence de santé publique du Canada
     </a>
   </React.Fragment>
 );

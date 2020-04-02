@@ -31,8 +31,8 @@ class SymptomPage extends React.Component {
       : { submissionStatus: null };
     const headerText =
       submissionStatus === false
-        ? "Something went wrong..."
-        : "Thank you for your contribution!";
+        ? "Quelque chose a mal tourné..."
+        : "Merci pour votre contribution!";
 
     return (
       <Modal
@@ -53,8 +53,8 @@ class SymptomPage extends React.Component {
       : { submissionStatus: null };
     if (typeof submissionStatus === "boolean") {
       const modalBody = submissionStatus
-        ? "Please update the form if you experience any changes in your condition."
-        : "Uh oh, the form submission failed. Please refresh the page and try again.";
+        ? "Veuillez mettre à jour le formulaire si vous constatez un changement dans les symptômes.."
+        : "La soumission du formulaire a échoué. Veuillez rafraîchir la page et réessayer";
       return (
         <div style={{ color: "red", fontWeight: "bold" }}>{modalBody}</div>
       );
@@ -62,9 +62,9 @@ class SymptomPage extends React.Component {
       return (
         <>
           <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Chargement...</span>
           </div>
-          <div>Your response is being submitted, please wait ...</div>
+          <div>Votre réponse est en cours d'envoi, veuillez patienter ...</div>
         </>
       );
     }
@@ -82,14 +82,14 @@ class SymptomPage extends React.Component {
           onClick={this.exitModal}
           disabled={!submissionStatus}
         >
-          More Info
+          Informations
         </Button>
         <Button
           color="success"
           onClick={this.goToHeatMap}
           disabled={!submissionStatus}
         >
-          Proceed to Heat Map
+          Aller à la carte
         </Button>
       </>
     );

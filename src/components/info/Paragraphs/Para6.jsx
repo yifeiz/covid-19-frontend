@@ -5,32 +5,18 @@ import "./Para.css";
 const Para6 = () => (
   <React.Fragment>
     <p>
-      While diseases can make anyone sick, some Canadians are more at risk of
-      getting an infection and developing severe complications due to their
-      health, social and economic circumstances.
+      Les personnes les plus vulnérables et les plus à risque de développer des
+      atteintes sévères sont les personnes âgées ou ayant des maladies
+      chroniques préexistantes (haute pression, maladie cardiaque, maladie
+      pulmonaire, cancer, dialyse ou diabète).
     </p>
-    <div>
-      Vulnerable populations may include anyone who is:
-      <ul>
-        <li>an older adult </li>
-        <li>
-          has underlying medical conditions (e.g. heart disease, hypertension,
-          diabetes, chronic respiratory diseases, cancer)
-        </li>
-        <li>
-          at risk due to a compromised immune system from a medical condition or
-          treatment (e.g. chemotherapy)
-        </li>
-      </ul>
-    </div>
-
     <span>Source: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.canada.ca/en/public-health/services/publications/diseases-conditions/vulnerable-populations-covid-19.html"
+      href="https://www.canada.ca/fr/sante-publique/services/publications/maladies-et-affections/populations-vulnerables-covid-19.html"
     >
-      Public Health Agency of Canada
+      Agence de santé publique du Canada
     </a>
   </React.Fragment>
 );

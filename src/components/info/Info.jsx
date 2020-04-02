@@ -21,17 +21,17 @@ class App extends Component {
     this.state = {
       collapse: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
       cards: [
-        "What is a Coronavirus (COVID-19)?",
-        "How does COVID-19 spread?",
-        "What are the symptoms of COVID-19?",
-        "How do I prevent myself and my loved ones from getting COVID-19?",
-        "When should I see my family doctor or go to the hospital?",
-        "What is social distancing and how do I do it?",
-        `What makes a citizen "Vulnerable"?`,
-        `What makes a citizen a "Potential Case"?`,
+        "Qu’est-ce que le coronavirus (COVID-19)?",
+        "Comment la COVID-19 se propage-t-elle?",
+        "Quels sont les symptômes de la COVID-19?",
+        "Comment prévenir la COVID-19 chez moi et dans mon entourage?",
+        "Quand devrais-je consulter mon médecin de famille, ou me rendre à l’hôpital?",
+        "Qu’est-ce que la distanciation sociale et comment l’appliquer?",
+        `Quels facteurs rendent une personne « vulnérable »?`,
+        `Qu’est-ce qu’un « Cas potentiel »?`,
         `What makes a citizen a "Confirmed Case"?`,
-        "What public health/medical expertise does our team have?",
-        `External Resources`
+        "Quelle est l’expertise de notre équipe en matière de santé publique?",
+        `Ressources externes`
       ]
     };
   }
@@ -51,7 +51,7 @@ class App extends Component {
       <React.Fragment>
         <Disclaimer />
         <div className="info__container">
-          <h4 className="info__title">Frequently Asked Questions</h4>
+          <h4 className="info__title">Informations</h4>
           {cards.map((elem, index) => {
             return (
               <Card
@@ -81,7 +81,6 @@ class App extends Component {
                       marginRight: "1rem",
                       padding: "1rem",
                       fontFamily: "Open Sans"
-                      
                     }}
                   >
                     {index === 0 && <Para0 />}
