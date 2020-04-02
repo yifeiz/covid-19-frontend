@@ -205,7 +205,7 @@ const SymptomForm = props => {
                     component={renderCheckbox}
                     label="En soumettant votre compte, vous confirmez avoir au moins 18
                     ans et vous consentez aux Conditions d’utilisation et à la
-                    Politique de confidentialité de Flattens. Si vous n’êtes pas à
+                    Politique de confidentialité de Flatten. Si vous n’êtes pas à
                     l’aise, ne soumettez pas vos réponses."
                   />
                 </div>
@@ -219,7 +219,8 @@ const SymptomForm = props => {
                   </button>
                   {!isVerified && (
                     <div className="error">
-                      Assurez-vous d’avoir répondu à toutes les questions ci-dessous.
+                      Assurez-vous d’avoir répondu à toutes les questions
+                      ci-dessous.
                     </div>
                   )}
                 </div>

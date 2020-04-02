@@ -70,8 +70,11 @@ class HeatMap extends React.Component {
       <React.Fragment>
         <DisclaimerMap />
         <div className="iframe-container" style={{ paddingTop: ratio }}>
-          <iframe src="https://flatten-271620.web.app/" allow="geolocation">
-            Sorry, the heat-map did not load.
+          <iframe
+            src="https://flatten-271620.web.app/?lang=fr"
+            allow="geolocation"
+          >
+            Désolé, la carte n'a pas été chargée.
           </iframe>
           {this.renderModal(this.props.cookieExists)}
         </div>

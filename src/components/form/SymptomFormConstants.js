@@ -1,8 +1,8 @@
 export const FORM_HEADER = "Dites-nous ce que vous Ressentez!";
 
 export const FORM_QUESTIONS = [
-  "Faites-vous de la fièvre, ou avez-vous des frissons ou des tremblements?",
-  "Avez-vous une nouvelle toux, ou une toux qui empire?",
+  "Faites-vous de la fièvre ou avez-vous des frissons ou des tremblements?",
+  "Avez-vous une nouvelle toux ou une toux qui empire?",
   "Avez-vous le souffle court (difficultés à respirer,  essoufflement)?",
   "Avez-vous 60 ans ou plus?",
   "Souffrez-vous de l’une de ces atteintes: diabète, maladie cardio-vasculaire, cancer actif, antécédents d’AVC, asthme, MPOC, dialyse, ou êtes vous immunodéprimé(e)?",

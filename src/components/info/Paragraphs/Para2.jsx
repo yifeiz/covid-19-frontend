@@ -5,31 +5,32 @@ import "./Para.css";
 const Para2 = () => (
   <React.Fragment>
     <p>
-      Symptoms for COVID-19 are similar to those for influenza or other
-      respiratory illnesses. The most common symptoms include: fever, cough, and
-      shortness of breath. Less common symptoms can include extreme tiredness,
-      sore throat, and runny nose
+      Les symptômes de la COVID-19 sont semblables à ceux de l’influenza ou
+      d’autres virus respiratoires. Les symptômes les plus fréquents sont la
+      fièvre, la toux et les difficultés respiratoires. Parmi les autres
+      symptômes, il y a la fatigue extrême, le mal de gorge, l’écoulement nasal
+      et une perte soudaine de l’odorat et du goût sans congestion nasale.
     </p>
     <p>
-      Most people (about 80%) recover from this disease without needing special
-      treatment, but it can also cause serious illness. Those who are older and
-      those with other medical problems are more likely to develop serious
-      illness, which can include difficulty breathing and pneumonia; there is
-      also a risk of death in severe cases
+      La plupart des personnes atteintes de la COVID-19 se rétablissent par
+      elles-mêmes et n’ont pas besoin d’être hospitalisées. Toutefois, certaines
+      personnes développent des complications sérieuses, telles que des
+      difficultés respiratoires et une pneumonie, qui peuvent mener au décès
+      dans les cas les plus sévères.
     </p>
     <p>
-      While we are still learning about how COVID-19 affects people, older
-      persons and persons with pre-existing medical conditions (such as high
-      blood pressure, heart disease, lung disease, active cancer, dialysis, or
-      diabetes) appear to develop serious illness more often than others
+      Les personnes les plus vulnérables et les plus à risque de développer des
+      atteintes sévères sont les personnes âgées ou ayant des maladies
+      chroniques préexistantes (haute pression, maladie cardiaque, maladie
+      pulmonaire, cancer, dialyse ou diabète).
     </p>
     <span>Source: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.ontario.ca/page/2019-novel-coronavirus"
+      href="https://www.santemontreal.qc.ca"
     >
-      Public Health Ontario
+      Direction de santé publique de Montréal
     </a>
   </React.Fragment>
 );

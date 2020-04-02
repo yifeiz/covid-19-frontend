@@ -5,21 +5,33 @@ import "./Para.css";
 const Para5 = () => (
   <React.Fragment>
     <p>
-      Social distancing is used to minimize COVID-19 transmission in the
-      community. This means minimizing close contact with others during the peak
-      of an outbreak. Where possible, we would encourage you to: avoid public
-      transit, stay 6 feet away from others, reduce your exposure in the
-      community by avoiding areas such as shopping malls, recreation centers,
-      movie theatres, and avoid social gatherings. Overall, try to limit your
-      exposure outside the home.
+      Les stratégies de distanciation sociale recommandées par le gouvernement
+      visent à diminuer la probabilité de contacts avec des personnes infectées,
+      et, dans la mesure du possible, de maintenir une distance minimale de deux
+      mètres entre les personnes.
+    </p>
+    <p>
+      Le gouvernement du Québec a ordonné de réduire au minimum, à compter du 25
+      mars et jusqu’au 13 avril 2020, l’ensemble des services et activités qui
+      ne sont pas prioritaires. Une liste des services et activités prioritaires
+      a été rendue publique et sera mise à jour périodiquement.
     </p>
     <span>Source: </span>
+    <span>Sources: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/health-professionals/public-health-measures-mitigate-covid-19.html"
+      href="https://www.quebec.ca/coronavirus"
     >
-      Government of Canada
+      Gouvernement du Québec
+    </a>
+    <span> et </span>
+    <a
+      className="infoLink"
+      target="_blank"
+      href="https://www.santemontreal.qc.ca"
+    >
+      Direction de santé publique de Montréal
     </a>
   </React.Fragment>
 );

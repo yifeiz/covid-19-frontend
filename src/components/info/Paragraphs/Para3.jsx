@@ -5,31 +5,32 @@ import "./Para.css";
 const Para3 = () => (
   <React.Fragment>
     <p>
-      At this time, there is no vaccine, medication, or natural health products
-      that have evidence of protecting against COVID-19. We would encourage you
-      to practice “social distancing”: Stay home as much as possible, refrain
-      from attending large gatherings of people, wash your hands often with soap
-      and water for at least 20 seconds (or use hand sanitizer made up of at
-      least 60% alcohol), avoid touching your eyes nose or mouth with unwashed
-      hands, avoid close contact with people who are sick, and avoid all
-      non-essential travel
+      Il n’existe actuellement aucun vaccin, médicament ou produit naturel qui
+      protège contre le COVID-19. Pour réduire les risques de transmission, il
+      est important de mettre en application les mesures de prévention générales
+      recommandées pendant la pandémie de COVID-19. Il s’agit notamment du
+      lavage fréquent des mains à l’eau et au savon (durant 20 secondes) ou avec
+      une solution désinfectante à base d’alcool, d’éviter de porter les mains
+      au visage, de l’étiquette respiratoire (ex. tousser dans le coude) et du
+      maintien d’une distance minimale de deux mètres entre les personnes.
     </p>
     <p>
-      As well, clean high-touch surfaces frequently with regular household
-      cleaners or diluted bleach (1 part bleach to 9 parts water): such as toys,
-      toilets, phones, electronics, door handles, bedside tables, and television
-      remotes
+      Il est recommandé de rehausser les mesures de nettoyage et de désinfection
+      des surfaces fréquemment touchées (jouets, téléphones, appareils
+      électroniques, poignées de porte, tables de chevet, télécommandes, etc.) à
+      l’aide d’un produit désinfectant ou d’une solution d’eau de javel (1
+      partie d’eau de javel pour 9 parties d’eau).
     </p>
     <p>
-      For a list of cleaners and disinfectants effective against COVID-19, refer
-      to the following Government of Canada resource:
+      Une liste de produits est disponible sur le site du Gouvernement du
+      Canada:
       <a
         className="infoLink"
         target="_blank"
-        href="https://www.canada.ca/en/health-canada/services/drugs-health-products/disinfectants/covid-19/list.html"
+        href="https://www.canada.ca/fr/sante-canada/services/medicaments-produits-sante/desinfectants/covid-19/liste.html"
       >
         {" "}
-        List of hard-surface disinfectants for use against coronavirus
+        Liste de désinfectants pour surfaces dures autorisés par Santé Canada
         (COVID-19)
       </a>
     </p>

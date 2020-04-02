@@ -4,20 +4,22 @@ import "./Para.css";
 
 const Para1 = () => (
   <React.Fragment>
-    <div>
-      COVID-19 is believed to be spread most commonly from an infected person
-      through:
+    <p>
+      Le virus se transmet principalement:
       <ul>
-        <li>Respiratory droplets generated when they cough or sneeze</li>
         <li>
-          Close, prolonged personal contact such as touching or shaking hands
+          Par des gouttelettes (toux, éternuement) et par contact direct (ex.
+          salive) avec une personne déjà infectée.
         </li>
+        <li>Par contact direct ou prolongé avec une personne déjà infectée</li>
         <li>
-          Touching something with the virus on it, then touching your mouth,
-          nose, or eyes before washing your hands
+          En touchant des surfaces ou objets contaminés et en portant par la
+          suite les mains au visage, aux yeux et au nez sans lavage préalable
+          des mains. La transmission par contact indirect (ex. objets
+          contaminés) ne représente pas le mode de transmission principal.
         </li>
       </ul>
-    </div>
+    </p>
     <span>Source: </span>
     <a
       className="infoLink"
