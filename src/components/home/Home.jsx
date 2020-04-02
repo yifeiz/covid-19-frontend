@@ -138,7 +138,7 @@ class Home extends React.Component {
               {this.renderLogin(this.props.tokenId)}
               <Link to={"/log-your-health"}>
                 <button className="button-anon">
-                  ou, continuer anonymement
+                  ou, continuer sans se connecter
                 </button>
               </Link>
               <p className="home__information">
