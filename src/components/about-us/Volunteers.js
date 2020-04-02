@@ -27,7 +27,7 @@ const volunteers = [
     name: "Surya Krishnan",
     src: "./Headshots/surya.png",
     link: "https://www.linkedin.com/in/suryakrsh/",
-    role: "Maps Team Front End Lead and DevOps Engineer"
+    role: "Maps Team Front End Lead and DevOps"
   },
   {
     name: "Shafi  U. Bhuiyan",
