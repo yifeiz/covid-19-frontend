@@ -105,7 +105,7 @@ class SymptomPage extends React.Component {
       <React.Fragment>
         <Disclaimer />
 
-        <SymptomForm onSubmit={this.onSubmit} />
+        <SymptomForm onSubmit={this.onSubmit} tokenId={this.props.tokenId} />
         <div>{this.renderModal()}</div>
       </React.Fragment>
     );

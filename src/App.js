@@ -12,7 +12,7 @@ import HeatMap from "./components/heatmap/HeatMap";
 import history from "./history";
 import "./main.css";
 
-import Protected from "./components/notLoggedIn/notLoggedIn";
+// import Protected from "./components/notLoggedIn/notLoggedIn";
 
 const App = props => {
   return (
@@ -23,12 +23,8 @@ const App = props => {
           <Route path="/" exact component={Home} />
           <Route path="/info" exact component={Info} />
           <Route path="/about-us" exact component={AboutUs} />
-          <Route path="/sponsors" exact component={Sponsors} />
-          <Route
-            path="/log-your-health"
-            exact
-            component={props.loggedIn ? SymptomPage : Protected}
-          />
+          <Route path="/supporters" exact component={Sponsors} />
+          <Route path="/log-your-health" exact component={SymptomPage} />
           <Route path="/heat-map" exact component={HeatMap} />
         </Switch>
       </Router>
