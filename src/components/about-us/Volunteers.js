@@ -9,19 +9,19 @@ const volunteers = [
     name: "Yifei Zhang",
     src: "./Headshots/yifei.png",
     link: "https://www.linkedin.com/in/yifei-zhang1/",
-    role: "Dev Team Lead and DevOps Engineer"
+    role: "Dev Team Lead and DevOps"
   },
   {
     name: "Martin Staadacker",
     src: "./Headshots/martin.png",
     link: "https://www.linkedin.com/in/staad/",
-    role: "Maps Team Systems Integration Lead and DevOps Engineer"
+    role: "Maps Team Systems Integration Lead and DevOps"
   },
   {
     name: "Arthur Allshire",
     src: "./Headshots/arthur.png",
     link: "https://www.linkedin.com/in/arthur-allshire-56b06a16a/",
-    role: " Cloud Team Lead and DevOps Engineer"
+    role: " Cloud Team Lead and DevOps"
   },
   {
     name: "Surya Krishnan",
