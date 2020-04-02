@@ -110,7 +110,7 @@ class Header extends React.Component {
             render={renderProps => (
               <NavLink onClick={renderProps.onClick}>
                 <h3 style={{ cursor: "pointer" }}>
-                  Log Out
+                  Fermer la Session
                   <img
                     className="react-share__ShareButton share-button"
                     style={{

@@ -9,12 +9,13 @@ const AboutUs = () => (
     <Disclaimer />
     <div className="about-us">
       <section>
-        <h4 className="title"> The Team </h4>
+        <h4 className="title"> L'équipe </h4>
         <p className="description">
-          Here are the amazing volunteers who made this project possible!
+          Voici les bénévoles extraordinaires qui ont contribué à monter ce
+          projet!{" "}
         </p>
         <p className="contact">
-          Contact Us:{" "}
+          Vous pouvez nous joindre au:{" "}
           <a className="emailLink" href="mailto:flattenofficial@gmail.com">
             flattenofficial@gmail.com
           </a>
@@ -25,7 +26,7 @@ const AboutUs = () => (
         <div className="container-fluid d-flex justify-content-center">
           <div className="row about-us-row">
             {volunteers.map((volunteer, index) => (
-              <div key={index}className="col-lg-3 col-md-4 col-sm-5">
+              <div key={index} className="col-lg-3 col-md-4 col-sm-5">
                 <Profile
                   link={volunteer.link}
                   name={volunteer.name}
