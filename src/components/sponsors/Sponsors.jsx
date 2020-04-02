@@ -7,16 +7,14 @@ class Sponsors extends React.Component {
   render() {
     let companies = [
       {
-        name: "Google Cloud",
+        name: "Google Cloud Logo",
+        src: "./company-logos/google-cloud2.png",
         link: "https://cloud.google.com/"
       },
       {
-        name: "Vector Institute",
+        name: "Vector Institute Logo",
+        src: "./company-logos/vector-institute.png",
         link: "https://vectorinstitute.ai/"
-      },
-      {
-        name: "CIFAR",
-        link: "https://cifar.ca"
       }
     ];
 
@@ -29,7 +27,7 @@ class Sponsors extends React.Component {
       <div className="App">
         <Disclaimer />
         <section>
-          <h4 className="sponsors__title">Supporters</h4>
+          <h4 className="sponsors__title">Sponsors</h4>
           <p className="description">{description}</p>
           <p className="contact">
             Contact Us:{" "}
@@ -39,18 +37,28 @@ class Sponsors extends React.Component {
           </p>
           <hr className="line" />
         </section>
-        <div className="container-fluid justify-content-center">
-          {companies.map((company, index) => (
-            <div
-              key={index}
-              style={{ textAlign: "center", fontSize: "1.5rem" }}
-            >
-              <a href={company.link} target="_blank" rel="noopener noreferrer">
-                {company.name}
-              </a>
+        <section className="sponsor-logos">
+          <div className="container-fluid d-flex justify-content-center">
+            <div className="row company-row">
+              {companies.map((company, index) => (
+                <div>
+                  <a
+                    href={company.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={require(`${company.src}`)}
+                      alt={company.name}
+                      key={index}
+                      className="logo"
+                    />
+                  </a>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
       </div>
     );
   }

@@ -81,11 +81,11 @@ class Header extends React.Component {
               <NavLink
                 tag={RRNavLink}
                 exact
-                to="/supporters"
+                to="/sponsors"
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Supporters</h3>
+                <h3>Sponsors</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">
@@ -101,7 +101,7 @@ class Header extends React.Component {
             </NavItem>
             <NavItem className="navlink">
               <NavLink>
-                <ShareButtons />
+              <ShareButtons />
               </NavLink>
             </NavItem>
           </Nav>
