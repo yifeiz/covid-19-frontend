@@ -18,11 +18,19 @@ const Para5 = () => (
     </p>
     <span>Source: </span>
     <span>Sources: </span>
-    <a className="infoLink" target="_blank" href="www.quebec.ca/coronavirus">
+    <a
+      className="infoLink"
+      target="_blank"
+      href="https://www.quebec.ca/coronavirus"
+    >
       Gouvernement du Québec
     </a>
     <span> et </span>
-    <a className="infoLink" target="_blank" href="www.santemontreal.qc.ca">
+    <a
+      className="infoLink"
+      target="_blank"
+      href="https://www.santemontreal.qc.ca"
+    >
       Direction de santé publique de Montréal
     </a>
   </React.Fragment>

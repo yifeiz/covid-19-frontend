@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Table, Row, Col, Container } from "reactstrap";
 import Recaptcha from "react-recaptcha";
+import Checkbox from "@material-ui/core/Checkbox";
+import Box from "@material-ui/core/Box";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { validate } from "./SymptomFormUtils";
 import {
@@ -12,8 +15,8 @@ import {
 } from "./SymptomFormConstants";
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
-import Box from "@material-ui/core/Box";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
+import { RecaptchaKey } from "./Recaptcha.js";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);
@@ -41,6 +44,21 @@ const SymptomForm = props => {
       </div>
     );
   };
+
+  const renderCheckbox = ({ input, label }) => (
+    <div className={props.tokenId ? "disabled" : ""}>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={input.value ? true : false}
+            onChange={input.onChange}
+          />
+        }
+        label={label}
+      />
+    </div>
+  );
+
   const renderQuestions = questions => {
     return questions.map(question => {
       const label = `q${questions.indexOf(question) + 1}`;
@@ -120,6 +138,9 @@ const SymptomForm = props => {
     </React.Fragment>
   );
 
+  if (props.tokenId) {
+    props.change("terms", true);
+  }
   return (
     <React.Fragment>
       <div className="form__padding">
@@ -170,20 +191,25 @@ const SymptomForm = props => {
                 </Table>
                 <div className="captcha">
                   <Recaptcha
-                    sitekey="6LfuVOIUAAAAAOPSfeWxh-Juu9_gJQ_cEu3mRitY"
+                    sitekey={RecaptchaKey()}
                     render="explicit"
                     onloadCallback={recaptchaLoaded}
                     verifyCallback={verifyCallback}
-                    hl="fr"
                     expiredCallback={recaptchaExpired}
+                    hl="fr"
                   />
                 </div>
-                <div style={{ paddingBottom: "10px" }}>
-                  En soumettant votre compte, vous confirmez avoir au moins 18
-                  ans et vous consentez aux Conditions d’utilisation et à la
-                  Politique de confidentialité de Flattens. Si vous n’êtes pas à
-                  l’aise, ne soumettez pas vos réponses.
+                <div>
+                  <Field
+                    name="terms"
+                    component={renderCheckbox}
+                    label="En soumettant votre compte, vous confirmez avoir au moins 18
+                    ans et vous consentez aux Conditions d’utilisation et à la
+                    Politique de confidentialité de Flatten. Si vous n’êtes pas à
+                    l’aise, ne soumettez pas vos réponses."
+                  />
                 </div>
+                <div style={{ paddingBottom: "10px" }}></div>
                 <div className="submit">
                   <button
                     className="submit-button red-button"
@@ -193,7 +219,8 @@ const SymptomForm = props => {
                   </button>
                   {!isVerified && (
                     <div className="error">
-                      Assurez-vous d’avoir répondu à toutes les questions ci-dessous.
+                      Assurez-vous d’avoir répondu à toutes les questions
+                      ci-dessous.
                     </div>
                   )}
                 </div>

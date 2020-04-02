@@ -78,7 +78,7 @@ class HeatMap extends React.Component {
             src="https://flatten-271620.web.app/?lang=fr"
             allow="geolocation"
           >
-            Désolé, la représentation graphique n'a pas été chargée.
+            Désolé, la carte n'a pas été chargée.
           </iframe>
           {this.renderModal(this.props.cookieExists)}
         </div>

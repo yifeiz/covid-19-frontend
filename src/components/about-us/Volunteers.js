@@ -3,7 +3,7 @@ const volunteers = [
     name: "Shrey Jain",
     src: "./Headshots/shrey.png",
     link: "https://www.linkedin.com/in/shrey-j-9869b213a/",
-    role: "President"
+    role: "Président"
   },
   {
     name: "Yifei Zhang",
@@ -56,7 +56,7 @@ const volunteers = [
     name: "Marzyeh Ghassemi",
     src: "./Headshots/marzyeh.png",
     link: "https://www.linkedin.com/in/marzyehghassemi",
-    role: "Advisor",
+    role: "Advisor and Director",
     degrees: ", PhD",
     titles: "CIFAR AI Chair and Canada Research Chair"
   },
@@ -70,40 +70,48 @@ const volunteers = [
     titles: "Healthcare IT Specialist"
   },
   {
+    name: "Nick Frosst",
+    src: "./Headshots/nick.png",
+    link: "https://www.linkedin.com/in/nick-frosst-19b80463/",
+    role: "Advisor and Director",
+    degrees: "",
+    titles: "Founder of Cohere"
+  },
+  {
     name: "Anastasia Razdaibiedina",
     src: "./Headshots/anastasia.png",
     link: "https://www.linkedin.com/in/anastasia-razdaibiedina-438929197/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Emily Tao",
     src: "./Headshots/emily.png",
     link: "https://www.linkedin.com/in/emilytao2000/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Samuel Hao",
     src: "./Headshots/samuel.png",
     link: "https://www.linkedin.com/in/samuelhao/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Charlie Chen",
     src: "./Headshots/charlie.png",
     link: "https://www.linkedin.com/in/hyu-chen/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "William Wen",
     src: "./Headshots/william.png",
     link: "https://www.linkedin.com/in/william-wen360/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Xavier Hébert-Couturier",
     src: "./Headshots/xavier.png",
     link: "https://www.linkedin.com/in/xavierhc/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Steven Van",
@@ -121,7 +129,7 @@ const volunteers = [
     name: "Owen Brake",
     src: "./Headshots/owen.png",
     link: "https://OwenBrake.com",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Siyan Zhao",
@@ -139,22 +147,14 @@ const volunteers = [
     name: "Robert Wu",
     src: "./Headshots/robertwu.png",
     link: "https://linkedin.com/in/wu-robert",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Rassam Yazdi",
     src: "./Headshots/rassam.png",
     link: "https://www.linkedin.com/in/rassam-yazdi-3a256319a/",
-    role: "Outreach"
+    role: "Développeur de logiciels"
   },
-
-  {
-    name: "Lingkai Shen",
-    src: "./Headshots/lingkai.png",
-    link: "https://www.linkedin.com/in/lingkai-shen/",
-    role: "Software Developer"
-  },
-
   {
     name: "Maanav Dalal",
     src: "./Headshots/maanav.png",
@@ -165,13 +165,13 @@ const volunteers = [
     name: "Eric Zhai",
     src: "",
     link: "https://www.linkedin.com/in/eric-zhai/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Ivan Nesterovic",
     src: "./Headshots/ivan.png",
     link: "https://www.linkedin.com/in/ivan-nesterovic/",
-    role: "Software Developer"
+    role: "Développeur de logiciels"
   },
   {
     name: "Miraal Kabir",

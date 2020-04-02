@@ -4,3 +4,5 @@ dispatch:
     service: backend-staging
   - url: "staging.flatten.ca/"
     service: default
+  - url: "fr.staging.flatten.ca/*"
+    service: default-fr

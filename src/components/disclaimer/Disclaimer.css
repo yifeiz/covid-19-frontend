@@ -3,6 +3,7 @@
   padding: 1.2% 13%;
   text-align: left;
   background-color: #f8f9fa;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 500px) and (max-height: 900px) {

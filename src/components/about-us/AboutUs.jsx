@@ -9,10 +9,10 @@ const AboutUs = () => (
     <Disclaimer />
     <div className="about-us">
       <section>
-        <h4 className="title">L'équipe </h4>
+        <h4 className="title"> L'équipe </h4>
         <p className="description">
           Voici les bénévoles extraordinaires qui ont contribué à monter ce
-          projet!
+          projet!{" "}
         </p>
         <p className="contact">
           Vous pouvez nous joindre au:{" "}
@@ -26,7 +26,7 @@ const AboutUs = () => (
         <div className="container-fluid d-flex justify-content-center">
           <div className="row about-us-row">
             {volunteers.map((volunteer, index) => (
-              <div className="col-lg-3 col-md-4 col-sm-5">
+              <div key={index} className="col-lg-3 col-md-4 col-sm-5">
                 <Profile
                   link={volunteer.link}
                   name={volunteer.name}

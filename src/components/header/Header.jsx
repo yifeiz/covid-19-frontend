@@ -1,7 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
 import { NavLink as RRNavLink } from "react-router-dom";
 import logo from "../../assets/logo_nav.png";
 import ShareButtons from "./Share.jsx";
+import { GoogleLogout } from "react-google-login";
+import { GoogleLogin } from "react-google-login";
+import { SignIn, SignOut } from "../../actions/index";
+import "./header.css";
+
+import { OAuth } from "./OAuth.js";
+
 import {
   Collapse,
   Navbar,
@@ -12,7 +20,39 @@ import {
 } from "reactstrap";
 
 class Header extends React.Component {
-  state = { isOpen: false };
+  state = {
+    isOpen: false,
+    windowWidth: window.innerWidth
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  handleResize = e => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
+  responseGoogle = response => {
+    if (response.googleId) {
+      console.log("LOGIN");
+      this.props.SignIn(response);
+    }
+  };
+
+  onLogoutSuccess = () => {
+    localStorage.removeItem("imageURL");
+    this.props.SignOut();
+    console.log("Logged out");
+  };
+
+  onLogoutFailure = () => {
+    console.log("Logout Failed");
+  };
 
   toggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
@@ -21,89 +61,100 @@ class Header extends React.Component {
   resetNav = () => {
     this.setState({ isOpen: false });
   };
-
+  renderNavItem(link, name) {
+    return (
+      <NavItem>
+        <NavLink
+          className="navlink"
+          tag={RRNavLink}
+          exact
+          to={link}
+          activeClassName="active"
+          onClick={this.resetNav}
+        >
+          <h3>{name}</h3>
+        </NavLink>
+      </NavItem>
+    );
+  }
+  renderNavItems() {
+    if (!this.props.tokenId) {
+      return (
+        <React.Fragment>
+          {this.renderNavItem("/log-your-health", "Formulaire")}
+          {this.renderNavItem("/heat-map", "Page de la carte")}
+          {this.renderNavItem("/Info", "Informations")}
+          {this.renderNavItem("/about-us", "Qui sommes-nous?")}
+          {this.renderNavItem("/supporters", "Soutenir la cause")}
+          {this.renderNavItem("/", "Ouvrir une session")}
+        </React.Fragment>
+      );
+    }
+    return (
+      <React.Fragment>
+        {this.renderNavItem("/log-your-health", "Formulaire")}
+        {this.renderNavItem("/heat-map", "Page de la carte")}
+        {this.renderNavItem("/Info", "Informations")}
+        {this.renderNavItem("/about-us", "Qui sommes-nous?")}
+        {this.renderNavItem("/supporters", "Soutenir la cause")}
+      </React.Fragment>
+    );
+  }
   renderNav() {
+    let loginLogoutButton = null;
+    if (this.props.tokenId) {
+      loginLogoutButton = (
+        <NavItem>
+          <GoogleLogout
+            clientId={OAuth()}
+            render={renderProps => (
+              <NavLink onClick={renderProps.onClick}>
+                <h3 style={{ cursor: "pointer" }}>
+                  Fermer la Session
+                  <img
+                    className="react-share__ShareButton share-button"
+                    style={{
+                      borderRadius: "50%",
+                      height: "24px",
+                      marginLeft: "10px"
+                    }}
+                    src={`${localStorage.getItem("imageURL")}`}
+                  />
+                </h3>
+              </NavLink>
+            )}
+            onLogoutSuccess={this.onLogoutSuccess}
+            onFailure={this.onLogoutFailure}
+          ></GoogleLogout>
+        </NavItem>
+      );
+    } else {
+      loginLogoutButton = (
+        <GoogleLogin
+          className="google-disabled"
+          clientId={OAuth()}
+          buttonText="Sign in with Google"
+          onSuccess={this.responseGoogle}
+          onFailure={this.responseGoogle}
+          cookiePolicy={"single_host_origin"}
+          disabled={!this.state.consent}
+          isSignedIn={true}
+        />
+      );
+    }
+
     return (
       <Navbar color="light" light expand="lg">
         <NavLink href="/">
           <img className="header__logo" src={logo} />
         </NavLink>
-        <div class="d-flex order-lg-1 ml-auto pr-4">
-          <ul class="navbar-nav flex-row">
-            <a href="https://flatten.ca">English</a>
-          </ul>
+        <div class="d-flex order-lg-1 ml-auto pr-2">
+          <ul class="navbar-nav flex-row">{loginLogoutButton}</ul>
         </div>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="nav-fill w-100" navbar>
-            <NavItem>
-              <NavLink
-                className="navlink"
-                tag={RRNavLink}
-                exact
-                to="/"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Accueil</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/Info"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Informations</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className="navlink"
-                tag={RRNavLink}
-                exact
-                to="/track-your-symptoms"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Formulaire</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/about-us"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Qui sommes-nous?</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/supporters"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Soutenir la cause</h3>
-              </NavLink>
-            </NavItem>
-            <NavItem className="navlink">
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to="/heat-map"
-                activeClassName="active"
-                onClick={this.resetNav}
-              >
-                <h3>Page de la carte</h3>
-              </NavLink>
-            </NavItem>
+            {this.renderNavItems()}
             <NavItem className="navlink">
               <NavLink>
                 <ShareButtons />
@@ -119,4 +170,15 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => {
+  let map = {};
+
+  if (state.account.tokenId) {
+    map.tokenId = state.account.tokenId;
+  } else {
+    map.tokenId = null;
+  }
+  return map;
+};
+
+export default connect(mapStateToProps, { SignIn, SignOut })(Header);

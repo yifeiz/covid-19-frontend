@@ -39,6 +39,49 @@ export const PostalTextField = ({ label, input, meta, ...props }) => {
     />
   );
 };
+const blackColor = "0,0,0";
+const primaryColor = "#4287f5";
+const RadioStyle = makeStyles(theme => ({
+  root: {
+    padding: "13px",
+    "&:hover": {
+      backgroundColor: "unset"
+    }
+  },
+  labelRoot: {
+    marginLeft: "-14px"
+  },
+  checked: {
+    color: primaryColor + "!important"
+  },
+  radio: {
+    color: primaryColor + "!important"
+  },
+  radioChecked: {
+    width: "23px",
+    height: "23px",
+    border: "1px solid " + primaryColor,
+    borderRadius: "50%"
+  },
+  radioUnchecked: {
+    width: "0px",
+    height: "0px",
+    padding: "10px",
+    border: "1px solid rgba(" + blackColor + ", .54)",
+    borderRadius: "50%"
+  }
+}));
+const CheckboxRadio = props => {
+  const classes = RadioStyle();
+  return (
+    <Radio
+      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
+      classes={{ checked: classes.radio }}
+      {...props}
+    />
+  );
+};
 
 export const RadioButton = ({ radioValue, children, input, ...props }) => {
   return (

@@ -4,6 +4,10 @@
   }
 }
 
+.google-signin-button {
+  width: 250px;
+}
+
 .home {
   height: 89.8%;
   width: 100%;
@@ -101,4 +105,9 @@
 
 .home__subtitle {
   padding-bottom: 32px !important;
+}
+
+.home__information {
+  padding-top: 16px;
+  font-size: 0.9rem !important;
 }
