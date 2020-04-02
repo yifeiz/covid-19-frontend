@@ -24,10 +24,15 @@ class Header extends React.Component {
 
   renderNav() {
     return (
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="lg">
         <NavLink href="/">
           <img className="header__logo" src={logo} />
         </NavLink>
+        <div class="d-flex order-lg-1 ml-auto pr-4">
+          <ul class="navbar-nav flex-row">
+            <a href="https://flatten.ca">English</a>
+          </ul>
+        </div>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="nav-fill w-100" navbar>
