@@ -1,4 +1,4 @@
-import backend from "../apis/backend.staging";
+import backend from "../apis/backend";
 
 export const submitForm = (formValues, tokenId) => async dispatch => {
   formValues.tokenId = tokenId;

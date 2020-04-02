@@ -8,7 +8,7 @@ import { GoogleLogin } from "react-google-login";
 import { SignIn, SignOut } from "../../actions/index";
 import "./header.css";
 
-import { OAuth } from "./OAuth.staging.js";
+import { OAuth } from "./OAuth.js";
 
 import {
   Collapse,

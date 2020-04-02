@@ -16,7 +16,7 @@ import {
 import image from "../../assets/science.png";
 import "./SymptomForm.css";
 import { PostalTextField, RadioButton } from "./SymptomFormFields";
-import { RecaptchaKey } from "./Recaptcha.staging.js";
+import { RecaptchaKey } from "./Recaptcha.js";
 
 const SymptomForm = props => {
   const [isVerified, setIsVerified] = useState(false);

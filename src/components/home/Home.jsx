@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
-import { OAuth } from "../header/OAuth.staging.js";
+import { OAuth } from "../header/OAuth.js";
 
 import logo from "../../assets/logo.png";
 import "./home.css";
