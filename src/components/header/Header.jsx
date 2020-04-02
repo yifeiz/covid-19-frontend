@@ -148,9 +148,11 @@ class Header extends React.Component {
         <NavLink href="/">
           <img className="header__logo" src={logo} />
         </NavLink>
-        <div class="d-flex order-lg-1 ml-auto pr-2">
-          <ul class="navbar-nav flex-row">{loginLogoutButton}</ul>
-        </div>
+        <div class="d-flex order-lg-1 ml-auto pr-4">
+          <ul class="navbar-nav flex-row">
+            {loginLogoutButton}
+            <a href="https://fr.flatten.ca">Français</a>
+          </ul>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="nav-fill w-100" navbar>
