@@ -12,4 +12,4 @@ export const FORM_QUESTIONS = [
 ];
 
 export const FORM_POSTAL_CODE_QUESTION =
-  "Quels sont les 3 premiers caractères de votre code postal";
+  "Quels sont les trois premiers caractères du code postal de votre résidence actuelle?";
