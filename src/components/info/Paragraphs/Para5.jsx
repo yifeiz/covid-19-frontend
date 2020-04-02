@@ -16,7 +16,6 @@ const Para5 = () => (
       ne sont pas prioritaires. Une liste des services et activités prioritaires
       a été rendue publique et sera mise à jour périodiquement.
     </p>
-    <span>Source: </span>
     <span>Sources: </span>
     <a
       className="infoLink"

@@ -136,6 +136,11 @@ class Home extends React.Component {
                 propagation de la COVID-19 localement et partout au pays.{" "}
               </p>
               {this.renderLogin(this.props.tokenId)}
+              <Link to={"/log-your-health"}>
+                <button className="button-anon">
+                  ou, continuer anonymement
+                </button>
+              </Link>
               <p className="home__information">
                 <i>
                   En enregistrant régulièrement votre état de santé, FLATTEN
