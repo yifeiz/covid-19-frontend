@@ -1,4 +1,4 @@
-export const FORM_HEADER = "Dites-nous ce que vous Ressentez!";
+export const FORM_HEADER = "Dites-nous ce que vous ressentez!";
 
 export const FORM_QUESTIONS = [
   "Faites-vous de la fièvre ou avez-vous des frissons ou des tremblements?",
