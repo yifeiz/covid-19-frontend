@@ -29,7 +29,7 @@ class App extends Component {
         "Qu’est-ce que la distanciation sociale et comment l’appliquer?",
         `Quels facteurs rendent une personne « vulnérable »?`,
         `Qu’est-ce qu’un « Cas potentiel »?`,
-        `What makes a citizen a "Confirmed Case"?`,
+        `Qu’est-ce qu’un « Cas confirmé »?`,
         "Quelle est l’expertise de notre équipe en matière de santé publique?",
         `Ressources externes`
       ]
