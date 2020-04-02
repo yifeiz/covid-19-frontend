@@ -32,7 +32,7 @@ class SymptomPage extends React.Component {
         size="lg"
       >
         <ModalHeader toggle={this.toggleModal}>
-          Thank you for your contribution!
+          Merci pour votre contribution!
         </ModalHeader>
         <ModalBody>{this.renderResponse(data)}</ModalBody>
         {this.renderButtons(data)}
@@ -44,8 +44,8 @@ class SymptomPage extends React.Component {
     const modalDescription = (
       <div>
         <h3 style={{ color: "red", fontWeight: "bold" }}>
-          Please update the form if you experience any changes in your
-          condition.
+          Veuillez mettre à jour le formulaire si vous constatez un changement
+          dans les symptômes..
         </h3>
       </div>
     );
@@ -58,7 +58,7 @@ class SymptomPage extends React.Component {
         <div class="spinner-border" role="status">
           <span class="sr-only">Loading...</span>
         </div>
-        <div>Your response is being submitted, please wait ...</div>
+        <div>Votre réponse est en cours d'envoi, veuillez patienter ...</div>
       </div>
     );
   }
@@ -71,10 +71,10 @@ class SymptomPage extends React.Component {
     return (
       <ModalFooter>
         <Button color="info" onClick={this.exitModal} disabled={!active}>
-          More Info
+          Informations
         </Button>
         <Button color="success" onClick={this.goToHeatMap} disabled={!active}>
-          Proceed to Heat Map
+          Aller à la carte
         </Button>
       </ModalFooter>
     );

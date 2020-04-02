@@ -5,36 +5,35 @@ import "./Para.css";
 const Para4 = () => (
   <React.Fragment>
     <p>
-      If you are seeking help for mild or moderate COVID-19 symptoms, you can
-      contact Telehealth Ontario at 1-866-797-0000, your local public health
-      unit, or your primary care provider, but know that there are no treatments
-      at this time and you will be instructed to stay home and practice methods
-      of social distancing (described below). Do not visit an assessment centre
-      unless you have been referred by a healthcare professional.
+      Si la COVID-19 vous inquiète ou si vous présentez des symptômes comme de
+      la toux, de la fièvre ou des difficultés respiratoires, ou d’autres
+      symptômes compatibles avec la COVID-19, vous pouvez composer le 514
+      644-4545.
     </p>
     <p>
-      If you are seriously ill or experiencing severe symptoms (severe shortness
-      of breath, chest pain, serious weakness or lethargy that impairs the
-      ability to carry out your regular activities) call your healthcare
-      provider for medical advice. If you have a medical emergency and need to
-      call 911, notify the operator that you have or think you might have,
-      COVID-19. If possible, put on a facemask before medical help arrives.
+      De plus, si vous avez de la toux, de la fièvre ou des difficultés
+      respiratoires ou d’autres symptômes compatibles avec la COVID-19:
+      <li>
+        ne vous présentez pas dans une clinique médicale sans avoir reçu au
+        préalable un rendez-vous;
+      </li>
+      <li>
+        si votre condition le permet, composez le 514-644-4545. Si vous êtes de
+        retour d’un voyage depuis moins de 14 jours, précisez-le;
+      </li>
+      <li>
+        rendez-vous à l’urgence seulement si vous avez des difficultés
+        respiratoires (difficulté à respirer au repos ou impossibilité de
+        respirer en position couchée).
+      </li>
     </p>
     <span>Sources: </span>
-    <a
-      className="infoLink"
-      target="_blank"
-      href="https://www.ontario.ca/page/2019-novel-coronavirus"
-    >
-      Government of Ontario
+    <a className="infoLink" target="_blank" href="www.quebec.ca/coronavirus">
+      Gouvernement du Québec
     </a>
-    <span>, </span>
-    <a
-      className="infoLink"
-      target="_blank"
-      href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
-    >
-      Centers for Disease Control and Prevention
+    <span> et </span>
+    <a className="infoLink" target="_blank" href="www.santemontreal.qc.ca">
+      Direction de santé publique de Montréal
     </a>
   </React.Fragment>
 );

@@ -56,7 +56,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Information</h3>
+                <h3>Informations</h3>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -90,7 +90,7 @@ class Header extends React.Component {
                 activeClassName="active"
                 onClick={this.resetNav}
               >
-                <h3>Supporters</h3>
+                <h3>Soutenir la cause</h3>
               </NavLink>
             </NavItem>
             <NavItem className="navlink">

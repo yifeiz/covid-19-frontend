@@ -5,13 +5,19 @@ import "./Para.css";
 const Para9 = () => (
   <React.Fragment>
     <p>
-      Our team is advised by an intensivist, Dr. Jain, as well as Dr. Bhuyian,
-      Chair of the Canadian Coalition for Global Health Research. We are also
-      working with Internationally Trained Medical Doctors (ITMD’s) and public
-      health networks affiliated with Dr. Bhuyian. We have had Dr. Jain, 36
-      ITMD’s, Dr. Bhuyian, and public health experts provide us with the
-      guidance necessary to ask the right questions and ensure we provide the
-      right information for Canadians today to help flatten the curve.
+      Notre équipe bénéficie des services-conseil d’un intensiviste, le Dr.
+      Jain, ainsi que du Dr. Bhuyian, Président de la Coalition canadienne pour
+      la recherche en santé mondiale. Nous travaillons également avec
+      Internationally Trained Medical Doctors (ITMD’s) et avec les réseaux de
+      santé publique affiliés au Dr. Bhuyian. Nous avons obtenu les conseils et
+      l’expertise du Dr. Jain, de 36 médecins du ITMD, du Dr. Bhuyian, ainsi que
+      d’experts en santé publique, afin de développer les questions adéquates et
+      ainsi fournir les informations les plus justes à la population canadienne,
+      dans le but d’aplatir la courbe.
+    </p>
+    <p>
+      L’information en version française est conforme à l’information offerte
+      par la Direction de santé publique de Montréal.
     </p>
   </React.Fragment>
 );
