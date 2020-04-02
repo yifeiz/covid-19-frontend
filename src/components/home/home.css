@@ -4,6 +4,10 @@
   }
 }
 
+.google-signin-button {
+  width: 250px;
+}
+
 .home {
   height: 89.8%;
   width: 100%;

@@ -5,32 +5,34 @@ import "./Para.css";
 const Para8 = () => (
   <React.Fragment>
     <p>
-      A person with laboratory confirmation of infection with the virus that
-      causes COVID-19 is performed at a reference laboratory (NML or a
-      provincial public health laboratory), and consists of positive nucleic
-      acid amplification tests (NAAT) on at least two specific genome targets or
-      a single positive target with nucleic acid sequencing.
+      Personne dont l’infection au coronavirus causant la COVID-19 a été
+      confirmée par un laboratoire de référence (LNM ou laboratoire de santé
+      publique d’une province ou d’un territoire). La confirmation nécessite des
+      tests positifs d’amplification des acides nucléiques (TAAN) sur au moins
+      deux cibles génomiques spécifiques ou une seule cible positive avec
+      séquençage des acides nucléiques.
     </p>
     <p>
-      Positive laboratory tests at a non-reference laboratory require additional
-      testing at a reference laboratory for confirmation.
+      Les tests de laboratoire positifs effectués par un laboratoire autre qu’un
+      laboratoire de référence doivent être confirmés par un laboratoire de
+      référence.
     </p>
     <p className="infoNote">
-      Note: Nucleic acid amplification tests must be validated for detection of
-      the virus that causes COVID-19.
+      Remarque : Les tests d’amplification des acides nucléiques doivent être
+      validés pour la détection du virus qui cause la COVID‑19.
     </p>
     <p className="infoNote">
-      Note: Laboratory tests are evolving for this emerging pathogen, and
-      laboratory testing recommendations will change accordingly as new assays
-      are developed and validated.
+      Remarque : Les tests en laboratoire évoluent pour cet agent pathogène
+      émergent, et les recommandations de tests de laboratoire changeront à
+      mesure que de nouveaux tests seront développés et validés.
     </p>
     <span>Source: </span>
     <a
       className="infoLink"
       target="_blank"
-      href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/health-professionals/national-case-definition.html#exposure"
+      href="https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus/professionnels-sante/definition-nationale-cas.html"
     >
-      Public Health Agency of Canada
+      Agence de santé publique du Canada
     </a>
   </React.Fragment>
 );

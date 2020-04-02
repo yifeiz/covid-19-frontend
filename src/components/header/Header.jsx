@@ -86,7 +86,7 @@ class Header extends React.Component {
           {this.renderNavItem("/Info", "Informations")}
           {this.renderNavItem("/about-us", "Qui sommes-nous?")}
           {this.renderNavItem("/supporters", "Soutenir la cause")}
-          {this.renderNavItem("/", "Login")}
+          {this.renderNavItem("/", "Ouvrir une session")}
         </React.Fragment>
       );
     }

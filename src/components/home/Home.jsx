@@ -50,14 +50,14 @@ class Home extends React.Component {
               this.setState({ consent: !this.state.consent });
             }}
           />
-          By clicking the box, you agree to our Privacy Policy and Terms of
-          Service.
+          Cochez pour confirmer que vous acceptez notre politique de
+          confidentialité et Conditions d’utilisation
         </label>
         <br />
         <GoogleLogin
           className="google-signin-button"
           clientId={OAuth()}
-          buttonText="Sign in with Google"
+          buttonText="Se connecter à l'aide de Google"
           render={renderProps => (
             <button
               type="button"
@@ -103,7 +103,7 @@ class Home extends React.Component {
                   fontWeight: "500"
                 }}
               >
-                Sign in with Google
+                Se connecter à l'aide de Google
               </span>
             </button>
           )}
@@ -138,11 +138,12 @@ class Home extends React.Component {
               {this.renderLogin(this.props.tokenId)}
               <p className="home__information">
                 <i>
-                  By logging your health on a regular basis, FLATTEN is able to
-                  identify regions where there are vulnerable, potential, and
-                  confirmed cases of COVID-19. This information is used for
-                  healthcare systems to optimize resources and for Canadians to
-                  understand the importance of social distancing.
+                  En enregistrant régulièrement votre état de santé, FLATTEN
+                  peut identifier les régions où il existe des zones
+                  vulnérables, potentielles et cas confirmés de COVID-19. Ces
+                  informations sont utilisées pour systèmes de santé pour
+                  optimiser les ressources et pour les Canadiens comprendre
+                  l'importance de l'éloignement social.
                 </i>
               </p>
             </div>
