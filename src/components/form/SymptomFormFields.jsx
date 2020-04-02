@@ -5,7 +5,7 @@ import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
-
+import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 const postalStyle = makeStyles(theme => ({
   root: {
     border: "4px solid #e2e2e1",
@@ -34,6 +34,7 @@ export const PostalTextField = ({ label, input, meta, ...props }) => {
       placeholder={label}
       error={meta.touched && meta.invalid}
       helperText={meta.touched && meta.error}
+      inputProps={{ maxLength: 3 }}
       {...input}
       {...props}
     />
@@ -87,7 +88,7 @@ export const RadioButton = ({ radioValue, children, input, ...props }) => {
   return (
     <FormControl>
       <RadioGroup row {...input} {...props}>
-        <FormControlLabel value={radioValue} control={<Radio />} />
+        <FormControlLabel value={radioValue} control={<CheckboxRadio />} />
       </RadioGroup>
     </FormControl>
   );
