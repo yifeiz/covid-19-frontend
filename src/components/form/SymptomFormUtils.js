@@ -26,11 +26,11 @@ export const validate = formValues => {
   }
 
   if (!formValues.postalCode) {
-    errors.postalCode = "You must enter a postal code";
+    errors.postalCode = "Vous devez entrer un code postal";
   } else if (
     !/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]$/i.test(formValues.postalCode)
   ) {
-    errors.postalCode = "Invalid postal code. Should be formatted as A1A";
+    errors.postalCode = "Code postal invalide. Devrait être formaté comme A1A";
   }
 
   return errors;
