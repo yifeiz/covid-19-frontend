@@ -9,40 +9,40 @@ const volunteers = [
     name: "Yifei Zhang",
     src: "./Headshots/yifei.png",
     link: "https://www.linkedin.com/in/yifei-zhang1/",
-    role: "Dev Team Lead and DevOps"
+    role: "Chef d'équipe dev et DevOps"
   },
   {
     name: "Martin Staadacker",
     src: "./Headshots/martin.png",
     link: "https://www.linkedin.com/in/staad/",
-    role: "Maps Team Systems Integration Lead and DevOps"
+    role: "Chef d'équipe de l'intégration Carte et DevOps"
   },
   {
     name: "Arthur Allshire",
     src: "./Headshots/arthur.png",
     link: "https://www.linkedin.com/in/arthur-allshire-56b06a16a/",
-    role: " Cloud Team Lead and DevOps"
+    role: "Chef d'équipe Cloud et DevOps"
   },
   {
     name: "Surya Krishnan",
     src: "./Headshots/surya.png",
     link: "https://www.linkedin.com/in/suryakrsh/",
-    role: "Maps Team Front End Lead and DevOps"
+    role: "Chef d'équipe de Carte frontale et DevOps"
   },
   {
-    name: "Shafi  U. Bhuiyan",
+    name: "Shafi U. Bhuiyan",
     src: "./Headshots/shafi.png",
     role: "Public Health Advisor",
     degrees: ", MBBS, MPH, MBA, PhD",
     titles:
-      "Chair, Board of Directors, Canadian Coalition for Global Health Research"
+      "Directeur, Conseil d'administration, Canadian Coalition for Global Health Research"
   },
   {
     name: "Geoffrey Hinton",
     src: "./Headshots/geoffrey.png",
     role: "Advisor",
     degrees: ", PhD",
-    titles: "Chief Scientific Advisor at Vector Institute"
+    titles: "Conseiller scientifique en chef de Vector Institute"
   },
   {
     name: "Minto Jain",
@@ -50,7 +50,7 @@ const volunteers = [
     link: "https://www.linkedin.com/in/minto-jain-19380333/",
     role: "Advisor",
     degrees: ", MHPE, MD, FRSCS",
-    titles: "Intensivist"
+    titles: "Intensiviste"
   },
   {
     name: "Marzyeh Ghassemi",
@@ -58,7 +58,7 @@ const volunteers = [
     link: "https://www.linkedin.com/in/marzyehghassemi",
     role: "Advisor and Director",
     degrees: ", PhD",
-    titles: "CIFAR AI Chair and Canada Research Chair"
+    titles: "Directeur de CIFAR AI et Directeur de Recherche Canada"
   },
 
   {
@@ -75,7 +75,7 @@ const volunteers = [
     link: "https://www.linkedin.com/in/nick-frosst-19b80463/",
     role: "Advisor and Director",
     degrees: "",
-    titles: "Founder of Cohere"
+    titles: "Fondateur de Cohere"
   },
   {
     name: "Anastasia Razdaibiedina",
@@ -117,13 +117,13 @@ const volunteers = [
     name: "Steven Van",
     src: "./Headshots/steven.png",
     link: "https://www.linkedin.com/in/steven-van",
-    role: "Media Team Lead"
+    role: "Chef d'équipe Média"
   },
   {
     name: "Sejal Jain",
     src: "./Headshots/sejal.png",
     link: "https://www.linkedin.com/in/sejal-jain-25029817b",
-    role: "Outreach Team Lead"
+    role: "Chef d'équipe diffusion"
   },
   {
     name: "Owen Brake",
@@ -135,13 +135,13 @@ const volunteers = [
     name: "Siyan Zhao",
     src: "./Headshots/siyan.png",
     link: "https://www.linkedin.com/in/siyanzhao/",
-    role: "Machine Learning"
+    role: "Apprentissage Machine"
   },
   {
     name: "Robert Li",
     src: "./Headshots/robert.png",
     link: "https://www.linkedin.com/in/jianing-robert-li",
-    role: "Machine Learning"
+    role: "Apprentissage Machine"
   },
   {
     name: "Robert Wu",
@@ -159,7 +159,7 @@ const volunteers = [
     name: "Maanav Dalal",
     src: "./Headshots/maanav.png",
     link: "https://www.linkedin.com/in/maanavdalal/",
-    role: "Design"
+    role: "Développeur de logiciels"
   },
   {
     name: "Eric Zhai",

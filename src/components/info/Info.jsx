@@ -25,7 +25,7 @@ class App extends Component {
         "Comment la COVID-19 se propage-t-elle?",
         "Quels sont les symptômes de la COVID-19?",
         "Comment prévenir la COVID-19 chez moi et dans mon entourage?",
-        "Quand devrais-je consulter mon médecin de famille, ou me rendre à l’hôpital?",
+        "Quand dois-je voir le médecin ou aller à l’hôpital?",
         "Qu’est-ce que la distanciation sociale et comment l’appliquer?",
         `Quels facteurs rendent une personne « vulnérable »?`,
         `Qu’est-ce qu’un « Cas potentiel »?`,
