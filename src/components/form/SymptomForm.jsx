@@ -94,42 +94,46 @@ const SymptomForm = props => {
   const FORM_DISCLAIMER = (
     <React.Fragment>
       <p>
-        Your answers are collected and will be made available publicly,
-        including through our website to help healthcare providers, researchers,
-        and others gauge the spread of COVID-19 and inform efforts that help
-        keep yourself, your family, and your community healthy.{" "}
+        Vos réponses seront colligées et rendues publiques, notamment sur notre
+        site internet. Les informations que vous fournirez auront pour but
+        d’aider les intervenants du réseau de la santé, les chercheurs, ainsi
+        que d’autres parties prenantes à évaluer la propagation de la COVID-19,
+        ainsi qu’à ajuster les efforts visant à protéger votre santé, celle de
+        votre famille, et de votre collectivité.{" "}
         <b>
-          We will use our good faith efforts to ensure your answers are shared
-          in an aggregated manner, such as in the form of the heat map that you
-          can view by following the link in our navigation panel above.
-        </b>{" "}
-        The following questionnaire is designed to help collect information
-        regarding your risk factors for COVID-19 infection. The questions are
-        based on the best available guidance from Canadian public health
-        agencies and other stakeholders and will be updated regularly. This
-        survey is not intended to facilitate any kind of diagnosis or
-        self-assessment for COVID-19. If you suspect you may have COVID-19,
-        please seek medical attention. Please review our
-        <a href="https://drive.google.com/open?id=1Cb9yb1zFXrQs0TKIAytx-16vCuHpJBDc">
-          {" "}
-          Terms of Service
-        </a>{" "}
-        and
+          Nous agirons en toute bonne foi afin de nous assurer que vos réponses
+          sont partagées sous forme agrégée, tel qu’illustré sur la
+          représentation graphique dans le menu ci-haut
+        </b>
+        . Le questionnaire qui suit a été conçu afin de recueillir des données
+        sur les facteurs de risque pour la COVID-19. Les questions s’appuient
+        sur le meilleur encadrement fourni par les agences de santé publique
+        canadiennes, ainsi que par les autres parties prenantes du milieu, et
+        elles seront mises à jour régulièrement. Ce sondage n’a pas pour but de
+        faciliter le diagnostic, ni de servir d’auto-évaluation pour la
+        COVID-19. Si vous soupçonnez être atteint de la COVID-19, veuillez vous
+        adresser à un professionnel de la santé. Veuillez lire attentivement
+        notre{" "}
         <a href="https://drive.google.com/open?id=1dbkrOLBBp_yqus-oeQ_JXdanDbdb8u-6">
-          {" "}
-          Privacy Policy
-        </a>{" "}
-        carefully and if you do not agree to our Terms of Service or are not
-        comfortable with our collection, use, and disclosure of the information
-        you provide, do not complete this Survey (though we would appreciate if
-        you could provide feedback to us at{" "}
-        <a href="mailto:flattenofficial@gmail.com">
-          flattenofficial@gmail.com
-        </a>{" "}
-        on how we may be able to address your concerns).
+          Politique de confidentialité
+        </a>
+        , ainsi que nos{" "}
+        <a href="https://drive.google.com/open?id=1Cb9yb1zFXrQs0TKIAytx-16vCuHpJBDc">
+          Conditions d’utilisation
+        </a>
+        , et si vous ne consentez pas à nos{" "}
+        <a href="https://drive.google.com/open?id=1Cb9yb1zFXrQs0TKIAytx-16vCuHpJBDc">
+          Conditions d’utilisation
+        </a>
+        , ou que vous n’êtes pas à l’aise avec nos méthodes de compilation,
+        d’utilisation ou de divulgation de l’information que vous fournirez, ne
+        répondez pas au sondage. (Par contre, nous apprécierions si vous nous
+        fassiez parvenir vos commentaires à&nbsp;
+        <a href="mailto:flattenofficial@gmail.com">flattenofficial@gmail.com</a>
+        , afin que nous puissions répondre à vos préoccupations).
       </p>
       <p style={{ fontStyle: "Normal", fontWeight: "Bold" }}>
-        Please fill in this form even if you are experiencing no symptoms.
+        Veuillez compléter ce formulaire, même si vous n’avez aucun symptôme.
       </p>
     </React.Fragment>
   );
@@ -164,8 +168,8 @@ const SymptomForm = props => {
                   <thead>
                     <tr>
                       <th className="answer">Question</th>
-                      <th className="answer">Yes</th>
-                      <th className="answer">No</th>
+                      <th className="answer">Oui</th>
+                      <th className="answer">Non</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -192,16 +196,17 @@ const SymptomForm = props => {
                     onloadCallback={recaptchaLoaded}
                     verifyCallback={verifyCallback}
                     expiredCallback={recaptchaExpired}
+                    hl="fr"
                   />
                 </div>
                 <div>
                   <Field
                     name="terms"
                     component={renderCheckbox}
-                    label="By submitting, you certify you are at least age of the
-                    majority in your province/territory and agree to Flattens'
-                    Terms of Use and Privacy Policy. If you do not feel
-                    comfortable with this, please do not submit."
+                    label="En soumettant votre compte, vous confirmez avoir au moins 18
+                    ans et vous consentez aux Conditions d’utilisation et à la
+                    Politique de confidentialité de Flattens. Si vous n’êtes pas à
+                    l’aise, ne soumettez pas vos réponses."
                   />
                 </div>
                 <div style={{ paddingBottom: "10px" }}></div>
@@ -210,11 +215,11 @@ const SymptomForm = props => {
                     className="submit-button red-button"
                     disabled={!isVerified}
                   >
-                    Submit
+                    Soumettez
                   </button>
                   {!isVerified && (
                     <div className="error">
-                      Please make sure to fill out all of the questions above.
+                      Assurez-vous d’avoir répondu à toutes les questions ci-dessous.
                     </div>
                   )}
                 </div>

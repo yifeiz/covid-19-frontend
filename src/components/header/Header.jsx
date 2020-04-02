@@ -81,22 +81,22 @@ class Header extends React.Component {
     if (!this.props.tokenId) {
       return (
         <React.Fragment>
-          {this.renderNavItem("/log-your-health", "Log your Health")}
-          {this.renderNavItem("/heat-map", "Heat Map")}
-          {this.renderNavItem("/Info", "Info")}
-          {this.renderNavItem("/about-us", "The Team")}
-          {this.renderNavItem("/supporters", "Supporters")}
+          {this.renderNavItem("/log-your-health", "Formulaire")}
+          {this.renderNavItem("/heat-map", "Page de la carte")}
+          {this.renderNavItem("/Info", "Informations")}
+          {this.renderNavItem("/about-us", "Qui sommes-nous?")}
+          {this.renderNavItem("/supporters", "Soutenir la cause")}
           {this.renderNavItem("/", "Login")}
         </React.Fragment>
       );
     }
     return (
       <React.Fragment>
-        {this.renderNavItem("/log-your-health", "Log your Health")}
-        {this.renderNavItem("/heat-map", "Heat Map")}
-        {this.renderNavItem("/Info", "Info")}
-        {this.renderNavItem("/about-us", "The Team")}
-        {this.renderNavItem("/supporters", "Supporters")}
+        {this.renderNavItem("/log-your-health", "Formulaire")}
+        {this.renderNavItem("/heat-map", "Page de la carte")}
+        {this.renderNavItem("/Info", "Informations")}
+        {this.renderNavItem("/about-us", "Qui sommes-nous?")}
+        {this.renderNavItem("/supporters", "Soutenir la cause")}
       </React.Fragment>
     );
   }
@@ -110,7 +110,7 @@ class Header extends React.Component {
             render={renderProps => (
               <NavLink onClick={renderProps.onClick}>
                 <h3 style={{ cursor: "pointer" }}>
-                  Log Out
+                  Fermer la Session
                   <img
                     className="react-share__ShareButton share-button"
                     style={{
