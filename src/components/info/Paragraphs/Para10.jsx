@@ -5,22 +5,23 @@ import "./Para.css";
 const Para10 = () => (
   <React.Fragment>
     <p>
-      <a href="https://covid-19.ontario.ca/self-assessment/#q0">
-        <p>Ontario COVID-19 self-assessment</p>
+      <a href="https://www.santemontreal.qc.ca">
+        <p>Direction de santé publique de Montréal</p>
       </a>
     </p>
     <p>
-      <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">
-        <p>
-          Government of Canada Coronavirus disease (COVID-19) Outbreak Updates
-        </p>
+      <a href="https://www.quebec.ca/coronavirus">
+        <p>Gouvernement du Québec</p>
       </a>
     </p>
     <p>
-      <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public">
-        <p>
-          World Health Organization (WHO) Coronavirus disease (COVID-19) Advice
-        </p>
+      <a href="https://www.canada.ca/fr/sante-publique/services/maladies/maladie-coronavirus-covid-19.html">
+        <p>Gouvernement du Canada</p>
+      </a>
+    </p>
+    <p>
+      <a href="https://www.who.int/fr/home">
+        Organisation mondiale de la santé
       </a>
     </p>
   </React.Fragment>

@@ -11,9 +11,8 @@ const AboutUs = () => (
       <section>
         <h4 className="title">L'équipe </h4>
         <p className="description">
-          Nous sommes un groupe de scientifiques, ingénieurs et cliniciens, qui
-          avons créé un formulaire et une carte numériques afin de fournir des
-          renseignements au sujet de la pandémie de COVID-19.
+          Voici les bénévoles extraordinaires qui ont contribué à monter ce
+          projet!
         </p>
         <p className="contact">
           Vous pouvez nous joindre au:{" "}
