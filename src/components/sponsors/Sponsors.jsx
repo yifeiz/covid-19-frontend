@@ -34,7 +34,7 @@ class Sponsors extends React.Component {
           <h4 className="sponsors__title">Soutenir la cause</h4>
           <p className="description">{description}</p>
           <p className="contact">
-            Nous joindre au:{" "}
+            Nous joindre au :{" "}
             <a className="emailLink" href="mailto:flattenofficial@gmail.com">
               flattenofficial@gmail.com
             </a>
