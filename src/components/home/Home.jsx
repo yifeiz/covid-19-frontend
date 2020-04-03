@@ -136,6 +136,11 @@ class Home extends React.Component {
                 COVID-19 in your local community and around the nation.
               </p>
               {this.renderLogin(this.props.tokenId)}
+              <Link to={"/log-your-health"}>
+                <button className="button-anon">
+                  or, proceed without signing in
+                </button>
+              </Link>
               <p className="home__information">
                 <i>
                   By logging your health on a regular basis, FLATTEN is able to
