@@ -27,3 +27,9 @@
     width: 180px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .logout__text {
+    font-size: 12px !important;
+  }
+}
