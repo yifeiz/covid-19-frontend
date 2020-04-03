@@ -107,3 +107,14 @@
   padding-top: 16px;
   font-size: 0.9rem !important;
 }
+
+.button-anon {
+  border: 2px solid #f54263;
+  background-color: white;
+  color: #f54263;
+  border-radius: 12px !important;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
