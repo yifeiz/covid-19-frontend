@@ -28,8 +28,8 @@
   }
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 420px) {
   .logout__text {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 }
