@@ -45,7 +45,42 @@
   position: relative;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 420px) {
+  .nav-link {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .navbar-toggler {
+    padding-right: 0px !important;
+  }
+  .header__logo {
+    width: 50px !important;
+  }
+
+  .home__left {
+    display: none;
+  }
+
+  .home__right {
+    width: 100%;
+  }
+
+  .home__logo {
+    width: 95%;
+  }
+  .navbar-nav {
+    font-size: 12px;
+  }
+
+  .navbar-toggler-icon {
+    width: 20px !important;
+  }
+  .red-button {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 700px) {
   .home__left {
     display: none;
   }

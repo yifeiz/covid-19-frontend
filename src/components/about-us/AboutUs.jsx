@@ -15,7 +15,7 @@ const AboutUs = () => (
           projet!{" "}
         </p>
         <p className="contact">
-          Vous pouvez nous joindre au:{" "}
+          Vous pouvez nous joindre au :{" "}
           <a className="emailLink" href="mailto:flattenofficial@gmail.com">
             flattenofficial@gmail.com
           </a>
