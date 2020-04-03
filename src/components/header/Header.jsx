@@ -109,7 +109,7 @@ class Header extends React.Component {
             clientId={OAuth()}
             render={renderProps => (
               <NavLink onClick={renderProps.onClick}>
-                <h3 style={{ cursor: "pointer" }}>
+                <h3 className="logout__text" style={{ cursor: "pointer" }}>
                   Log Out
                   <img
                     className="react-share__ShareButton share-button"
@@ -151,7 +151,7 @@ class Header extends React.Component {
         <div class="d-flex order-lg-1 ml-auto pr-2">
           <ul class="navbar-nav flex-row">{loginLogoutButton}</ul>
         </div>
-        <div class="d-flex order-lg-1 ml-auto pr-4">
+        <div class="d-flex order-lg-1 ml-auto pr-2">
           <ul class="navbar-nav flex-row">
             <a href="https://fr.flatten.ca">Français</a>
           </ul>
