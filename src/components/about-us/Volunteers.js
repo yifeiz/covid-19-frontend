@@ -12,7 +12,7 @@ const volunteers = [
     role: "Dev Team Lead and DevOps",
   },
   {
-    name: "Martin Staadacker",
+    name: "Martin Staadecker",
     src: "./Headshots/martin.png",
     link: "https://www.linkedin.com/in/staad/",
     role: "Maps Team Systems Integration Lead and DevOps",
